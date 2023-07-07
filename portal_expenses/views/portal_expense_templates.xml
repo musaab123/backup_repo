@@ -4,7 +4,7 @@
 		<xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
 			<!-- <t t-if="request.env.user.employee_id"> -->
 			<t t-call="portal.portal_docs_entry">
-				<t t-set="title">
+				<t t-set="title"> 
 					Certificate
 				</t>
 				<t t-set="url" t-value="'/my/certificate'" />
@@ -62,12 +62,11 @@
 			<t t-call="portal.portal_table">
 				<thead>
 					<tr>
-						<th>
-							Experience certificate
-						</th>
-						<th>
-							Salary Certificate
-						</th>
+						<td>
+							Please Enter The Certificates List By Clicking Below The Employee's Name
+						</td>
+						<br></br>
+						
 					</tr>
 				</thead>
 				<tbody>
@@ -81,12 +80,11 @@
 								</a>
 							</td>
 							<td>
-								<!-- <t t-out="ser.name"/> -->
-								<a t-attf-href="/my/certificates/#{ser.id}">
+								<!-- <a t-attf-href="/my/certificates/#{ser.id}">
 									<span>
 										<t t-out="ser.name"/> 
 									</span>
-								</a>
+								</a> -->
 							</td>
 						</tr>
 					</t>
@@ -96,24 +94,52 @@
 	</template>
 	<template id="payslip_portal_template" inherit_id="portal.portal_sidebar">
 		<xpath expr="//div[hasclass('o_portal_sidebar')]" position="inside">
+		<link rel="stylesheet" href="/portal_expenses/static/src/css/style.css" />
 
 				<br></br>
 				<br></br>
-                <p t-out="employee.name"/>
+				<strong>Hello Mr / <p t-out="employee.name"/> You can download your Experience Certificate and the Salary Certificate with ease thanks </strong>
+                
+				<br></br>
+				<br></br>
 				<br></br>
 				<br></br>
 
 				<div class="row">
 					<div class="col-6">
-						<a  t-attf-href="/my/certificates/print/{{employee.id}}"><i class="fa fa-download" /> Experience certificate</a>
 		
+
+							<ul class="list-group list-group-flush flex-wrap flex-row flex-lg-column">
+                               
+                                    <div class="o_download_pdf btn-toolbar flex-sm-nowrap">
+                                        <div class="btn-group flex-grow-1 mr-1 mb-1">
+											<a  t-attf-href="/my/certificates/print/{{employee.id}}" class="btn btn-outline-success btn-lg btn-block o_download_btn">Experience Certificate</a>
+                                        </div>
+                                    </div>
+                               
+                            </ul>
 					</div>
 					<div class="col-6">
-						<a t-attf-href="/my/salary/print/{{employee.id}}"><i class="fa fa-download" /> Salary certificate</a>
+						<ul class="list-group list-group-flush flex-wrap flex-row flex-lg-column">
+                               
+                                    <div class="o_download_pdf btn-toolbar flex-sm-nowrap">
+                                        <div class="btn-group flex-grow-1 mr-1 mb-1">
+											<a t-attf-href="/my/salary/print/{{employee.id}}" class="btn btn-outline-success btn-lg btn-block o_download_btn"> Salary Certificate</a>
+                                        </div>
+                                    </div>
+                               
+                            </ul>
 		
 					</div>
 				
 				</div>
+
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+
+				<hr></hr>
 
 				</xpath>
 	</template>
