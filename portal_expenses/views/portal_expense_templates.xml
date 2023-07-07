@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="portal_my_home_expense_ufd" name="Show Expenses" customize_show="True" inherit_id="portal.portal_my_home" priority="100">
+		<xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+			<!-- <t t-if="request.env.user.employee_id"> -->
+			<t t-call="portal.portal_docs_entry">
+				<t t-set="title">
+					Certificate
+				</t>
+				<t t-set="url" t-value="'/my/certificate'" />
+				<t t-set="placeholder_count" t-value="'certificate_count'" />
+			</t>
+			<!-- </t> -->
+		</xpath>
+	</template>
+	<template id="portal_my_home_menu_petty_cash" inherit_id="portal.portal_breadcrumbs" priority="40">
+		<xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+			<li t-if="page_name == 'certificate_list_view'">
+				Certificate
+			</li>
+		</xpath>
+	</template>
+	<template id="portal_my_certificate_list">
+		<t t-call="portal.portal_layout">
+			<t t-call="portal.portal_table">
+				<thead>
+					<tr>
+						<th>
+							Experience certificate
+						</th>
+						<th>
+							Salary Certificate
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<t t-foreach="serificate" t-as="ser">
+						<tr>
+							<td>
+								<a t-attf-href="/my/certificates/#{ser.id}">
+									<span>
+										Experience certificate
+									</span>
+								</a>
+							</td>
+							<td>
+								<!-- <t t-out="ser.name"/> -->
+								<a t-attf-href="/my/certificates/#{ser.id}">
+									<span>
+										Salary Certificate
+									</span>
+								</a>
+							</td>
+						</tr>
+					</t>
+				</tbody>
+			</t>
+		</t>
+	</template>
+	<template id="portal_my_certificate_list">
+		<t t-call="portal.portal_layout">
+			<t t-call="portal.portal_table">
+				<thead>
+					<tr>
+						<th>
+							Experience certificate
+						</th>
+						<th>
+							Salary Certificate
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<t t-foreach="serificate" t-as="ser">
+						<tr>
+							<td>
+								<a t-attf-href="/my/certificates/#{ser.id}">
+									<span>
+										<t t-out="ser.name"/> 
+									</span>
+								</a>
+							</td>
+							<td>
+								<!-- <t t-out="ser.name"/> -->
+								<a t-attf-href="/my/certificates/#{ser.id}">
+									<span>
+										<t t-out="ser.name"/> 
+									</span>
+								</a>
+							</td>
+						</tr>
+					</t>
+				</tbody>
+			</t>
+		</t>
+	</template>
+	<template id="payslip_portal_template" inherit_id="portal.portal_sidebar">
+		<xpath expr="//div[hasclass('o_portal_sidebar')]" position="inside">
+
+				<br></br>
+				<br></br>
+                <p t-out="employee.name"/>
+				<br></br>
+				<br></br>
+
+				<div class="row">
+					<div class="col-6">
+						<a  t-attf-href="/my/certificates/print/{{employee.id}}"><i class="fa fa-download" /> Experience certificate</a>
+		
+					</div>
+					<div class="col-6">
+						<a t-attf-href="/my/salary/print/{{employee.id}}"><i class="fa fa-download" /> Salary certificate</a>
+		
+					</div>
+				
+				</div>
+
+				</xpath>
+	</template>
+
+
+
+	
+</odoo>
