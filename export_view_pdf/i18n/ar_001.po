@@ -1,0 +1,232 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* export_view_pdf
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-20 17:46+0000\n"
+"PO-Revision-Date: 2023-03-20 17:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: export_view_pdf
+#: model_terms:ir.ui.view,arch_db:export_view_pdf.external_layout_seti
+msgid "<i class=\"fa fa-at\" role=\"img\" aria-label=\"Email\" title=\"Email\"/>"
+msgstr ""
+
+#. module: export_view_pdf
+#: model_terms:ir.ui.view,arch_db:export_view_pdf.external_layout_seti
+msgid "<i class=\"fa fa-building-o\" role=\"img\" aria-label=\"Fiscal number\"/>"
+msgstr ""
+
+#. module: export_view_pdf
+#: model_terms:ir.ui.view,arch_db:export_view_pdf.external_layout_seti
+msgid "<i class=\"fa fa-globe\" role=\"img\" aria-label=\"Website\" title=\"Website\"/>"
+msgstr ""
+
+#. module: account
+#: model:ir.model.fields,field_description:account.field_account_bank_statement_line__name
+#: model:ir.model.fields,field_description:account.field_account_full_reconcile__name
+#: model:ir.model.fields,field_description:account.field_account_move__name
+#: model:ir.model.fields,field_description:account.field_account_move_line__move_name
+#: model:ir.model.fields,field_description:account.field_account_payment__name
+msgid "Number"
+msgstr "رقم الفاتورة "
+
+#. module: sale
+#: model_terms:ir.ui.view,arch_db:sale.view_order_tree
+#: model_terms:ir.ui.view,arch_db:sale.view_quotation_tree
+msgid "Number"
+msgstr " المرجع"
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order__amount_untaxed
+msgid "Untaxed Amount"
+msgstr "الاجمالي غير شامل الضريبة"
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order__amount_tax
+#: model:ir.model.fields,field_description:sale.field_sale_order_line__tax_id
+#: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
+msgid "Taxes"
+msgstr "الاجمالي ضريبة القيمة المضافة"
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order__amount_total
+#: model:ir.model.fields,field_description:sale.field_sale_order_line__price_total
+#: model:ir.model.fields,field_description:sale.field_sale_report__price_total
+#: model_terms:ir.ui.view,arch_db:sale.portal_my_orders
+#: model_terms:ir.ui.view,arch_db:sale.portal_my_quotations
+#: model_terms:ir.ui.view,arch_db:sale.view_order_line_tree
+msgid "Total"
+msgstr "الاجمالي شامل الضريبة"
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order__partner_id
+#: model:ir.model.fields,field_description:sale.field_sale_order_line__order_partner_id
+#: model:ir.model.fields,field_description:sale.field_sale_report__partner_id
+#: model_terms:ir.ui.view,arch_db:sale.view_order_product_search
+#: model_terms:ir.ui.view,arch_db:sale.view_sales_order_filter
+msgid "Customer"
+msgstr "العميل"
+
+#. module: purchase
+#: model_terms:ir.ui.view,arch_db:purchase.purchase_order_kpis_tree
+#: model_terms:ir.ui.view,arch_db:purchase.purchase_order_tree
+#: model_terms:ir.ui.view,arch_db:purchase.purchase_order_view_tree
+msgid "Untaxed"
+msgstr "الاجمالي غير شامل الضريبة"
+
+#. module: purchase
+#. odoo-python
+#: code:addons/purchase/controllers/portal.py:0
+#: model:ir.model.fields,field_description:purchase.field_purchase_order__amount_total
+#: model:ir.model.fields,field_description:purchase.field_purchase_order_line__price_total
+#: model:ir.model.fields,field_description:purchase.field_purchase_report__price_total
+#: model_terms:ir.ui.view,arch_db:purchase.portal_my_purchase_orders
+#: model_terms:ir.ui.view,arch_db:purchase.portal_my_purchase_rfqs
+#, python-format
+msgid "Total"
+msgstr "الاجمالي شامل الضريبة"
+
+
+#. module: account
+#: model:ir.model.fields,field_description:account.field_account_bank_statement_line__invoice_partner_display_name
+#: model:ir.model.fields,field_description:account.field_account_move__invoice_partner_display_name
+#: model:ir.model.fields,field_description:account.field_account_payment__invoice_partner_display_name
+msgid "Invoice Partner Display Name"
+msgstr "العميل"
+
+#. module: account
+#: model:ir.model.fields.selection,name:account.selection__res_config_settings__show_line_subtotals_tax_selection__tax_excluded
+#: model_terms:ir.ui.view,arch_db:account.view_invoice_tree
+msgid "Tax Excluded"
+msgstr "الاجمالي غير شامل الضريبة"
+
+#. module: account
+#: model:ir.model.fields,field_description:account.field_account_bank_statement_line__amount_untaxed_signed
+#: model:ir.model.fields,field_description:account.field_account_move__amount_untaxed_signed
+#: model:ir.model.fields,field_description:account.field_account_payment__amount_untaxed_signed
+msgid "Untaxed Amount Signed"
+msgstr "الاجمالي غير شامل الضريبة"
+
+#. module: account
+#. odoo-javascript
+#: code:addons/account/static/src/components/tax_totals/tax_totals.xml:0
+#: code:addons/account/static/src/xml/legacy_tax_totals.xml:0
+#: model:ir.model.fields,field_description:account.field_account_bank_statement_line__amount_total
+#: model:ir.model.fields,field_description:account.field_account_invoice_report__price_total
+#: model:ir.model.fields,field_description:account.field_account_move__amount_total
+#: model:ir.model.fields,field_description:account.field_account_move_line__price_total
+#: model:ir.model.fields,field_description:account.field_account_payment__amount_total
+#: model_terms:ir.ui.view,arch_db:account.account_invoice_report_view_tree
+#: model_terms:ir.ui.view,arch_db:account.view_account_payment_tree
+#: model_terms:ir.ui.view,arch_db:account.view_invoice_tree
+#: model_terms:ir.ui.view,arch_db:account.view_move_form
+#: model_terms:ir.ui.view,arch_db:account.view_move_tree
+#, python-format
+msgid "Total"
+msgstr "الاجمالي شامل الضريبة"
+
+#. module: account
+#: model:ir.model.fields,field_description:account.field_account_bank_statement_line__amount_total_signed
+#: model:ir.model.fields,field_description:account.field_account_move__amount_total_signed
+#: model:ir.model.fields,field_description:account.field_account_payment__amount_total_signed
+msgid "Total Signed"
+msgstr "الاجمالي شامل الضريبة"
+
+
+#. module: export_view_pdf
+#: model_terms:ir.ui.view,arch_db:export_view_pdf.external_layout_seti
+msgid "<i class=\"fa fa-phone\" role=\"img\" aria-label=\"Phone\" title=\"Phone\"/>"
+msgstr ""
+
+#. module: export_view_pdf
+#: model_terms:ir.ui.view,arch_db:export_view_pdf.external_layout_seti
+msgid ""
+"<span class=\"text-right arabic\" style=\"padding-right:-6px;\">رقم السجل "
+"التجاري</span>‬"
+msgstr ""
+
+#. module: export_view_pdf
+#: model_terms:ir.ui.view,arch_db:export_view_pdf.external_layout_seti
+msgid ""
+"<span class=\"text-right arabic\" style=\"padding-right:-6px;\">ضريبة القيمة"
+" المضافة</span>‬"
+msgstr ""
+
+#. module: export_view_pdf
+#: model_terms:ir.ui.view,arch_db:export_view_pdf.export_in_pdf_group_by
+msgid "<span>(</span>"
+msgstr ""
+
+#. module: export_view_pdf
+#: model_terms:ir.ui.view,arch_db:export_view_pdf.export_in_pdf_group_by
+msgid "<span>)</span>"
+msgstr ""
+
+#. module: export_view_pdf
+#: model_terms:ir.ui.view,arch_db:export_view_pdf.export_in_pdf_group_by
+msgid "<span>: </span>"
+msgstr ""
+
+#. module: export_view_pdf
+#: model_terms:ir.ui.view,arch_db:export_view_pdf.export_in_pdf_group_by
+msgid ""
+"<span>Undefined</span>\n"
+"                            <span>(</span>"
+msgstr ""
+
+#. module: export_view_pdf
+#. odoo-javascript
+#: code:addons/export_view_pdf/static/src/views/pdf_export.js:0
+#, python-format
+msgid "Cancel"
+msgstr ""
+
+#. module: export_view_pdf
+#. odoo-javascript
+#: code:addons/export_view_pdf/static/src/views/pdf_export.js:0
+#: model:ir.actions.report,name:export_view_pdf.export_pdf
+#: model:ir.actions.report,name:export_view_pdf.export_pdf_group_by
+#, python-format
+msgid "Export"
+msgstr ""
+
+#. module: export_view_pdf
+#. odoo-javascript
+#: code:addons/export_view_pdf/static/src/views/list_button_view.xml:0
+#: code:addons/export_view_pdf/static/src/views/list_button_view.xml:0
+#, python-format
+msgid "Export PDF"
+msgstr ""
+
+#. module: export_view_pdf
+#: model_terms:ir.ui.view,arch_db:export_view_pdf.external_layout_seti
+msgid "Logo"
+msgstr ""
+
+#. module: export_view_pdf
+#: model_terms:ir.ui.view,arch_db:export_view_pdf.external_layout_seti
+msgid ""
+"Page:\n"
+"                    <span class=\"page\"/>\n"
+"                    of\n"
+"                    <span class=\"topage\"/>"
+msgstr ""
+
+#. module: export_view_pdf
+#: model_terms:ir.ui.view,arch_db:export_view_pdf.external_layout_seti
+msgid "‫‪ <span class=\"text-right\" style=\"padding-left:5px;\"/>CR No. :"
+msgstr ""
+
+#. module: export_view_pdf
+#: model_terms:ir.ui.view,arch_db:export_view_pdf.external_layout_seti
+msgid "‫‪ <span class=\"text-right\" style=\"padding-left:5px;\">VAT‬‬ No.: </span>"
+msgstr ""
