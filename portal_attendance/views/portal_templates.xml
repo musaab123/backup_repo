@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="portal_my_home_attendance" name="Show attendance" customize_show="True" inherit_id="portal.portal_my_home" priority="100">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+            <t t-if="request.env.user.employee_id">
+                <t t-call="portal.portal_docs_entry">
+                    <t t-set="title">Attendance</t>
+                    <t t-set="url" t-value="'/my/attendance'" />
+                    <t t-set="placeholder_count" t-value="'attendance_count'"/>
+                </t>
+            </t>
+        </xpath>
+    </template>
+    <template id="portal_my_home_menu_attendance" inherit_id="portal.portal_breadcrumbs" priority="30">
+        <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+            <li t-if="page_name in ['attendance']" t-attf-class="breadcrumb-item #{'active' if not attendance else ''}">
+                Attendance
+            </li>
+        </xpath>
+    </template>
+    <template id="portal_my_attendance_list">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True" />
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Attendance</t>
+            </t>
+            <t t-if="not grouped_attendance">
+                <p>There are currently no Attendance in your account.</p>
+            </t>
+            <!-- <div class="mx-1 mb-2 d-flex justify-content-center bg-white">
+                <t t-foreach="allocations" t-as="allocation_key">
+                    <div class="flex-fill border text-center">
+                        <div><b><t t-out="allocation_key" /></b></div>
+                        <div><t t-out="allocations[allocation_key][0]" /></div>
+                        <div><t t-out="allocations[allocation_key][1]" /> Available</div>
+                    </div>
+                </t> 
+            </div> -->
+            <t t-if="grouped_attendance">
+                <t t-call="portal.portal_table">
+                    <t t-foreach="grouped_attendance" t-as="attendances">
+                        <thead>
+                            <tr t-attf-class="{{'thead-light' if not groupby == 'none' else ''}}">
+                                <th>
+                                    <span class='d-none d-md-inline'>Employee Name</span>
+                                </th>
+                                <th class="text-right">Check In</th>
+                                <th class="text-right">Check Out</th>
+                                <th class="text-right">Check in message</th>
+                                <th class="text-right">Open Check-in location in Maps</th>
+                                <th class="text-right">Check out message</th>
+                                <th class="text-right">Open Check-out location in Maps</th>
+                                <th class="text-right">Work Hours</th>
+                                <th/>
+                            </tr>
+                        </thead>
+                        <t t-foreach="attendances" t-as="attendance">
+                            <tr id="attendance_row">
+                                <td>
+                                    <t t-esc="attendance.employee_id.name" />
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="attendance.check_in" t-options="{'widget': 'datetime'}" />
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="attendance.check_out" t-options="{'widget': 'datetime'}" />
+                                </td>
+                                <td class="text-right"><span t-field="attendance.message_in" /></td>
+                                <td class="text-right"><span t-field="attendance.check_in_url" /></td>
+                                <td class="text-right"><span t-field="attendance.message_out" /></td>
+                                <td class="text-right"><span t-field="attendance.check_out_url" /></td>
+                                <td class="text-right"><span t-field="attendance.worked_hours" /></td>
+                            </tr>
+                        </t>
+                    </t>
+                </t>
+            </t>
+        </t>
+    </template>
+    
+</odoo>
