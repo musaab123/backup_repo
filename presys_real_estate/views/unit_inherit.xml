@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		 <record id="view_product_template_prop_form_inherit_oror" model="ir.ui.view">
+            <field name="name">product.template.inherit</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="itsys_real_estate.building_unit_form"/>
+            <field name="arch" type="xml">
+
+            <xpath expr="/form/sheet/notebook/page[1]" position="after">
+                <page string="Information">
+                        <group>
+                            <group>
+                                <field name="is_furnished"/>
+                                <field name="is_patio" />
+                                <field name="is_kitchen_cupboard"/>
+                                <field name="electricity_meter_number"/>
+                                <field name="current_meter_reading"/>
+                                <field name="water_meter_number" />
+                                <field name="current_meter_reading_water"/>
+                                <field name="gas_meter_number"/>
+                                <field name="current_meter_reading_gas"/>
+                                <field name="unit_number"/>
+                                <field name="commercial_activities"/>
+                                <field name="ac_number"/>
+                                <field name="ac_type" />
+                                <field name="unit_location"/>
+
+
+                                
+
+                            </group>
+                            <group>
+                                <field name="clean"/>
+                                <field name="saft"/>
+                                <field name="other"/>
+                                <field name="service_fees"/>
+                                <field name="value_deposit"/>
+                                <field name="finishing_unit"/>
+
+                         
+                               <h2   class="text-center" style=" clear: both;
+                                        display: inline-block;
+                                        overflow: hidden;
+                                        white-space: nowrap;
+                                       "> Billboard information </h2>
+                                <br></br>
+                           
+                                <field name="height"/>
+                                <field name="width"/>
+                                <field name="front"/>
+                                <field name="side"/>
+                                <field name="internal"/>
+
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+                <xpath expr="//field[@name='region_id']" position="after">
+                                <field name="unit_location"/>
+
+                </xpath>
+
+                 <xpath expr="//field[@name='electricity_meter']"  position="attributes">
+                              <attribute name = "invisible">1</attribute>
+
+                </xpath>
+                  <xpath expr="//field[@name='water_meter']"  position="attributes">
+                              <attribute name = "invisible">1</attribute>
+
+                </xpath>
+                
+
+            </field>
+        </record>
+	</data>
+</odoo>
+

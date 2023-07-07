@@ -1,0 +1,1421 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* presys_real_estate
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-27 21:20+0000\n"
+"PO-Revision-Date: 2023-06-27 21:20+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_partner__birth_day
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_users__birth_day
+msgid " Birth Day"
+msgstr "تاريخ الميلاد"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_building__branch_number
+#: model:ir.model.fields,field_description:presys_real_estate.field_building__build_number
+#: model:ir.model.fields,field_description:presys_real_estate.field_building__district
+#: model:ir.model.fields,field_description:presys_real_estate.field_building__email_code
+#: model:ir.model.fields,field_description:presys_real_estate.field_building__street_name
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_partner__branch_number
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_partner__build_number
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_partner__district
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_partner__email_code
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_partner__street_name
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_users__branch_number
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_users__build_number
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_users__district
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_users__email_code
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_users__street_name
+msgid " Build Number"
+msgstr "رقم المبنى"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_product__height
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_template__height
+msgid " Height"
+msgstr "الارتفاع"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_product__width
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_template__width
+msgid " Width"
+msgstr "العرض"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid ""
+"<br>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t</br>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<small>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\tFront\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t</small>"
+msgstr "امام"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid ""
+"<br>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t</br>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<small>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\tInternal\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t</small>"
+msgstr "داخلي"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid ""
+"<br>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t</br>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<small>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\tSide\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t</small>"
+msgstr "جانبي"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid ""
+"<br>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t</br>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tWidth"
+msgstr "العرض"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.custom_session_header_footer
+msgid "<i class=\"fa fa-at\" role=\"img\" aria-label=\"Email\" title=\"Email\"/>"
+msgstr ""
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.custom_session_header_footer
+msgid "<i class=\"fa fa-building-o\" role=\"img\" aria-label=\"Fiscal number\"/>"
+msgstr ""
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.custom_session_header_footer
+msgid "<i class=\"fa fa-globe\" role=\"img\" aria-label=\"Website\" title=\"Website\"/>"
+msgstr ""
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.custom_session_header_footer
+msgid "<i class=\"fa fa-phone\" role=\"img\" aria-label=\"Phone\" title=\"Phone\"/>"
+msgstr ""
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid ""
+"<small class=\"text-black\">\n"
+"\t\t\t\t\t\t\t\t\tFor unified contract according to requirements of the Ministry of Housing and the rental system.\n"
+"\t\t\t\t\t\t\t\t</small>"
+msgstr "لعقد موحد حسب متطلبات وزارة الإسكان ونظام الإيجار"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_product__ac_number
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_template__ac_number
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "AC Number"
+msgstr "عدد المكيفات"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_product__ac_type
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_template__ac_type
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "AC Type"
+msgstr "نوع المكيفات"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "ACCESS OBLIGATIONS"
+msgstr "التزامات الوصول"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "ACCESS RIGHT"
+msgstr "الصلاحيات"
+
+#. module: presys_real_estate
+#: model:ir.actions.act_window,name:presys_real_estate.real_state_tag_action
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_real_access__qui_name
+#: model:ir.model.fields,field_description:presys_real_estate.field_real_access__qui
+#: model:ir.ui.menu,name:presys_real_estate.menu_access_right_list
+#: model:res.groups,name:presys_real_estate.group_a_master
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.sales_qui_real_state_view_tree
+msgid "Access Right"
+msgstr "الصلاحيات"
+
+#. module: presys_real_estate
+#: model:ir.actions.act_window,name:presys_real_estate.test_access_action
+msgid "Additional Obligations"
+msgstr "الالتزامات الاضافية"
+
+#. module: presys_real_estate
+#: model:ir.ui.menu,name:presys_real_estate.menu_additional_obligations_test
+msgid "Additional obligations "
+msgstr "الالتزامات الاضافية"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_rental_contract__admin_qustion
+msgid "Admin Qustion"
+msgstr "الاستيضاخ"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_building__agency_date
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_partner__agency_date
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_users__agency_date
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Agency Date"
+msgstr "تاريخ الوكالة"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_building__agency_number
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_partner__agency_number
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_users__agency_number
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Agency Number"
+msgstr "رقم الوكالة"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_building__agent_name
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Agent Name"
+msgstr "اسم العميل"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_building__agent_phone
+msgid "Agent Number"
+msgstr "رقم العميل"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_amenities_test__amenities_id
+msgid "Amenities"
+msgstr "المرافقون"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_real_estate_report_rfq
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Apartment number"
+msgstr "رقم الشقة"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_company__arabic_company_dis
+msgid "Arabic  Company description"
+msgstr ""
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_company__arabic_city
+msgid "Arabic City"
+msgstr ""
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_company__arabic_country
+msgid "Arabic Country"
+msgstr ""
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_company__arabic_name
+msgid "Arabic Name"
+msgstr ""
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_company__arabic_state
+msgid "Arabic State"
+msgstr ""
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_company__arabic_street
+msgid "Arabic Street"
+msgstr ""
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_company__arabic_street2
+msgid "Arabic Street2"
+msgstr ""
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_company__arabic_web
+msgid "Arabic Website"
+msgstr ""
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_company__arabic_zip
+msgid "Arabic Zip"
+msgstr ""
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_test_access__commitment_qustion
+#: model:ir.model.fields,field_description:presys_real_estate.field_test_access__commitment_qustion
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Ask"
+msgstr "الاستيضاح"
+
+#. module: presys_real_estate
+#: model:ir.model.fields.selection,name:presys_real_estate.selection__product_template__ac_type__aspelt
+msgid "Aspelt"
+msgstr "اسبيلت"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Bank account (IBAN)/Bank Name"
+msgstr "الحساب المصرفي (IBAN) / اسم البنك"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.view_product_template_prop_form_inherit_oror
+msgid "Billboard information"
+msgstr "معلومات اللوحة"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Birth Day"
+msgstr "تاريخ الميلاد"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.view_building_prop_form_inherit
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.view_res_partner_form_inherit
+msgid "Branch number..."
+msgstr "رقم الفرع"
+
+#. module: presys_real_estate
+#: model:ir.model,name:presys_real_estate.model_building
+msgid "Building"
+msgstr "عقار"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Building Area"
+msgstr "منطقة المبنى"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.view_building_prop_form_inherit
+msgid "Building National Address"
+msgstr "العنوان الوطني للعقار"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Building Type"
+msgstr "نوع المبنى"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Building Use"
+msgstr "استخدام المبنى"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_building__bulding_use
+msgid "Bulding Use"
+msgstr "استخدام المبنى"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.view_building_prop_form_inherit
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.view_res_partner_form_inherit
+msgid "Bulding number..."
+msgstr "رقم المبنى"
+
+#. module: presys_real_estate
+#: model:ir.model.fields.selection,name:presys_real_estate.selection__product_template__ac_type__central
+msgid "Central"
+msgstr "مركزي"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Clean services"
+msgstr "خدمات النظافة"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_product__clean
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_template__clean
+msgid "Cleaning"
+msgstr "التنظيف"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Comment"
+msgstr "الاستيضاح"
+
+#. module: presys_real_estate
+#: model:ir.model.fields.selection,name:presys_real_estate.selection__rental_contract__contract_type__commercial
+msgid "Commercial"
+msgstr "تجاري"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Commercial Number"
+msgstr "الرقم التجاري"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_partner__commercial_egistration_No
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_users__commercial_egistration_No
+msgid "Commercial Registration No"
+msgstr "رقم السجل التجاري"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Commercial activities"
+msgstr "النشاطات التجارية"
+
+#. module: presys_real_estate
+#: model:ir.actions.report,name:presys_real_estate.report_commercial_contract_rs
+msgid "Commercial contract"
+msgstr "العقد التجاري"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_mutual_obligations__commitment_id
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_mutual_obligations__commitment_name
+#: model:ir.model.fields,field_description:presys_real_estate.field_mutual_obligations__commitment
+msgid "Commitment"
+msgstr "الاستيضاح"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_test_access__commitment_qustion_id
+msgid "Commitment Qustion"
+msgstr "الاسئلة الاستيضاحية"
+
+#. module: presys_real_estate
+#: model:ir.model,name:presys_real_estate.model_res_company
+msgid "Companies"
+msgstr "الشركات "
+
+#. module: presys_real_estate
+#: model:res.groups,name:presys_real_estate.group_configration_master_contracts
+msgid "Configration"
+msgstr "الاعدادات"
+
+#. module: presys_real_estate
+#: model:ir.model,name:presys_real_estate.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_mutual_obligations__contract_id
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_real_access__contract_id
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_test_access__contract_id
+msgid "Contract"
+msgstr "العفد"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Contract Date Time"
+msgstr "تاريخ العقد"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Contract Duration"
+msgstr "مدة العقد"
+
+#. module: presys_real_estate
+#: model:ir.model,name:presys_real_estate.model_contract_real_access
+msgid "Contract Real Access"
+msgstr "ضلاحيات العقد"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_rental_contract__contract_time
+msgid "Contract Time"
+msgstr "وقت العقد"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_rental_contract__contract_type
+msgid "Contract Type"
+msgstr "نوع الغقد"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Contract starting date"
+msgstr "تاريح بداية العقد"
+
+#. module: presys_real_estate
+#: model_terms:ir.actions.act_window,help:presys_real_estate.real_state_tag_action
+msgid "Create Access Right"
+msgstr "انشاء صلاحيات"
+
+#. module: presys_real_estate
+#: model_terms:ir.actions.act_window,help:presys_real_estate.test_access_action
+msgid "Create Mutual Access"
+msgstr "انشاء التزامات صلاحيات"
+
+#. module: presys_real_estate
+#: model_terms:ir.actions.act_window,help:presys_real_estate.mutual_obligations_action
+msgid "Create Mutual Obligations"
+msgstr "انشاء التزامات وصول"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_amenities_test__create_uid
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_mutual_obligations__create_uid
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_real_access__create_uid
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_test_access__create_uid
+#: model:ir.model.fields,field_description:presys_real_estate.field_mutual_obligations__create_uid
+#: model:ir.model.fields,field_description:presys_real_estate.field_real_access__create_uid
+#: model:ir.model.fields,field_description:presys_real_estate.field_test_access__create_uid
+msgid "Created by"
+msgstr "انساء بواسطة"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_amenities_test__create_date
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_mutual_obligations__create_date
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_real_access__create_date
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_test_access__create_date
+#: model:ir.model.fields,field_description:presys_real_estate.field_mutual_obligations__create_date
+#: model:ir.model.fields,field_description:presys_real_estate.field_real_access__create_date
+#: model:ir.model.fields,field_description:presys_real_estate.field_test_access__create_date
+msgid "Created on"
+msgstr "انساء "
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_rental_contract__is_creation
+msgid "Creation Auto"
+msgstr "انساء تلقائي"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_product__current_meter_reading
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_product__current_meter_reading_gas
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_template__current_meter_reading
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_template__current_meter_reading_gas
+msgid "Current meter reading"
+msgstr "القراءت الحالية للعداد"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_product__current_meter_reading_water
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_template__current_meter_reading_water
+msgid "Current water meter reading"
+msgstr "القراءت الحالية لعداد المياه"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_real_estate_report_rfq
+msgid "Customer Name"
+msgstr "اسم العميل"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_real_estate_report_rfq
+msgid "Customer Reference"
+msgstr "مرجع العميل"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Data required."
+msgstr "البيانات المطلوبة"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_account_bank_statement_line__invoice_date_supply
+#: model:ir.model.fields,field_description:presys_real_estate.field_account_move__invoice_date_supply
+#: model:ir.model.fields,field_description:presys_real_estate.field_account_payment__invoice_date_supply
+msgid "Date Of Supply"
+msgstr "تارخ التزويد"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Date of Birth"
+msgstr "تاريح الميلاد"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_real_estate_report_rfq
+msgid "Delivery Date"
+msgstr "تاريخ التوصيل"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Dependence"
+msgstr "المرافقون"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.view_res_partner_form_inherit
+msgid "Dependency"
+msgstr "المرافقون"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_amenities_test__amenities_birth_day_first
+msgid "Dependency Birth Day"
+msgstr "تارخ ميلاد المرافقون"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_amenities_test__amenities_id_first
+msgid "Dependency ID"
+msgstr "هوية المرافقون"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Deposit value"
+msgstr "قيمة الإيداع"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_real_estate_report_rfq
+msgid "Discount"
+msgstr "الخصم"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_amenities_test__display_name
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_mutual_obligations__display_name
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_real_access__display_name
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_test_access__display_name
+#: model:ir.model.fields,field_description:presys_real_estate.field_mutual_obligations__display_name
+#: model:ir.model.fields,field_description:presys_real_estate.field_real_access__display_name
+#: model:ir.model.fields,field_description:presys_real_estate.field_test_access__display_name
+msgid "Display Name"
+msgstr "عرض الاسم"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.view_building_prop_form_inherit
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.view_res_partner_form_inherit
+msgid "District"
+msgstr "الحي"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_real_estate_report_rfq
+msgid "Due Date"
+msgstr "تاريخ المتبقي"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Eastern border by"
+msgstr "الحدود الشرقية"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_product__electricity_meter_number
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_template__electricity_meter_number
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Electricity meter number"
+msgstr "رقم عداد الكهرباء"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Email"
+msgstr "الايميل"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.view_building_prop_form_inherit
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.view_res_partner_form_inherit
+msgid "Email code"
+msgstr "الرقم البريدي"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_partner__enterprise_name
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_users__enterprise_name
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Enterprise Name"
+msgstr "اسم الشركة"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_partner__enterprise_number
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_users__enterprise_number
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Enterprise number"
+msgstr "رقم الشركة"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.view_res_partner_form_inherit
+msgid "Escorts data"
+msgstr "بيانات المرافقون"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_partner__expiry_commercial_registration
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_users__expiry_commercial_registration
+msgid "Expiry Date"
+msgstr "تاريح الانتهاء"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Expiry registration"
+msgstr "تاريخ انتهاء التسجيل"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_product__finishing_unit
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_template__finishing_unit
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Finishing"
+msgstr "مشطب"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Floor"
+msgstr "الدور"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_product__front
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_template__front
+msgid "Front"
+msgstr "الامام"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_product__is_furnished
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_template__is_furnished
+msgid "Furnished"
+msgstr "مفروشة"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_product__gas_meter_number
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_template__gas_meter_number
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Gas meter number"
+msgstr "رقم عداد الغاز"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_product__service_fees
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_template__service_fees
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "General service fees"
+msgstr "تكلفة الخدمات العامة"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Hight"
+msgstr "الارتفاع"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_amenities_test__id
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_mutual_obligations__id
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_real_access__id
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_test_access__id
+#: model:ir.model.fields,field_description:presys_real_estate.field_mutual_obligations__id
+#: model:ir.model.fields,field_description:presys_real_estate.field_real_access__id
+#: model:ir.model.fields,field_description:presys_real_estate.field_test_access__id
+msgid "ID"
+msgstr "هوية"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "ID Number"
+msgstr "رقم الهوية"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_real_estate_report_rfq
+msgid "Incoterm"
+msgstr "الشرط التجاري"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.view_product_template_prop_form_inherit_oror
+msgid "Information"
+msgstr "معلومات"
+
+#. module: presys_real_estate
+#: model:ir.model.fields.selection,name:presys_real_estate.selection__product_template__unit_location__inside
+msgid "Inside"
+msgstr "داخلي"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_building__instrument_date
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Instrument Date"
+msgstr "تاريح الصك"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_building__instrument_number
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Instrument Number"
+msgstr "رقم الصك"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Insurance value"
+msgstr "قيمة التامين"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_product__internal
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_template__internal
+msgid "Internal"
+msgstr "داحلي"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_real_estate_report_rfq
+msgid "Invoice Date"
+msgstr "تاريح الفاتورة"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_real_estate_report_rfq
+msgid "Invoice Number"
+msgstr "رقم الفاتورة"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,help:presys_real_estate.field_rental_contract__periodicity
+msgid "Invoice automatically repeat at specified interval"
+msgstr "تكرار الفاتورة تلقائيًا في فترة زمنية محددة"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_real_access__is_yes
+msgid "Is Yes"
+msgstr "نعم"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Is there a patio"
+msgstr "هل يوجد فناء"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "It renews automatically"
+msgstr "هل يجدد تلقائيًا"
+
+#. module: presys_real_estate
+#: model:ir.model,name:presys_real_estate.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_amenities_test____last_update
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_mutual_obligations____last_update
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_real_access____last_update
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_test_access____last_update
+#: model:ir.model.fields,field_description:presys_real_estate.field_mutual_obligations____last_update
+#: model:ir.model.fields,field_description:presys_real_estate.field_real_access____last_update
+#: model:ir.model.fields,field_description:presys_real_estate.field_test_access____last_update
+msgid "Last Modified on"
+msgstr "احر تعديل بتاريح"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_amenities_test__write_uid
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_mutual_obligations__write_uid
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_real_access__write_uid
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_test_access__write_uid
+#: model:ir.model.fields,field_description:presys_real_estate.field_mutual_obligations__write_uid
+#: model:ir.model.fields,field_description:presys_real_estate.field_real_access__write_uid
+#: model:ir.model.fields,field_description:presys_real_estate.field_test_access__write_uid
+msgid "Last Updated by"
+msgstr "اخر تعديل بواسطة"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_amenities_test__write_date
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_mutual_obligations__write_date
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_real_access__write_date
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_test_access__write_date
+#: model:ir.model.fields,field_description:presys_real_estate.field_mutual_obligations__write_date
+#: model:ir.model.fields,field_description:presys_real_estate.field_real_access__write_date
+#: model:ir.model.fields,field_description:presys_real_estate.field_test_access__write_date
+msgid "Last Updated on"
+msgstr "اخر تعديل بتاريح"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Legal Agent"
+msgstr "الوكالة الشرعية"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Legal agency status"
+msgstr "حالة الوكالة الشرعية"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Legal agency status(Non-profit organization)"
+msgstr "حالة الوكالة الشرعية (منظمة غير ربحية)"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_test_access__lessor_answer
+msgid "Lessor Answer"
+msgstr "إجابة المؤجر"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_mutual_obligations__lessor_one
+msgid "Lessor One"
+msgstr "المؤجر الاول"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Location Unit"
+msgstr "موقع الوحدة"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.custom_session_header_footer
+msgid "Logo"
+msgstr "الشعار"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "MUTUAL OBLIGATIONS"
+msgstr "الالتزامات المتبادلة"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Mobile Number(Absher)"
+msgstr "رفم هاتف (ابشر)"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_rental_contract__mutual_access
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.test_access_real_state_view_tree
+msgid "Mutual Access"
+msgstr "الصلاحيات المتبادلة"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_rental_contract__mutual_obligation
+msgid "Mutual Obligation"
+msgstr "الالتزامات المتبادلة"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.mutual_obligations_real_state_view_tree
+msgid "Mutual Obligations"
+msgstr "الالتزامات المتبادلة"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Name"
+msgstr "الاسم"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.view_res_partner_form_inherit
+msgid "National Address"
+msgstr "العنوان الوطني"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "National Address Data"
+msgstr "بيانات العنوان الوطني"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.view_res_partner_form_inherit
+msgid "Non-profit organization"
+msgstr "منظمة غير ربحية"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Northen border by"
+msgstr "الخدود الشرقية"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Notes"
+msgstr "الملاحظات"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Number of Apartments"
+msgstr "عدد الشقق"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Number of Floors"
+msgstr "عدد الادوار"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Number of Left"
+msgstr "عدد المضاعد"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Number of Parking"
+msgstr "عدد المواقف"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "OWNER DATA"
+msgstr "بيانات المالك"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_product__other
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_template__other
+msgid "Other"
+msgstr "اخرى"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Other services"
+msgstr "خدمات اخرى"
+
+#. module: presys_real_estate
+#: model:ir.model.fields.selection,name:presys_real_estate.selection__product_template__unit_location__outside
+msgid "Outside"
+msgstr "خارجي"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Owner National Address"
+msgstr "العنوان الوطني للمالك"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.custom_session_header_footer
+msgid ""
+"Page:\n"
+"                    <span class=\"page\"/>\n"
+"                    of\n"
+"                    <span class=\"topage\"/>"
+msgstr ""
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_product__parking
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_template__parking
+msgid "Parking"
+msgstr "المواقف"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_building__parking_number
+msgid "Parking Number"
+msgstr "عدد المواقف"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Parking services"
+msgstr "خدمات المواقف"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.view_res_partner_form_inherit
+msgid "Partner Inf"
+msgstr "بينات العميل"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_product__is_patio
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_template__is_patio
+msgid "Patio"
+msgstr "فناء"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Payment of payments"
+msgstr "طريقه السداد"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Phone Number"
+msgstr "رقم الهاتف"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Phone Number(Absher)"
+msgstr "رقم هاتف (ابشر)"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_real_estate_report_rfq
+msgid "Post Paid Real State Invoice"
+msgstr "فاتورة عقارية اجلة"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_real_estate_report_rfq
+msgid "Pre Paid Real State Invoice"
+msgstr "فاتورة عقارية نقدية"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_real_estate_report_rfq
+msgid "Price"
+msgstr "السعر"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_real_estate_report_rfq
+msgid "Product"
+msgstr "المنتج"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.view_building_prop_form_inherit
+msgid "Proeprty Inf"
+msgstr "بيانات العقار"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Propaganda painting"
+msgstr "اللوحة الدعائية"
+
+#. module: presys_real_estate
+#: model:ir.model,name:presys_real_estate.model_product_template
+msgid "Property"
+msgstr "المنتج"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Property Name"
+msgstr "اسم العقار"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_real_estate_report_rfq
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_real_access__qui_id
+msgid "Qui"
+msgstr "الاستيضاح"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Qustion"
+msgstr "الاستيضاح"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "REAL ESTATE DATA"
+msgstr "البيانات العقارية"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "RENTAL UNIT DATA"
+msgstr "بيانات الوحدة الايجارية"
+
+#. module: presys_real_estate
+#: model:ir.model,name:presys_real_estate.model_real_access
+msgid "Real Access"
+msgstr "الصلاحيات"
+
+#. module: presys_real_estate
+#: model:ir.module.category,name:presys_real_estate.module_real_estate_category
+msgid "Real Estate"
+msgstr "العقارية"
+
+#. module: presys_real_estate
+#: model:ir.actions.report,name:presys_real_estate.action_report_real_estate_account
+msgid "Real Estate Invoice "
+msgstr "فاتورة عقارية"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Real State National Address"
+msgstr "العنوان الوطني للعقار"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_rental_contract__periodicity
+msgid "Recurrence"
+msgstr "معدل تكرار"
+
+#. module: presys_real_estate
+#: model:ir.model,name:presys_real_estate.model_rental_contract
+msgid "Rental Contract"
+msgstr "عقد ايجار "
+
+#. module: presys_real_estate
+#: model:ir.actions.report,name:presys_real_estate.report_rental_contract_rf
+msgid "Rental contract"
+msgstr "عقد الايجار"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Rooms Number"
+msgstr "عدد الغرف"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Safe services"
+msgstr "خدمات الامن"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_product__saft
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_template__saft
+msgid "Safty"
+msgstr "الامن"
+
+#. module: presys_real_estate
+#: model:ir.model.fields.selection,name:presys_real_estate.selection__product_template__finishing_unit__scratchy
+msgid "Scratchy"
+msgstr "مشطب"
+
+#. module: presys_real_estate
+#. odoo-python
+#: code:addons/presys_real_estate/models/saudi_invoice.py:0
+#, python-format
+msgid "Send Invoice"
+msgstr "ارسال الفاتورة"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.view_res_partner_form_inherit
+msgid "Shortcode address"
+msgstr "العنوان المختصر"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_product__side
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_template__side
+msgid "Side"
+msgstr "جانبي"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Southern border by"
+msgstr "الحدودالجنوبية"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Store number"
+msgstr "رقم المحل"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.view_building_prop_form_inherit
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.view_res_partner_form_inherit
+msgid "Street Name"
+msgstr "اسم الشارع"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "TENANT DATA"
+msgstr "بيانات المستاجر"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_real_estate_report_rfq
+msgid "Tax Invoice"
+msgstr "فاتورة ضريبية"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_real_estate_report_rfq
+msgid "Taxes"
+msgstr "الضرائب"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Tenant"
+msgstr "المستاجر"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_test_access__tenant_answer
+msgid "Tenant Answer"
+msgstr "استيضاح المستاجر"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_contract_mutual_obligations__tenant_one
+msgid "Tenant One"
+msgstr "المستاجر الاول"
+
+#. module: presys_real_estate
+#: model:ir.ui.menu,name:presys_real_estate.menu_conf_list
+msgid "Terms and Conditions"
+msgstr "الشروط والاحكام"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Tessor"
+msgstr "المؤجر"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_partner__legal_agent
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_users__legal_agent
+msgid "The legal agent"
+msgstr "الوكيل الشرعي"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "The trade name"
+msgstr "اسم التاجر"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Toilets Number"
+msgstr "عدد دورات المياه"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_real_estate_report_rfq
+msgid "Total"
+msgstr "الاجمالي"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_real_estate_report_rfq
+msgid "Total Amount Due"
+msgstr "اجمالي المتبقي"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_real_estate_report_rfq
+msgid "Total Without Taxes"
+msgstr "الاجمالي غير شامل الضرائب"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_partner__trade_name
+#: model:ir.model.fields,field_description:presys_real_estate.field_res_users__trade_name
+msgid "Trade Name"
+msgstr "اسم التاجر"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_product__unit_location
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_template__unit_location
+msgid "Unit Location"
+msgstr "موقع الوحدة"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_product__unit_number
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_template__unit_number
+msgid "Unit Number"
+msgstr "رقم الوحدة"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Unit Type"
+msgstr "نوع الوحدة"
+
+#. module: presys_real_estate
+#: model:ir.model.fields.selection,name:presys_real_estate.selection__product_template__finishing_unit__unscratchy
+msgid "Unscratchy"
+msgstr "غير مشطب"
+
+#. module: presys_real_estate
+#: model_terms:ir.actions.act_window,help:presys_real_estate.real_state_tag_action
+msgid ""
+"Use Tags to manage and track your Access Right (Real state structure ...)"
+msgstr "استخدم العلامات لإدارة حق الوصول وتتبعه (بنية الحالة الحقيقية"
+
+#. module: presys_real_estate
+#: model_terms:ir.actions.act_window,help:presys_real_estate.mutual_obligations_action
+#: model_terms:ir.actions.act_window,help:presys_real_estate.test_access_action
+msgid ""
+"Use Tags to manage and track your Mutual Obligations Real state structure "
+"..."
+msgstr ""
+"استخدم العلامات لإدارة وتتبع هيكل الحالة الحقيقية للالتزامات المتبادلة"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Value rent"
+msgstr "قيمة الايجار"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_product__water_meter_number
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_template__water_meter_number
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "Water meter number"
+msgstr "رقم عداد المياه"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Western border by"
+msgstr "الحدود الغربية"
+
+#. module: presys_real_estate
+#: model:ir.model.fields.selection,name:presys_real_estate.selection__product_template__ac_type__window
+msgid "Window"
+msgstr "شباك"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+msgid "Yes"
+msgstr "نعم"
+
+#. module: presys_real_estate
+#: model:res.groups,name:presys_real_estate.group_c_master
+msgid "access obligations"
+msgstr "الوصول إلى الالتزامات"
+
+#. module: presys_real_estate
+#: model:ir.model,name:presys_real_estate.model_amenities_test
+msgid "amenities.test"
+msgstr "المرافقون"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_product__commercial_activities
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_template__commercial_activities
+msgid "commercial activities"
+msgstr "النشاطات التجارية"
+
+#. module: presys_real_estate
+#: model:ir.model,name:presys_real_estate.model_contract_mutual_obligations
+msgid "contract mutual obligations"
+msgstr "عقد الالتزامات الاضافية"
+
+#. module: presys_real_estate
+#: model:ir.model,name:presys_real_estate.model_contract_test_access
+msgid "contract test access"
+msgstr "عقد الصلاحيات"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "current reading Electricity"
+msgstr "القراءت الحالية لعداد الكهرباء"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "current reading Gas"
+msgstr "القراءت الحالية لعداد الغاز"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "current reading water"
+msgstr "القراءت الحالية لعداد المياه"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_product__value_deposit
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_template__value_deposit
+msgid "deposit Value"
+msgstr "القيمة المدفوعة"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "flower"
+msgstr "الدور"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "furnished or not"
+msgstr "مشطب ام لا"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_rental_contract__is_create
+msgid "is create"
+msgstr "هل انشئ"
+
+#. module: presys_real_estate
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_product__is_kitchen_cupboard
+#: model:ir.model.fields,field_description:presys_real_estate.field_product_template__is_kitchen_cupboard
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_commercial_contract
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "kitchen cupboard"
+msgstr "دولاب مطبخ"
+
+#. module: presys_real_estate
+#: model:ir.model.fields.selection,name:presys_real_estate.selection__rental_contract__periodicity__midterm
+msgid "midterm"
+msgstr "وسط"
+
+#. module: presys_real_estate
+#: model:ir.actions.act_window,name:presys_real_estate.mutual_obligations_action
+#: model:ir.model,name:presys_real_estate.model_mutual_obligations
+#: model:res.groups,name:presys_real_estate.group_b_master
+msgid "mutual obligations"
+msgstr "التزامات متبادلة"
+
+#. module: presys_real_estate
+#: model:ir.ui.menu,name:presys_real_estate.menu_mutual_obligations_list
+msgid "mutual obligations "
+msgstr "التزامات متبادلة"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.report_rental_contract_document_rd
+msgid "property Creation Date"
+msgstr "تارخ انشاء العقار"
+
+#. module: presys_real_estate
+#: model:ir.model.fields.selection,name:presys_real_estate.selection__rental_contract__periodicity__quarterly
+msgid "quarterly"
+msgstr "ربع سنوي"
+
+#. module: presys_real_estate
+#: model_terms:ir.ui.view,arch_db:presys_real_estate.view_product_template_prop_form_inherit_1
+msgid "qustion contract"
+msgstr "استيضاحات العقد"
+
+#. module: presys_real_estate
+#: model:ir.model.fields.selection,name:presys_real_estate.selection__rental_contract__contract_type__residential
+msgid "residential"
+msgstr "سكني"
+
+#. module: presys_real_estate
+#: model:ir.model,name:presys_real_estate.model_test_access
+msgid "test access"
+msgstr "الصلاحيات"

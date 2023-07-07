@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="report_real_estate_report_rfq">
+		<t t-call="web.html_container">
+			<t t-call="presys_real_estate.custom_session_header_footer">
+            <t t-foreach="docs" t-as="o">
+              <div class="page">
+							<link rel="stylesheet" href="/presys_real_estate/static/src/css/report-style.css" />
+
+                 <div class="row arabic">
+                                <t t-if="o.amount_residual == 0 and o.move_type == 'out_invoice' and o.state == 'posted'">
+                            
+                                    <h3 class="text-center he" style="background-color:#A4BC92; color:black;">Pre Paid Real State Invoice</h3>
+                            </t>
+                                            
+                            <t t-if="o.amount_residual > 0 and o.move_type == 'out_invoice' and o.state == 'posted'">
+                            
+                                    <h3 class="text-center he" style="background-color:#A4BC92;"> Post Paid Real State Invoice</h3>
+                            
+                            </t>
+
+
+                    </div>
+                     <br></br>
+
+                    <table style="border:1pt solid #ff8c00;width:100%;
+   						 height: 23px;color:black; margin-top:10pt;" class="table-condensed table-sm">
+							<tr>
+								<h4 style="padding:1pt;margin:0pt;text-align:center;background-color:#A4BC92;">Tax Invoice</h4> 
+							</tr>
+					</table>
+                    <br></br>
+
+                           <!-- oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
+
+                <div class="row">
+		          <div class="col-8" style="color:black; ">
+                            <style>
+											table {
+											
+											font-family: arial, sans-serif;
+											
+											border-collapse: collapse;
+											
+											width: 100%;
+											
+											}
+											
+											td, th {
+											
+											border: 1px solid #000;
+											padding: 8px;
+											
+											}
+											
+											tr:nth-child(even) {
+											
+											background-color: #C7E9B0;
+											
+											}
+										</style>
+
+							<table >
+								<tr>
+									<td style="width:50%;">Customer Name</td>
+									<td style="width:50%; text-align:center;"><span t-field="o.partner_id.name"/></td>
+								</tr>
+                        <tr>
+									<td style="width:50%;">Invoice Number</td>
+									<td style="width:50%; text-align:center;"><span t-field="o.name"/></td>
+								</tr>
+								<tr>
+									<td style="width:50%;">Invoice Date</td>
+									<td style="width:50%; text-align:center;"><span t-field="o.invoice_date"/></td>
+								</tr>
+								<tr>
+									<td style="width:25%;">Due Date</td>
+									<td style="width:50%; text-align:center;">
+										<span t-field="o.invoice_date_due"/>
+                                    </td>
+								</tr>
+								<tr>
+									<td style="width:25%;">Delivery Date </td>
+									<td style="width:50%; text-align:center;">
+										<span t-field="o.l10n_sa_delivery_date"/>
+									</td>
+								</tr>
+                        <tr>
+									<td style="width:25%;">Incoterm</td>
+									<td style="width:50%; text-align:center;">
+										<span t-field="o.invoice_incoterm_id"/>
+									</td>
+								</tr>
+                        <tr>
+									<td style="width:25%;">Customer Reference</td>
+									<td style="width:50%; text-align:center;">
+										<span t-field="o.ref"/>
+									</td>
+								</tr>
+
+							</table>
+						</div>
+                        <div class="col-1"></div>
+
+
+                         
+                          <div class="col-3 ">
+			                <img t-if="o.get_qr_code()"
+								style="display:block;"
+								t-att-src="'/report/barcode/?barcode_type=%s&amp;value=%s&amp;width=%s&amp;height=%s'%('QR', o.get_qr_code(), 120, 120)"/>
+
+			            </div> 
+
+	
+			        </div>
+                    <br></br>
+                    <br></br>
+
+
+                    <div class="row">
+
+                             <div class="col-12">
+
+                        <table>
+                           <thead style="background-color: #A4BC92;  border-radius: 5px 5px 0 0;">
+                              <tr class="">
+                                 <td name="th_description"  class=" arabic" style="height: 40px;  vertical-align: middle;">Product</td>
+                                 <td name="th_priceunit" class=" arabic" style="height: 40px;  vertical-align: middle;">Price</td>
+                                 <td name="th_quantity" class=" arabic" style="height: 40px;  vertical-align: middle;">Quantity</td>
+                                 <td name="th_priceunit" class=" arabic" style="height: 40px;  vertical-align: middle;">Discount</td>
+                                 <td name="th_priceunit" class=" arabic" style="height: 40px;  vertical-align: middle;">Taxes</td>
+                                 <td name="th_priceunit" class="text-end arabic" style="height: 40px;  vertical-align: middle;">Amount</td>
+                              </tr>
+                           </thead>
+                           <t t-set="tax_total" t-value="0"/>
+                           <t t-set="discount_total" t-value="0"/>
+                           <tbody class="invoice_tbody knk">
+                              <tr t-foreach="o.invoice_line_ids" t-as="l">
+                                 <t t-set="line_tax_total" t-value="0"/>
+                                 <t t-foreach="l.tax_ids" t-as="t">
+                                    <t t-set="tax_total" t-value="tax_total + l.price_subtotal* t.amount/100"/>
+                                    <t t-set="line_tax_total" t-value="line_tax_total + t.amount"/>
+                                 </t>
+                                 <t t-set="discount_total" t-value="discount_total + ((l.price_unit * l.quantity) - l.price_subtotal)"/>
+                                 <td >
+                                    <span class="arabic" t-esc="l.name"/>
+                                    <br/>
+                                 </td>
+                                 <td class="arabic"><span t-field="l.price_unit" t-options='{"widget": "monetary", "display_currency": o.currency_id}'/></td>
+                                 <td class="arabic"><span t-esc="'%.2f %s '%(l.quantity,l.product_uom_id.name)"/></td>
+                                 <td class="arabic">
+                                    <span t-field="l.discount"/>
+                                 </td>
+                                 <td class="arabic">
+                                    <t t-set="line_tax_total" t-value="l.price_subtotal*line_tax_total/100"/>
+                                    <sapn t-esc="line_tax_total" t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                 </td>
+                                 <td  class="text-end arabic">
+                                    <span t-esc="l.price_subtotal" t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                 </td>
+                              </tr>
+                              <tr class="p-5">
+                                 <td>Total Without Taxes</td>
+                                 <td colspan="5"  class="text-end arabic"><span t-esc="o.amount_untaxed" t-options='{"widget": "monetary", "display_currency": o.currency_id}'/></td>
+                              </tr>
+                              <tr>
+                                 <td>Taxes</td>
+                                 <td colspan="5" class="text-end arabic"><span t-esc="tax_total" t-options='{"widget": "monetary", "display_currency": o.currency_id}'/></td>
+                              </tr>
+                     
+                              <tr>
+                                 <td>Total</td>
+                                 <td  colspan="5" class="text-end arabic"><span t-esc="o.amount_untaxed + tax_total" t-options='{"widget": "monetary", "display_currency": o.currency_id}'/></td>
+                              </tr>
+                              <tr>
+                                 <td>Total Amount Due</td>
+                                 <td colspan="5" class="text-end arabic"><span t-esc="o.amount_residual" t-options='{"widget": "monetary", "display_currency": o.currency_id}'/></td>
+                              </tr>
+
+                              <tr  class="justify-content-around arabic">
+                                 <td>Discount</td>
+                                 <td colspan="5" class="text-end arabic"><span t-field="o.discount_amt" t-options='{"widget": "monetary", "display_currency": o.currency_id}'/></td>
+                              </tr>
+                           </tbody>
+                        </table>
+
+                        </div>
+                    </div>
+
+
+
+
+             
+
+
+
+              </div>
+
+
+
+            </t>
+				</t>
+			</t>
+		</template>
+	</data>
+</odoo>

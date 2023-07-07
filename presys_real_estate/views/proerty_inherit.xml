@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		 <record id="view_building_prop_form_inherit" model="ir.ui.view">
+            <field name="name">building.inherit</field>
+            <field name="model">building</field>
+            <field name="inherit_id" ref="itsys_real_estate.building_form"/>
+            <field name="arch" type="xml">
+
+            <xpath expr="/form/sheet/notebook/page[1]" position="after">
+                <page string="Proeprty Inf">
+                        <group>
+                            <group>
+                                 <label for="build_number" string="Building National Address"/>
+                                    <div class="o_address_format">
+                                            <field name="build_number" placeholder="Bulding number..." class="o_address_street" />
+                                            <field name="branch_number" placeholder="Branch number..." class="o_address_street" />
+                                            <field name="email_code" placeholder="Email code" class="o_address_city" />
+                                            <field name="district" class="o_address_state" placeholder="District" options="{'no_open': True, 'no_quick_create': True}"/>
+                                            <field name="street_name" placeholder="Street Name" class="o_address_zip" />
+                                    </div>
+                                <field name="bulding_use" />
+                                <field name="instrument_number"/>
+                                <field name="instrument_date"/>
+                                <field name="parking_number"/>
+                            </group>
+                            <group>
+                                <field name="agency_number"/>
+                                <field name="agency_date"/>
+                                <field name="agent_name"/>
+                                <field name="agent_phone"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+	</data>
+</odoo>
+

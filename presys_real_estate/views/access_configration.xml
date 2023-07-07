@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+    <record id="sales_qui_real_state_view_tree" model="ir.ui.view">
+        <field name="name">real.access.view.tree</field>
+        <field name="model">real.access</field>
+        <field name="arch" type="xml">
+            <tree string="Access Right" editable="bottom" sample="1">
+                <field name="qui"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="real_state_tag_action" model="ir.actions.act_window">
+        <field name="name">Access Right</field>
+        <field name="res_model">real.access</field>
+        <field name="view_id" ref="sales_qui_real_state_view_tree"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+            Create Access Right
+            </p><p>
+            Use Tags to manage and track your Access Right (Real state structure ...)
+            </p>
+        </field>
+    </record>
+
+     <record id="mutual_obligations_real_state_view_tree" model="ir.ui.view">
+        <field name="name">mutual.obligations.view.tree</field>
+        <field name="model">mutual.obligations</field>
+        <field name="arch" type="xml">
+            <tree string="Mutual Obligations" editable="bottom" sample="1">
+                <field name="commitment"/>
+
+            </tree>
+        </field>
+    </record>
+
+    <record id="mutual_obligations_action" model="ir.actions.act_window">
+        <field name="name">mutual obligations</field>
+        <field name="res_model">mutual.obligations</field>
+        <field name="view_id" ref="mutual_obligations_real_state_view_tree"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+            Create Mutual Obligations
+            </p><p>
+            Use Tags to manage and track your Mutual Obligations Real state structure ...
+            </p>
+        </field>
+    </record>
+
+
+
+  <record id="test_access_real_state_view_tree" model="ir.ui.view">
+        <field name="name">test.access.view.tree</field>
+        <field name="model">test.access</field>
+        <field name="arch" type="xml">
+            <tree string="Mutual Access" editable="bottom" sample="1">
+                <field name="commitment_qustion"/>
+               
+
+            </tree>
+        </field>
+    </record>
+
+    <record id="test_access_action" model="ir.actions.act_window">
+        <field name="name">Additional Obligations</field>
+        <field name="res_model">test.access</field>
+        <field name="view_id" ref="test_access_real_state_view_tree"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+            Create Mutual Access
+            </p><p>
+            Use Tags to manage and track your Mutual Obligations Real state structure ...
+            </p>
+        </field>
+    </record> 
+
+
+    <menuitem
+                id="menu_conf_list"
+                name="Terms and Conditions"
+                parent="itsys_real_estate.menu_itsys_real_estate"
+                sequence="300"/>
+
+        <menuitem
+                id="menu_access_right_list"
+                name="Access Right"
+                parent="menu_conf_list"
+                action="real_state_tag_action"
+                sequence="310"/>
+
+        <menuitem
+                id="menu_mutual_obligations_list"
+                name="mutual obligations "
+                parent="menu_conf_list"
+                action="mutual_obligations_action"
+                sequence="320"/>
+
+        <menuitem
+                id="menu_additional_obligations_test"
+                name="Additional obligations "
+                action="test_access_action"
+                parent="menu_conf_list"
+                sequence="330"/>
+
+	</data>
+</odoo>

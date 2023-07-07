@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_realestate_real,access.realestate.real,model_real_access,,1,1,1,1
+access_realestate_contract_real_acess,access.contract.real.access,model_contract_real_access,,1,1,1,1
+access_realestate_obligations,access.realestate.obligations,model_mutual_obligations,,1,1,1,1
+access_realestate_contract_obligations,access.contract.mutual.obligations,model_contract_mutual_obligations,,1,1,1,1
+access_realestate_test,access.realestate.test,model_test_access,,1,1,1,1
+access_realestate_contract_test,access.contract.realestate.test,model_contract_test_access,,1,1,1,1
+access_realestate_amenities,access.realestate.amenities,model_amenities_test,,1,1,1,1

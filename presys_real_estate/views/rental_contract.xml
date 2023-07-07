@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <data>
+      <record id="view_product_template_prop_form_inherit_1" model="ir.ui.view">
+         <field name="name">rental.contract.inherit</field>
+         <field name="model">rental.contract</field>
+         <field name="inherit_id" ref="itsys_real_estate.rental_contract_form_view"/>
+         <field name="arch" type="xml">
+            <field name="region" position="after">
+               <field name="contract_time"/>
+               <field name="is_creation"/>
+               <field name="contract_type"/>
+            </field>
+            <xpath expr="/form/sheet/notebook/page[2]" position="after">
+
+                <page string="qustion contract" attrs="{'invisible':[('contract_type','=', 'residential')]}">
+                               
+                           <group>
+                              <field name="admin_qustion" context = "{'contract_id': active_id} " options="{'no_create':True,'no_create_edit':True}" >
+                                 <tree string="" editable="top" create="0" delete="0">
+                                 <!-- <tree string="qustion contract" > -->
+                                       <field name="qui_id" invisible="1"/> 
+                                       <!-- <field name="contract_id" /> --> 
+                                       <field name="qui_name" readonly="1"/> 
+                                       <field name="is_yes"  widget="boolean_toggle"/>
+                                       <!-- <field name="is_no" widget="boolean_toggle"/>  -->
+                                 </tree>
+                                 <!-- <form>
+                                       <field name="qui_id"/> 
+                                       <field name="is_yes"  widget="boolean_toggle"/>
+                                 </form> -->
+                              </field>
+                           </group>
+                           <group>
+                              <field name="mutual_obligation" options="{'no_create':True,'no_create_edit':True}" >
+                                 <tree string="" editable="top" create="0" delete="0" multi_edit="1" >
+                                       <field name="commitment_id" invisible="1"/> 
+                                       <field name="commitment_name" readonly="1"/>
+                                       <field name="tenant_one" required="1"  />
+                                       <field name="lessor_one" required="1"/> 
+                                 </tree>
+                              </field>
+                           </group>               
+                           <group>
+                              <field name="mutual_access" options="{'no_create':True,'no_create_edit':True}" >
+                                 <tree   editable="top" create="0" delete="0" multi_edit="1">
+                                    <field name="commitment_qustion_id" invisible="1"/>
+                                    <field name="commitment_qustion" readonly="1"/>
+                                    <field name="tenant_answer" required="1"/>
+                                    <field name="lessor_answer" required="1"/>
+                                 </tree>
+                              </field>
+                           </group>
+               </page>
+                            
+
+           
+            </xpath>
+         </field>
+      </record>
+      <!-- <record id="_rental_contract_form_action" model="ir.actions.act_window">
+            <field name="context">{'default_contract_id': active_id}</field>
+            <field name="name">RRentall Contract</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">rental.contract</field>
+            <field name="view_id" ref="itsys_real_estate.rental_contract_form_view"/>
+     </record> -->
+   </data>
+</odoo>

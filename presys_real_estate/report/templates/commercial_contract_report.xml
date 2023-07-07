@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="report_commercial_contract">
+		<t t-call="web.html_container">
+			<t t-call="presys_real_estate.custom_session_header_footer">
+				
+					<t t-foreach="docs" t-as="o">
+						<!-- <t t-call="web.external_layout"> -->
+						<div class="page">
+							<link rel="stylesheet" href="/presys_real_estate/static/src/css/report-style.css" />
+							<div class="card mb-3 px-4 py-2 border-0 border-start border-end border-primary border-4 bg-light-primary">
+								<h5 class="text-black">
+									Data required.
+								</h5>
+								<small class="text-black">
+									For unified contract according to requirements of the Ministry of Housing and the rental system.
+								</small>
+							</div>
+							
+							<div class="dddd">
+								<div class="row">
+									<div class="col-12 col-lg-6">
+										<style>
+											table {
+											
+											font-family: arial, sans-serif;
+											
+											border-collapse: collapse;
+											
+											width: 100%;
+											
+											}
+											
+											td, th {
+											
+											border: 1px solid #000;
+											<!-- text-align: left; -->
+											padding: 8px;
+											
+											}
+											
+											tr:nth-child(even) {
+											
+											background-color: #C7E9B0;
+											
+											}
+										</style>
+										<!-- <h3>OWNER DATA</h3> -->
+										<div class="card mb-3 px-4 py-2 border-0 border-start border-end border-primary border-4 bg-light-primary">
+											<h5 class="text-black" style="padding-top:15px;">
+												OWNER DATA
+											</h5>
+										</div>
+										<table>
+											<tr>
+												<td>
+													ID Number
+												</td>
+												<td>
+													<span t-field="o.property_owner_id.ssn_id" />
+												</td>
+											</tr>
+											<tr>
+												<td>
+													Date of Birth
+												</td>
+												<td>
+													<span t-field="o.property_owner_id.birth_day" />
+												</td>
+											</tr>
+											<tr>
+												<td>
+													Mobile Number(Absher)
+												</td>
+												<td>
+													<span t-field="o.property_owner_id.mobile" />
+												</td>
+											</tr>
+											<tr>
+												<td>
+													Email
+												</td>
+												<td>
+													<span t-field="o.property_owner_id.email" />
+												</td>
+											</tr>
+											<t t-foreach="o.property_owner_id.bank_ids" t-as="y">
+												<tr>
+													<td>
+														Bank account (IBAN)/Bank Name
+													</td>
+													<td>
+														<span t-field="y.bank_id" />
+														<br>
+														</br>
+														<span t-field="y.acc_number" />
+													</td>
+												</tr>
+											</t>
+											<tr>
+												<td>
+													Owner National Address
+												</td>
+												<td>
+													<span t-field="o.property_owner_id.street" />
+													<br>
+													</br>
+													<span t-field="o.property_owner_id.street2" />
+													<br>
+													</br>
+													<span t-field="o.property_owner_id.city" />
+													<br>
+													</br>
+													<span t-field="o.property_owner_id.state_id" />
+													<br>
+													</br>
+												</td>
+											</tr>
+										</table>
+										<br>
+										</br>
+										<!-- <h3>REAL ESTATE DATA</h3> -->
+										<div class="card mb-3 px-4 py-2 border-0 border-start border-end border-primary border-4 bg-light-primary">
+											<h5 class="text-black" style="padding-top:15px;">
+												REAL ESTATE DATA
+											</h5>
+										</div>
+										<table>
+											<tr>
+												<td>
+													Real State National Address
+												</td>
+												<td>
+													<span t-field="o.building.build_number" />
+													<br>
+													</br>
+													<span t-field="o.building.branch_number" />
+													<br>
+													</br>
+													<span t-field="o.building.email_code" />
+													<br>
+													</br>
+													<span t-field="o.building.district" />
+													<br>
+													</br>
+													<span t-field="o.building.street_name" />
+												</td>
+											</tr>
+											<tr>
+												<td>
+													Instrument Number
+												</td>
+												<td>
+													<span t-field="o.building.instrument_number" />
+												</td>
+											</tr>
+											<tr>
+												<td>
+													Instrument Date
+												</td>
+												<td>
+													<span t-field="o.building.instrument_date" />
+												</td>
+											</tr>
+											<tr>
+												<td>
+													Building Type
+												</td>
+												<td>
+													<span t-field="o.building.type" />
+												</td>
+											</tr>
+											<tr>
+												<td>
+													Building Use
+												</td>
+												<td>
+													<span t-field="o.building.bulding_use" />
+												</td>
+											</tr>
+											<tr>
+												<td>
+													Number of Parking
+												</td>
+												<td>
+													<span t-field="o.building.garage" />
+												</td>
+											</tr>
+											<tr>
+												<td>
+													Property Name
+												</td>
+												<td>
+													<span t-field="o.building.name" />
+												</td>
+											</tr>
+											<tr>
+												<td colspan="4" class="text-center">
+													Legal agency status
+												</td>
+											</tr>
+											<tr>
+												<td>
+													Agency Number
+												</td>
+												<td>
+													<span t-field="o.building.agency_number" />
+												</td>
+											</tr>
+											<tr>
+												<td>
+													Agency Date
+												</td>
+												<td>
+													<span t-field="o.building.agency_date" />
+												</td>
+											</tr>
+											<tr>
+												<td>
+													Agent Name
+												</td>
+												<td>
+													<span t-field="o.building.agent_name" />
+												</td>
+											</tr>
+											<tr>
+												<td>
+													Phone Number(Absher)
+												</td>
+												<td>
+													<span t-field="o.building.agent_phone" />
+												</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+							<br></br>
+							<div class="row">
+								<div class="col-6">
+									<table class="telant_table">
+										<div class="card mb-3 px-4 py-2 border-0 border-start border-end border-primary border-4 bg-light-primary p-2">
+											<h5 class="text-black" style="padding-top:15px;">
+												TENANT DATA
+											</h5>
+										</div>
+										<tr>
+											<td>
+												The trade name
+											</td>
+											<td>
+												<span t-field="o.partner_id.trade_name" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Commercial Number
+											</td>
+											<td>
+												<span t-field="o.partner_id.commercial_egistration_No" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Expiry registration
+											</td>
+											<td>
+												<span t-field="o.partner_id.expiry_commercial_registration" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												ID Number
+											</td>
+											<td>
+												<span t-field="o.partner_id.ssn_id" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Birth Day
+											</td>
+											<td>
+												<span t-field="o.partner_id.birth_day" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Agency Number
+											</td>
+											<td>
+												<span t-field="o.partner_id.agency_number" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Agency Date
+											</td>
+											<td>
+												<span t-field="o.partner_id.agency_date" />
+											</td>
+										</tr>
+										<!--
+										<tr>
+										<td colspan="4" class="text-center">Legal agency status</td>
+										</tr>
+										-->
+										<tr>
+											<td>
+												Legal Agent
+											</td>
+											<td>
+												<span t-field="o.partner_id.legal_agent" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												National Address Data
+											</td>
+											<td>
+												<span t-field="o.partner_id.street" />
+												<br>
+												</br>
+												<span t-field="o.partner_id.street2" />
+												<br>
+												</br>
+												<span t-field="o.partner_id.city" />
+												<br>
+												</br>
+												<span t-field="o.partner_id.district" />
+												<br>
+												</br>
+												<span t-field="o.partner_id.state_id" />
+											</td>
+										</tr>
+										<tr>
+											<td colspan="4" class="text-center">
+												Legal agency status(Non-profit organization)
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Enterprise number
+											</td>
+											<td>
+												<span t-field="o.partner_id.enterprise_number" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Enterprise Name
+											</td>
+											<td>
+												<span t-field="o.partner_id.enterprise_name" />
+											</td>
+										</tr>
+									</table>
+									<!--
+									<table class="telant_table ">
+									<tr>
+									<th colspan="4" class="text-center">Tenant data</th>
+									</tr>
+									<tr>
+									<th width="">The trade name</th>
+									<td width=""><span t-field="o.partner_id.trade_name"/></td>
+									</tr>
+									<tr>
+									<th width="">Commercial No</th>
+									
+									<td width=""><span t-field="o.partner_id.commercial_egistration_No"/></td>
+									</tr>
+									<tr>
+									<th width=""> Expiry registration</th>
+									
+									<td width=""><span t-field="o.partner_id.expiry_commercial_registration"/></td>
+									</tr>
+									<tr>
+									<th width="">ID Number</th>
+									<td width=""><span t-field="o.partner_id.ssn_id"/></td>
+									</tr>
+									<tr>
+									<th width="">Birth Day</th>
+									
+									<td width=""><span t-field="o.partner_id.birth_day"/></td>
+									</tr>
+									<tr>
+									<th width="40%">Agency Number</th>
+									<td width="60%"><span t-field="o.partner_id.agency_number"/></td>
+									</tr>
+									<tr>
+									<th width="40%">Agency Date</th>
+									<td width="60%"><span t-field="o.partner_id.agency_date"/></td>
+									</tr>
+									<tr>
+									<th width="">Legal Agent</th>
+									
+									<td width=""><span t-field="o.partner_id.legal_agent"/></td>
+									</tr>
+									<tr>
+									<td width="40"> National Address Data</td>
+									<td width="60"> <span t-field="o.partner_id.street"/> <br></br>
+									<span t-field="o.partner_id.street2"/> <br></br>
+									<span t-field="o.partner_id.city"/> <br></br>
+									<span t-field="o.partner_id.district"/> <br></br>
+									<span t-field="o.partner_id.state_id"/>
+									
+									</td>
+									</tr>
+									
+									
+									<tr>
+									<th colspan="4" class="text-center">Legal agency status(Non-profit organization)</th>
+									</tr>
+									<tr>
+									<th width="">Enterprise number</th>
+									<td width=""><span t-field="o.partner_id.enterprise_number"/></td>
+									</tr>
+									<tr>
+									<th width="">Enterprise Name</th>
+									<td width=""><span t-field="o.partner_id.enterprise_name"/></td>
+									</tr>
+									</table>
+									-->
+								</div>
+								<div class="col-6">
+									<!-- <h3>RENTAL UNIT DATA</h3> -->
+									<table>
+										<div class="card mb-3 px-4 py-2 border-0 border-start border-end border-primary border-4 bg-light-primary" style="margin:5px;">
+											<h5 class="text-black" style="padding-top:15px;">
+												RENTAL UNIT DATA
+											</h5>
+										</div>
+										<tr>
+											<td>
+												Store number
+											</td>
+											<td>
+												<span t-field="o.building_unit.code" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Unit Type
+											</td>
+											<td>
+												<span t-field="o.building_unit.ptype" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Location Unit
+											</td>
+											<td>
+												<span t-field="o.building_unit.unit_location" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Building Area
+											</td>
+											<td>
+												<span t-field="o.building_unit.building_area" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Northen border by
+											</td>
+											<td>
+												<span t-field="o.building_unit.north" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Southern border by
+											</td>
+											<td>
+												<span t-field="o.building_unit.south" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Eastern border by
+											</td>
+											<td>
+												<span t-field="o.building_unit.east" />
+											</td>
+										</tr>
+										<!--
+										<tr>
+										<td colspan="4" class="text-center">Legal agency status</td>
+										</tr>
+										-->
+										<tr>
+											<td>
+												Western border by
+											</td>
+											<td>
+												<span t-field="o.building_unit.west" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Floor
+											</td>
+											<td>
+												<span t-field="o.building_unit.floor" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												kitchen cupboard
+											</td>
+											<td width="">
+												<input type="checkbox" t-att-checked="o.building_unit.is_kitchen_cupboard" style="padding:10px !important;" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												AC Type
+											</td>
+											<td>
+												<span t-field="o.building_unit.ac_type" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												AC Number
+											</td>
+											<td>
+												<span t-field="o.building_unit.ac_number" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Finishing
+											</td>
+											<td>
+												<span t-field="o.building_unit.finishing_unit" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Electricity meter number
+											</td>
+											<td>
+												<span t-field="o.building_unit.electricity_meter_number" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												current reading Electricity
+											</td>
+											<td>
+												<span t-field="o.building_unit.current_meter_reading" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Water meter number
+											</td>
+											<td>
+												<span t-field="o.building_unit.water_meter_number" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												current reading water
+											</td>
+											<td>
+												<span t-field="o.building_unit.current_meter_reading_water" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Clean services
+											</td>
+											<td>
+												<input type="checkbox" t-att-checked="o.building_unit.clean" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Safe services
+											</td>
+											<td>
+												<input type="checkbox" t-att-checked="o.building_unit.saft" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Parking services
+											</td>
+											<td>
+												<input type="checkbox" t-att-checked="o.building_unit.parking" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Other services
+											</td>
+											<td>
+												<input type="checkbox" t-att-checked="o.building_unit.other" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												General service fees
+											</td>
+											<td>
+												<span t-field="o.building_unit.service_fees" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Value rent
+											</td>
+											<td>
+												<span t-field="o.building_unit.rental_fee" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Insurance value
+											</td>
+											<td>
+												<span t-field="o.building_unit.insurance_fee" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Deposit value
+											</td>
+											<td>
+												<span t-field="o.building_unit.value_deposit" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Payment of payments
+											</td>
+											<td>
+												<span t-field="o.recurring_interval" />
+												<br>
+												</br>
+												<span t-field="o.periodicity" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Contract starting date
+											</td>
+											<td>
+												<span t-field="o.date_from" />
+												<br>
+												</br>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Contract Date Time
+											</td>
+											<td>
+												<span t-esc="o.date_to - o.date_from" widget="date" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												It renews automatically
+											</td>
+											<td>
+												<input type="checkbox" t-att-checked="o.is_creation" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Propaganda painting
+											</td>
+											<td>
+												Hight
+												<span t-field="o.building_unit.height" />
+												<br>
+												</br>
+												Width
+												<span t-field="o.building_unit.width" />
+												<br>
+												</br>
+												<small>
+													Front
+												</small>
+												<input type="checkbox" t-att-checked="o.building_unit.front" />
+												<br>
+												</br>
+												<small>
+													Internal
+												</small>
+												<input type="checkbox" t-att-checked="o.building_unit.internal" />
+												<br>
+												</br>
+												<small>
+													Side
+												</small>
+												<input type="checkbox" t-att-checked="o.building_unit.side" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Commercial activities
+											</td>
+											<td>
+												<span t-field="o.building_unit.commercial_activities" />
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							<br>
+							</br>
+							<!-- ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
+							<!-- oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
+							<table>
+								<tr>
+									<th colspan="4" class="text-center">
+										ACCESS RIGHT
+									</th>
+								</tr>
+								<tr>
+									<td>
+										Comment
+									</td>
+									<td>
+										Yes
+									</td>
+									<!-- <th>No</th> -->
+								</tr>
+								<t t-foreach="o.admin_qustion" t-as="x">
+									<tr>
+										<td t-if="x.is_yes">
+											<span t-field="x.qui_name" />
+										</td>
+										<td t-if="x.is_yes">
+											<input type="checkbox" t-att-checked="x.is_yes" />
+										</td>
+										<!-- <td><input type="checkbox"  t-att-checked="x.is_no"/></td> -->
+									</tr>
+								</t>
+							</table>
+							<br>
+							</br>
+							<table>
+								<tr>
+									<th colspan="4" class="text-center">
+										MUTUAL OBLIGATIONS
+									</th>
+								</tr>
+								<tr>
+									<td>
+										Ask
+									</td>
+									<td>
+										Tenant
+									</td>
+									<td>
+										Tessor
+									</td>
+								</tr>
+								<t t-foreach="o.mutual_obligation" t-as="y">
+									<tr>
+										<td t-if="y.tenant_one">
+											<span t-field="y.commitment_name" />
+										</td>
+										<td t-if="y.tenant_one">
+											<span t-field="y.tenant_one" />
+										</td>
+										<td t-if="y.tenant_one">
+											<span t-field="y.lessor_one" />
+										</td>
+									</tr>
+								</t>
+							</table>
+							<br>
+							</br>
+							<table>
+								<tr>
+									<th colspan="4" class="text-center">
+										ACCESS OBLIGATIONS
+									</th>
+								</tr>
+								<tr>
+									<td>
+										Qustion
+									</td>
+									<td>
+										Tenant
+									</td>
+									<td>
+										Tessor
+									</td>
+								</tr>
+								<t t-foreach="o.mutual_access" t-as="z">
+									<tr>
+										<td t-if="z.tenant_answer">
+											<span t-field="z.commitment_qustion" />
+										</td>
+										<td t-if="z.tenant_answer">
+											<span t-field="z.tenant_answer" />
+										</td>
+										<td t-if="z.tenant_answer">
+											<span t-field="z.lessor_answer" />
+										</td>
+									</tr>
+								</t>
+							</table>
+						</div>
+					</t>
+				</t>
+			</t>
+		</template>
+	</data>
+</odoo>

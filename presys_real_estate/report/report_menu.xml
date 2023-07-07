@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<odoo>
+<data noupdate="0">
+         <record id="report_commercial_contract_rs" model="ir.actions.report">
+            <field name="name">Commercial contract</field>
+            <field name="model">rental.contract</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">presys_real_estate.report_commercial_contract</field>
+            <field name="report_file">presys_real_estate.report_commercial_contract</field>
+            <field name="binding_model_id" ref="model_rental_contract"/>
+        </record>
+        
+
+         <record id="report_rental_contract_rf" model="ir.actions.report">
+            <field name="name">Rental contract</field>
+            <field name="model">rental.contract</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">presys_real_estate.report_rental_contract_document_rd</field>
+            <field name="report_file">presys_real_estate.report_rental_contract_document_rd</field>
+            <field name="binding_model_id" ref="model_rental_contract"/>
+        </record>
+
+
+        <record id="action_report_real_estate_account" model="ir.actions.report">
+            <field name="name">Real Estate Invoice </field>
+            <field name="model">account.move</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">presys_real_estate.report_real_estate_report_rfq</field>
+            <field name="report_file">presys_real_estate.report_real_estate_report_rfq</field>
+            <field name="binding_model_id" ref="account.model_account_move"/>
+            <field name="binding_type">report</field>
+
+        </record>
+</data>
+</odoo>
+
