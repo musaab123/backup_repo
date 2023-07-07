@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+   <t t-name="OrderReceipt" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension" owl="1">
+      <xpath expr="//div[@class='pos-receipt']" position="replace">
+      <!-- <script type="text/javascript" src="point_of_sale/static/src/js/models.js" /> -->
+         <div class="pos-receipt">
+            <t t-if="receipt.company.logo">
+               <img class="pos-receipt-logo" t-att-src="receipt.company.logo" alt="Logo"/>
+               <br/>
+               
+            </t>
+            <t t-if="!receipt.company.logo">
+               <h2 class="pos-receipt-center-align">
+                  <t t-esc="receipt.company.name" />
+               </h2>
+               <br/>
+            </t>             
+            <div class="pos-receipt-contact">
+               <t t-if="receipt.company.contact_address"> 
+                  <h1>
+                     <t t-esc="receipt.company.contact_address" />
+                  </h1>
+               </t>
+
+               <t t-if="receipt.street"> 
+                  <h3>
+                     <t t-esc="receipt.street" />
+                  </h3>
+               </t>
+              
+               <t t-if="receipt.header_html">
+                  <t t-raw="receipt.header_html" />
+               </t>
+               <t t-if="!receipt.header_html and receipt.header">
+                  <div style="white-space:pre-line">
+                     <t t-esc="receipt.header" />
+                  </div>
+               </t>
+            </div>
+
+             <div style="border: 2px dotted black;"></div>
+      
+            <h3 style="text-align:center;"><u>  فاتورة ضريبية </u></h3>
+           
+             <div style="float:right;">
+               <t t-esc="receipt.name"/>
+
+                رقم الفاتورة
+            </div>
+
+             <t t-if="receipt.company.vat">
+                  <div style="float:right;">
+
+                     الرقم الضريبي 
+                     <t t-esc="receipt.company.vat" />
+                  </div>
+               </t>
+                <br></br>
+           
+
+            <div style="float:right; padding:5px;">
+
+               التاريخ 
+               <t t-if="receipt.date.localestring">
+                  <t t-esc="receipt.date.localestring" />
+               </t>
+            </div>
+            
+
+             <div style="float:right;  padding:5px;">
+               
+                 <t t-if='receipt.partner'>
+                    <t t-esc='receipt.partner.name' /> 
+                 </t>
+
+                     اسم العميل
+                 </div>
+
+                 <div style="float:right;  padding:5px;">               
+                 <t t-if='receipt.partner'>
+                    <t t-esc='receipt.partner.vat' /> 
+                 </t>
+                     الرقم الضريبي للعميل 
+                 </div>
+             
+             
+            <br/><br/>
+
+            <table  width="100%">
+               <thead style="border-top: 2px dotted black;">
+                  <tr class="text-center">
+                     <th width="30%" >الصنف</th>
+                     <th width="20%">العدد</th>
+                     <th width="25%">السعر</th>
+                     <th width="25%" style=" position: relative;left: 30px;">المبلغ </th>
+                  </tr>
+               </thead>
+               <tbody  style="border-top: 2px dotted black;">
+                  <t t-foreach="receipt.orderlines" t-as="line" t-key="line.id">
+                     <tr>
+                        <td class="text-center">
+                            <div t-esc="line.product_name_wrapped[0]" />
+
+                        </td>
+                        <td style="text-align:center"> 
+                             <t t-esc="Math.round(line.quantity * Math.pow(10, env.pos.dp['Product Unit of Measure'])) / Math.pow(10, env.pos.dp['Product Unit of Measure'])"/>
+
+                        </td>
+                        <td><t t-esc="env.pos.format_currency_no_symbol(line.price_display_one)" /></td>
+                        <td>
+                            <span class="price_display pos-receipt-right-align">
+                            <t t-if="line.price_display > 0">
+                              <t t-esc="env.pos.format_currency_no_symbol(line.price_display)" />
+
+                              
+                            </t>
+                                   
+                                 <t t-else="">
+                                    <t t-set="price_display" t-value="line.price_display * -1 " />
+                                       <t t-esc="env.pos.format_currency_no_symbol(price_display)" />
+                                      <span> / Retern</span> 
+                                  
+                                 </t>
+                           
+                                </span>
+                        </td>
+                     </tr>
+                  </t>
+               </tbody>
+            </table>
+            <br/><br/>
+
+            <table>
+  <thead>
+    <tr>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td width="35%"><span t-esc="env.pos.format_currency(receipt.subtotal_without_discount)"/></td>
+       <td width="15%" >الاجمالي</td> 
+
+      <td width="20%" style="text-align: center;"><t t-esc="receipt.total_quantity"/></td>
+      <td width="30%">عدد القطع</td>
+    </tr>
+    <tr>
+      <td><span t-esc="env.pos.format_currency(receipt.total_discount)"/></td>
+      <td>الخصم</td>
+    </tr>
+  </tbody>
+</table>
+
+
+          
+            
+            <div style="float:right; padding:5px;">
+                     <span t-esc="env.pos.format_currency(receipt.total_tax)"/>
+                     <span style="float:left;  position: relative; right: 20px;">  ضريبية القيمة المضافة % 15  </span>
+                </div>
+
+            <t t-foreach="receipt.paymentlines" t-as="line" t-key="line.cid">
+                <div style="float:right; padding:5px;">
+                    <span t-esc="env.pos.format_currency_no_symbol(line.amount)" />
+                     <span style="float:left;  position: relative; right: 20px;">  الصافي شامل الضريبة  </span>
+                </div>
+            </t>
+              <br/><br/>
+               <br/><br/>
+
+                <div style="border-top: 2px dotted black; padding:5px;"></div>
+
+               <div style="float:right; ">
+                    <t t-esc="receipt.cashier"  style=" position: relative; right: 30px; "/>
+                   <span >  البائع  </span>
+                </div>
+
+               
+            <!-- <t t-if='receipt.client'>
+                <div style="font-weight:bold;">
+                    <t t-esc='receipt.client.name' />
+                    <span>Customer:</span>
+                </div>
+            </t> -->
+            
+                <br></br>
+                <div style="border-bottom: 2px dotted black; padding:5px;"></div>
+            <div>
+               <t t-if="receipt.company.phone">
+                  <div style="text-align:center; padding:5px;">
+                    
+                       <span> Tel: </span>
+                     <t t-esc="receipt.company.phone" />
+                     <span> :ت </span>
+                  </div>
+               </t>
+            </div>
+               <div style="border-top: 2px dotted black;"></div>
+
+            <div style="text-align:center; font-size:25px;  padding:5px;">
+               سياسة الاسترجاع والاستبدال
+            </div>
+                    <div style="border-top: 2px dotted black; padding:2px; padding:2px;"></div>
+                    <div style="border-top: 2px dotted black;"></div>
+
+            <div style="text-align:center; padding:5px">
+               <span>الاستبدال او الارجاع خلال ثلاث ايام في حالة عدم قص القماش مع احضار الفاتورة الأصل خلال 24 ساعة</span>
+            </div>
+            <br/><br/>
+            <div style="text-align:center;">
+               <span> *** شكراً لزيارتكم  *** </span>
+            </div>
+            <t if="receipt.is_gcc_country">
+               <img t-if="receipt.qr_code" id="qrcode" t-att-src="receipt.qr_code" class="pos-receipt-logo"/>
+               <br/>
+            </t>
+         </div>
+
+           
+      </xpath>
+
+
+     
+   </t>
+</templates>
