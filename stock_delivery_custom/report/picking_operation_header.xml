@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!-- oooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
+
+<template id="report_saleorder_document_inherit" inherit_id="stock.report_picking">
+         				
+
+
+		
+
+
+
+
+
+</template>
+
+
+
+</odoo>
