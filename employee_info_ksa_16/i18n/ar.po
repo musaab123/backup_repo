@@ -1,0 +1,264 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* employee_info_ksa_16
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-30 09:03+0000\n"
+"PO-Revision-Date: 2023-04-30 12:08+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.2.2\n"
+
+#. module: employee_info_ksa_16
+#: model_terms:ir.ui.view,arch_db:employee_info_ksa_16.hr_contract_notice_period
+msgid "<span> days</span>"
+msgstr "<span> الأيام</span>"
+
+#. module: employee_info_ksa_16
+#: model_terms:ir.ui.view,arch_db:employee_info_ksa_16.journal_config_settings_view_form
+msgid "<span>days</span>"
+msgstr "<span> الأيام</span>"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_employee__id_attachment_id
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_employee__passport_attachment_id
+msgid "Attachment"
+msgstr "المرفقات"
+
+#. module: employee_info_ksa_16
+#: model:ir.model,name:employee_info_ksa_16.model_res_config_settings
+msgid "Config Settings"
+msgstr "تهيئة الإعدادات "
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_employee_dependents__member_contact
+msgid "Contact No"
+msgstr "رقم الإتصال"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_employee_dependents__create_uid
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_employee_relation__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_employee_dependents__create_date
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_employee_relation__create_date
+msgid "Created on"
+msgstr "أنشيء في"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_employee_dependents__birth_date
+msgid "DOB"
+msgstr "تاريخ الميلاد"
+
+#. module: employee_info_ksa_16
+#: model_terms:ir.ui.view,arch_db:employee_info_ksa_16.hr_employee_inherit_form_view
+msgid "Dependence Details"
+msgstr "تفاصيل المرافقين"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_employee__fam_ids
+msgid "Dependents"
+msgstr "المرافقين"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,help:employee_info_ksa_16.field_hr_employee__fam_ids
+msgid "Dependents Information"
+msgstr "معلومات المرافقين"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_employee_dependents__display_name
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_employee_relation__display_name
+msgid "Display Name"
+msgstr "إسم العرض"
+
+#. module: employee_info_ksa_16
+#: model:ir.model,name:employee_info_ksa_16.model_hr_employee
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_employee_dependents__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: employee_info_ksa_16
+#: model:ir.model,name:employee_info_ksa_16.model_hr_contract
+msgid "Employee Contract"
+msgstr "العقد"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,help:employee_info_ksa_16.field_hr_employee__joining_date
+msgid "Employee joining date computed from the contract start date"
+msgstr "تاريخ إنضمام الموظف يحسب من تاريخ بداية العقد"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_employee__id_expiry_date
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_employee__passport_expiry_date
+msgid "Expiry Date"
+msgstr "تاريخ الإنتهاء"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,help:employee_info_ksa_16.field_hr_employee__id_expiry_date
+msgid "Expiry date of Identification ID"
+msgstr "تاريخ إنتهاء الهوية"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,help:employee_info_ksa_16.field_hr_employee__passport_expiry_date
+msgid "Expiry date of Passport ID"
+msgstr "تاريخ إنتهاء جواز السفر"
+
+#. module: employee_info_ksa_16
+#: model:ir.actions.server,name:employee_info_ksa_16.employee_data_reminder_ir_actions_server
+#: model:ir.cron,cron_name:employee_info_ksa_16.employee_data_reminder
+msgid "HR Employee Data Expiration"
+msgstr ""
+
+#. module: employee_info_ksa_16
+#: model:ir.model,name:employee_info_ksa_16.model_hr_employee_dependents
+msgid "HR Employee Dependents"
+msgstr "المرافقين"
+
+#. module: employee_info_ksa_16
+#: model:ir.ui.menu,name:employee_info_ksa_16.menu_hr_management
+msgid "HR Management"
+msgstr "إدارة الموارد البشرية"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_employee_dependents__id
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_employee_relation__id
+msgid "ID"
+msgstr "بطاقة تعريف"
+
+#. module: employee_info_ksa_16
+#. odoo-python
+#: code:addons/employee_info_ksa_16/models/hr_employee.py:0
+#, python-format
+msgid "ID-%s Expired On %s"
+msgstr "انتهت صلاحية الهوية/الإقامة ٪ s في ٪ s"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_employee__joining_date
+msgid "Joining Date"
+msgstr "تاريخ الإنضمام"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_employee_dependents____last_update
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_employee_relation____last_update
+msgid "Last Modified on"
+msgstr "تاريخ آخر تعديل"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_employee_dependents__write_uid
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_employee_relation__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_employee_dependents__write_date
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_employee_relation__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_employee__personal_mobile
+msgid "Mobile"
+msgstr "جوال"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_employee_dependents__member_name
+msgid "Name"
+msgstr "الإسم"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_employee_dependents__iqama_id
+msgid "National/Iqama ID"
+msgstr "رقم الهوية/ الاقامة"
+
+#. module: employee_info_ksa_16
+#: model_terms:ir.ui.view,arch_db:employee_info_ksa_16.hr_employee_inherit_form_view
+msgid "National/Iqama ID."
+msgstr "رقم الهوية/ الاقامة"
+
+#. module: employee_info_ksa_16
+#: model_terms:ir.ui.view,arch_db:employee_info_ksa_16.hr_employee_inherit_form_view
+msgid "National/Iqama Information"
+msgstr "معلومات الهوية/ الاقامة"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_res_config_settings__no_of_days
+msgid "No Of Days"
+msgstr "عدد الأيام"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_contract__notice_days
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_res_config_settings__notice_period
+msgid "Notice Period"
+msgstr "فترة الإشعار"
+
+#. module: employee_info_ksa_16
+#: model_terms:ir.ui.view,arch_db:employee_info_ksa_16.hr_employee_inherit_form_view
+msgid "Passport ID"
+msgstr "رقم الجواز"
+
+#. module: employee_info_ksa_16
+#. odoo-python
+#: code:addons/employee_info_ksa_16/models/hr_employee.py:0
+#, python-format
+msgid "Passport-%s Expired On %s"
+msgstr "انتهت صلاحية جواز السفر ٪ s في ٪ s"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,help:employee_info_ksa_16.field_hr_employee__personal_mobile
+msgid "Personal mobile number of the employee"
+msgstr "رقم جوال الموظف الشخصي"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_employee_dependents__relation_id
+msgid "Relation"
+msgstr "القرابة"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,field_description:employee_info_ksa_16.field_hr_employee_relation__name
+msgid "Relationship"
+msgstr "صلة القرابة"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,help:employee_info_ksa_16.field_hr_employee_dependents__relation_id
+msgid "Relationship with the employee"
+msgstr "القرابة للموظف"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,help:employee_info_ksa_16.field_hr_employee_relation__name
+msgid "Relationship with thw employee"
+msgstr "القرابة للموظف"
+
+#. module: employee_info_ksa_16
+#: model:ir.ui.menu,name:employee_info_ksa_16.employee_report_menu
+msgid "Reports"
+msgstr "التقارير"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,help:employee_info_ksa_16.field_hr_employee_dependents__employee_id
+msgid "Select corresponding Employee"
+msgstr "حدد الموظف المقابل"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,help:employee_info_ksa_16.field_hr_employee__passport_attachment_id
+msgid "You can attach the copy of Passport"
+msgstr "بإمكانك إرفاق نسخة من الجواز"
+
+#. module: employee_info_ksa_16
+#: model:ir.model.fields,help:employee_info_ksa_16.field_hr_employee__id_attachment_id
+msgid "You can attach the copy of your Id"
+msgstr "بإمكانك إرفاق نسخة من الهوية"
+
+#. module: employee_info_ksa_16
+#: model:ir.model,name:employee_info_ksa_16.model_hr_employee_relation
+msgid "hr.employee.relation"
+msgstr ""
