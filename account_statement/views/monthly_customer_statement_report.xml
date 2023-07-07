@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+	<template id="external_layout_seti">
+        <t t-set="company" t-value="doc.company_id"/>
+        <t t-set="company" t-value="res_company"/>
+
+		<div class="header">
+	    	<table style="border:1pt solid grey;width:100%;font-size:12px;" width="100%">
+	    		<link rel="stylesheet" href="/saudi_einvoice_knk/static/src/css/style.css"/>
+	            <tr>
+	                <td colspan="2" width="35%">
+	                	<strong><span style="padding-left:5px;" t-field="company.name"/></strong><br/>
+	                	<t t-if="company.street">
+	                		<span style="padding-left:5px;" t-field="company.street"/><br/>
+	                	</t>
+	                	<t t-if="company.street2">
+	                		<span style="padding-left:5px;" t-field="company.street2"/><br/>
+	                	</t>
+	                	<t t-if="company.city">
+	                		<span style="padding-left:5px;" t-field="company.city"/><br/>
+	                	</t>
+	                	<t t-if="company.country_id">
+	                		<span style="padding-left:5px;" t-field="company.country_id.name"/><br/>
+	                	</t>
+	                </td>
+	                
+	                <td  colspan="3" width="30%" class="text-center"><img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="height: 100px;width: 100px; " alt="Logo"/></td>
+
+	                <td colspan="2" width="35%" class="text-right">
+	                	<strong>
+	                		<span class="text-right arabic" style="padding-right:5px;" t-field="company.arabic_name"/></strong><br/>
+	                	<t t-if="company.street">
+	                		<span class="text-right arabic" style="padding-right:5px;" t-field="company.arabic_street"/><br/>
+	                	</t>
+	                	<t t-if="company.street2">
+	                		<span class="text-right arabic" style="padding-right:5px;" t-field="company.arabic_street2"/><br/>
+	                	</t>
+	                	<t t-if="company.city">
+	                		<span class="text-right arabic" style="padding-right:5px;" t-field="company.arabic_city"/><br/>
+	                	</t>
+	                	<t t-if="company.arabic_country">
+	                		<span class="text-right arabic" style="padding-right:5px;" t-field="company.arabic_country"/><br/>
+	                	</t>
+	                </td>
+	            </tr>
+	        	<tr style="border:1pt solid grey;">
+	            	<td width="16%">‫‪ <span class="text-right" style="padding-left:5px;"/>CR No. : </td> 
+	            	<td width="16%"> <span class="text-center arabic" t-field="company.company_registry"/> ‫‪</td> 
+	            	<td width="17%"> <span class="text-right arabic" style="padding-right:-6px;">رقم السجل التجاري</span>‬</td>
+
+	            	<td width="2%" style="border-left:1pt solid black;"></td>  
+
+	            	<td width="16%">‫‪ <span class="text-right" style="padding-left:5px;">VAT‬‬ No.: </span> </td>
+	            	<td width="16%"> <span class="text-center arabic" t-field="company.vat"/> ‫‪</td>
+	            	<td width="17%"> <span class="text-right arabic" style="padding-right:-6px;">ضريبة القيمة المضافة</span>‬</td>
+	            </tr>  
+	        </table>
+        </div>
+        <div class="article o_report_layout_standard">
+            <t t-raw="0" />
+        </div>
+        <div class="footer o_background_footer">
+            <div class="text-center" style="font-size:14px;"  >
+                <ul class="list-inline">
+                    <li t-if="company.phone" class="list-inline-item"><i class="fa fa-phone" role="img" aria-label="Phone" title="Phone"/> <span t-field="company.phone"/></li>
+                    <li t-if="company.email" class="list-inline-item"><i class="fa fa-at" role="img" aria-label="Email" title="Email"/> <span t-field="company.email"/></li>
+                    <li t-if="company.website" class="list-inline-item"><i class="fa fa-globe" role="img" aria-label="Website" title="Website"/> <span t-field="company.website"/></li>
+                    <li t-if="company.vat" class="list-inline-item"><i class="fa fa-building-o" role="img" aria-label="Fiscal number"/><t t-esc="(company.country_id.vat_label or 'Tax ID').replace(' ','\N{NO-BREAK SPACE}')"/>: <span t-esc="company.vat.replace(' ','\N{NO-BREAK SPACE}')"/></li>
+                </ul>
+                <!-- <div t-field="company.report_footer"/> -->
+                <div t-if="report_type == 'pdf'" class="text-muted">
+                    Page:
+                    <span class="page"/>
+                    of
+                    <span class="topage"/>
+                </div>
+            </div>
+        </div>
+	</template>
+
+		<template id="report_customer_monthly_statement">
+			<t t-call="web.html_container">			
+		<t t-call="account_statement.external_layout_seti">
+				<t t-set="doc" t-value="doc.with_context({'lang':doc.lang})" />
+				<div class="page">
+					<div><br/><br/><br/><br/></div>
+					<div class="oe_structure" />
+						<h2>
+							
+							<span>Monthly Customer Statement:</span><br></br>كشف حساب شهري للعميل:
+							<br></br>
+							<span t-esc="doc.name" />
+						</h2><br/><br/>
+						<h5>
+							<span>Month:</span><br>الشهر</br><span t-esc="doc.month_name" />
+						</h5>
+						<div class="row">
+							<t t-set="i" t-value="0.0" />
+							<t t-set="j" t-value="0.0" />
+							<t t-set="k" t-value="0.0" />
+						</div><br/><br/>
+						<div class="row">
+							<t t-if ="doc.monthly_statement_line_ids.ids">
+							<table class="table table-condensed">
+							<thead>
+								<tr class="text-center">
+								<th><span>Date</span><br></br>
+									التاريخ
+								</th>
+								<th> <span>Invoice Number</span> <br></br> رقم الفاتورة</th>
+								<th><span>Account</span><br></br>الحساب</th>
+								<th><span>Ref</span><br></br>المرجع</th>
+								<th><span>Invoices/Debit</span> <br></br>الفواتير / مدين</th>
+								<th> <span>Payments/Credit</span><br></br>المدفوعات / دائن</th>
+								<th><span>Balance</span><br></br>الرصيد</th>
+							</tr>
+							</thead>
+							<tbody>
+								<tr t-foreach="doc.monthly_statement_line_ids.sorted(key=lambda r: r.name)" t-as="line">
+									<td>
+										<span t-esc="line.invoice_date" />
+									</td>
+									<td>
+										<span t-esc="line.name" />
+									</td>
+									<td>
+										<span t-esc="line.name" />
+									</td>
+									<td class="text-right">
+										<span t-esc="line.amount_total_signed"
+											t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}" />
+									</td>
+									<td class="text-right">
+										<span t-esc="line.credit_amount"
+											t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}" />
+									</td>
+									<td class="text-right">
+										<span t-esc="line.result"
+											t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}" />
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</t>
+					</div>
+					<div class="row" name="total">
+						<div class="col-xs-5 pull-right">
+							<table class="table table-condensed">
+								<tr class="border-black">
+									<td>
+										<strong>Total Amount OverDue :</strong><br></br>المبلغ الإجمالي المتبغي
+									</td>
+									<td class="text-right">
+										<span t-field="doc.monthly_payment_amount_overdue_amt"
+											t-options='{"widget": "monetary", "display_currency": res_company.currency_id}' />
+									</td>
+								</tr>
+								<tr class="border-black">
+									<td>
+										<strong>Balance Due :</strong><br></br>الرصيد المتبغي
+									</td>
+									<td class="text-right">
+										<span t-field="doc.monthly_payment_amount_due_amt"
+											t-options='{"widget": "monetary", "display_currency": res_company.currency_id}' />
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</t>
+			</t>
+		</template>
+
+		<template id="monthly_customer_statement">
+				<t t-foreach="docs" t-as="doc">
+					<t t-call="account_statement.report_customer_monthly_statement" t-lang="doc.lang" />
+				</t>
+		</template>
+	</data>
+</odoo>
