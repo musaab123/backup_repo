@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="custom_session_header_footer">
+         <t t-foreach="docs" t-as="o">
+
+        <t t-set="company" t-value="user.company_id"/>
+
+        <div t-attf-class="header o_company_#{company.id}_layout" t-att-style="report_header_style">
+            <div class="row">
+                <div class="col-3 mb4">
+                    <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="max-height: 45px; position: relative; top: 50px;"
+                         alt="Logo"/>
+                </div>
+                <div class="col-9 text-right" style="margin-top:22px;" t-field="company.report_header" name="moto"/>
+            </div>
+            <div t-if="company.logo or company.report_header" class="row zero_min_height">
+                <div class="col-12">
+                </div>
+            </div>
+            
+     
+        </div>
+
+         <div dir="rtl">
+                <div>
+                <style type="text/css">
+                              @font-face {
+                                font-family:Tajawal-ExtraLight ;
+                                src: url(/real_estate_addons/itsys_real_estate/static/src/font/Tajawal-ExtraLight.ttf);
+                              }
+                              h2 {font-family: Tajawal-ExtraLight;}
+                              td {font-family: Tajawal-ExtraLight;}
+                              th { font-family: Tajawal-ExtraLight;}
+                              h5 { font-family: Tajawal-ExtraLight;}
+                              h4 { font-family: Tajawal-ExtraLight;}
+                              p { font-family: Tajawal-ExtraLight;}
+                              
+
+                              span, table, th, td, b, p {
+                                            font-size: 15px;
+                                            text-align: center;
+                                            }
+
+                              .newh {
+                                  text-align: center;
+                                  background-color:#c1f0c1;
+                                  }
+
+                              table, tr, th, td {
+                                  border:1px solid #000000 !important;
+                                  }
+
+                             
+                       </style>
+                    <div  name="company_address" style="text-align:center">
+                        <b>
+                        
+                         <span  style="padding-top:20px;">البريد الالكتروني</span>
+                         <span t-field="company.partner_id.website"/>
+                         <br/>
+
+                        <span t-field="company.partner_id.street2" style="padding-top:20px;"/>
+                        <span t-field="company.partner_id.street"/><br/>
+
+                         <span>Tel: <span t-field="company.partner_id.phone" style="text-align:right;font-size:15px;"/><br/></span>
+                       <span>Email: <span t-field="company.partner_id.email" style="text-align:right;font-size:15px;"/><br/></span>
+                      
+
+                        </b>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+         <div class="footer">
+            <div class="text-center" style="border-top: 1px solid black;">
+                <ul class="list-inline mb4 text-nowrap">
+                    <li t-if="company.phone" class="list-inline-item d-inline">Phone: <span class="o_force_ltr" t-field="company.phone"/></li>
+                    <li t-if="company.email" class="list-inline-item d-inline">Email: <span t-field="company.email"/></li>
+                    <li t-if="company.website" class="list-inline-item d-inline">Web: <span t-field="company.website"/></li>
+                    <li t-if="company.vat" class="list-inline-item d-inline"><t t-esc="company.country_id.vat_label or 'Tax ID'"/>: <span t-field="company.vat"/></li>
+                </ul>
+            </div>
+        </div>
+    </t>
+       
+    </template>
+
+</odoo>

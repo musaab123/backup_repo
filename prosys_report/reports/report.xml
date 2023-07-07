@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_report_prosys_sale" model="ir.actions.report">
+            <field name="name">Sales Order Totals</field>
+            <field name="model">sale.order</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">prosys_report.prosys_sale_report</field>
+            <field name="report_file">prosys_report.prosys_sale_report</field>
+            <field name="binding_model_id" ref="sale.model_sale_order"/>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+
+</odoo>

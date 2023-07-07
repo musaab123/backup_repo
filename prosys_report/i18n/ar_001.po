@@ -1,0 +1,96 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* prosys_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0-20221031\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-27 17:05+0000\n"
+"PO-Revision-Date: 2023-01-27 17:05+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: prosys_report
+#: model:ir.actions.report,name:prosys_report.action_report_prosys_sale
+msgid "Sales Order Totals"
+msgstr "اجمالي حركة المبيعات"
+
+#. module: prosys_report
+#: model_terms:ir.ui.view,arch_db:prosys_report.custom_session_header_footer
+msgid "<span style=\"text-align:right\">Vat:</span>"
+msgstr " : الرقم الضريبي"
+
+#. module: prosys_report
+#: model_terms:ir.ui.view,arch_db:prosys_report.custom_session_header_footer
+msgid "Email:"
+msgstr "البريد الإلكتروني : "
+
+#. module: prosys_report
+#: model_terms:ir.ui.view,arch_db:prosys_report.custom_session_header_footer
+msgid "Logo"
+msgstr "الشعار : "
+
+#. module: prosys_report
+#: model_terms:ir.ui.view,arch_db:prosys_report.custom_session_header_footer
+msgid "Phone:"
+msgstr "الهاتف : "
+
+#. module: prosys_report
+#: model:ir.model,name:prosys_report.model_sale_order
+msgid "Sales Order"
+msgstr "أمر البيع"
+
+#. module: prosys_report
+#: model_terms:ir.ui.view,arch_db:prosys_report.prosys_sale_report
+msgid "Sales Representative"
+msgstr "مسؤول المبيعات"
+
+#. module: prosys_report
+#: model_terms:ir.ui.view,arch_db:prosys_report.prosys_sale_report
+msgid "Sales Team"
+msgstr "فريق المبيعات"
+
+#. module: prosys_report
+#: model_terms:ir.ui.view,arch_db:prosys_report.prosys_sale_report
+msgid "Tax"
+msgstr "الضريبة"
+
+#. module: prosys_report
+#: model_terms:ir.ui.view,arch_db:prosys_report.prosys_sale_report
+msgid "The amount does not include tax"
+msgstr "لا يتضمن المبلغ الضريبة"
+
+#. module: prosys_report
+#: model_terms:ir.ui.view,arch_db:prosys_report.prosys_sale_report
+msgid "The amount is inclusive of tax"
+msgstr "المبلغ شامل الضريبة"
+
+#. module: prosys_report
+#: model_terms:ir.ui.view,arch_db:prosys_report.prosys_sale_report
+msgid "The expected date"
+msgstr "التاريخ المتوقع"
+
+#. module: prosys_report
+#: model_terms:ir.ui.view,arch_db:prosys_report.custom_session_header_footer
+msgid "Web:"
+msgstr "الموقع الإلكتروني : "
+
+#. module: prosys_report
+#: model_terms:ir.ui.view,arch_db:prosys_report.prosys_sale_report
+msgid "customer"
+msgstr "العميل"
+
+#. module: prosys_report
+#: model_terms:ir.ui.view,arch_db:prosys_report.prosys_sale_report
+msgid "invoice number"
+msgstr "رقم الفاتورة"
+
+#. module: prosys_report
+#: model_terms:ir.ui.view,arch_db:prosys_report.prosys_sale_report
+msgid "Sales Order Totals"
+msgstr "اجمالي حركة المبيعات"
