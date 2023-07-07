@@ -1,0 +1,35 @@
+<odoo>
+  <data>
+
+    <record id="product_pricelist_item_form_inherited" model="ir.ui.view">
+        <field name="name">Product Pricelist Item Form</field>
+        <field name="model">product.pricelist.item</field>
+        <field name="inherit_id" ref="product.product_pricelist_item_form_view"/>
+        <field name="arch" type="xml">
+          <field name="categ_id" position="after">
+                   <field name="brand_id" options="{'no_create':1}" attrs="{
+                                'invisible':[('applied_on', '!=', '4_product_brand')],
+                                'required':[('applied_on', '=', '4_product_brand')]}"/>
+          </field>
+        </field>
+    </record>
+
+     <record id="product_pricelist_item_form_inherited_salepersone" model="ir.ui.view">
+        <field name="name">Product Pricelist Item Form</field>
+        <field name="model">product.pricelist.item</field>
+        <field name="inherit_id" ref="product.product_pricelist_item_form_view"/>
+        <field name="arch" type="xml">
+          <field name="brand_id" position="after">
+                   <field name="saleperson_id" options="{'no_create':1}" attrs="{
+                                'invisible':[('applied_on', '!=', '5_sale_persone')],
+                                'required':[('applied_on', '=', '5_sale_persone')]}"/>
+          </field>
+        </field>
+    </record>
+
+
+
+    
+
+  </data>
+</odoo>

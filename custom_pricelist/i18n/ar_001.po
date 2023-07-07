@@ -1,0 +1,159 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* custom_pricelist
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-21 11:49+0000\n"
+"PO-Revision-Date: 2023-05-21 11:49+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: custom_pricelist
+#. odoo-python
+#: code:addons/custom_pricelist/models/models.py:0
+#, python-format
+msgid "%(percentage)s %% discount and %(price)s surcharge"
+msgstr "%(percentage)s %% خصم %(price)s رسوم إضافية "
+
+#. module: custom_pricelist
+#. odoo-python
+#: code:addons/custom_pricelist/models/models.py:0
+#, python-format
+msgid "%s %% discount"
+msgstr "%s %% خصم "
+
+#. module: custom_pricelist
+#. odoo-python
+#: code:addons/custom_pricelist/models/models.py:0
+#, python-format
+msgid "All Products"
+msgstr "كل المنتجات"
+
+#. module: custom_pricelist
+#: model:ir.model.fields,field_description:custom_pricelist.field_product_pricelist_item__applied_on
+msgid "Apply On"
+msgstr "التطبيق على "
+
+#. module: custom_pricelist
+#. odoo-python
+#: code:addons/custom_pricelist/models/models.py:0
+#, python-format
+msgid "Brand: %s"
+msgstr "الماركة التجارية: %s" 
+
+#. module: custom_pricelist
+#. odoo-python
+#: code:addons/custom_pricelist/models/models.py:0
+#, python-format
+msgid "Category: %s"
+msgstr "الفئة: %s"
+
+#. module: custom_pricelist
+#. odoo-python
+#: code:addons/custom_pricelist/models/models.py:0
+#, python-format
+msgid "Please specify the brand for which this rule should be applied"
+msgstr ""
+
+#. module: custom_pricelist
+#. odoo-python
+#: code:addons/custom_pricelist/models/models.py:0
+#, python-format
+msgid "Please specify the category for which this rule should be applied"
+msgstr ""
+
+#. module: custom_pricelist
+#. odoo-python
+#: code:addons/custom_pricelist/models/models.py:0
+#, python-format
+msgid "Please specify the product for which this rule should be applied"
+msgstr ""
+
+#. module: custom_pricelist
+#. odoo-python
+#: code:addons/custom_pricelist/models/models.py:0
+#, python-format
+msgid ""
+"Please specify the product variant for which this rule should be applied"
+msgstr ""
+
+#. module: custom_pricelist
+#. odoo-python
+#: code:addons/custom_pricelist/models/models.py:0
+#, python-format
+msgid "Please specify the sale Team for which this rule should be applied"
+msgstr ""
+
+#. module: custom_pricelist
+#: model:ir.model,name:custom_pricelist.model_product_pricelist
+msgid "Pricelist"
+msgstr "قائمه الأسعار"
+
+#. module: custom_pricelist
+#: model:ir.model.fields,help:custom_pricelist.field_product_pricelist_item__applied_on
+msgid "Pricelist Item applicable on selected option"
+msgstr "عنصر قائمة الأسعار القابل للتطبيق على الخيار المحدد "
+
+#. module: custom_pricelist
+#: model:ir.model.fields,field_description:custom_pricelist.field_product_pricelist_item__brand_id
+#: model:ir.model.fields.selection,name:custom_pricelist.selection__product_pricelist_item__applied_on__4_product_brand
+msgid "Product Brand"
+msgstr "ماركة المنتج"
+
+#. module: custom_pricelist
+#. odoo-python
+#: code:addons/custom_pricelist/models/models.py:0
+#, python-format
+msgid "Product: %s"
+msgstr "المنتج: %s "
+
+
+#. module: custom_pricelist
+#: model:ir.model.fields,field_description:custom_pricelist.field_product_pricelist_item__saleperson_id
+msgid "Sale Persone "
+msgstr " فريق المبيعات"
+
+#. module: custom_pricelist
+#. odoo-python
+#: code:addons/custom_pricelist/models/models.py:0
+#, python-format
+msgid "Sale Team: %s"
+msgstr "فريق المبيعات: %s"
+
+#. module: custom_pricelist
+#: model:ir.model.fields.selection,name:custom_pricelist.selection__product_pricelist_item__applied_on__5_sale_persone
+msgid "Sales Teams"
+msgstr "فريق المبيعات"
+
+#. module: custom_pricelist
+#: model:ir.model.fields,help:custom_pricelist.field_product_pricelist_item__saleperson_id
+msgid ""
+"Specify a Sale Person if this rule only applies to Persone belonging to this"
+" Sale Persone or its children Sale persone. Keep empty otherwise."
+msgstr ""
+
+#. module: custom_pricelist
+#: model:ir.model.fields,help:custom_pricelist.field_product_pricelist_item__brand_id
+msgid ""
+"Specify a product Brand if this rule only applies to products belonging to "
+"this brand or its children brands. Keep empty otherwise."
+msgstr ""
+
+#. module: custom_pricelist
+#. odoo-python
+#: code:addons/custom_pricelist/models/models.py:0
+#, python-format
+msgid "Variant: %s"
+msgstr "المتغير: %s "
+
+#. module: custom_pricelist
+#: model:ir.model,name:custom_pricelist.model_product_pricelist_item
+msgid "custom_pricelist"
+msgstr "قوائم الاسعار الجديدة"
