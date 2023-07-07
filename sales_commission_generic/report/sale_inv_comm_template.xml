@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+            <template id="external_layout_seti">
+        <t t-if="o and 'company_id' in o">
+        <t t-set="company" t-value="o.company_id"/>
+        </t>
+        <t t-if="not o or not 'company_id' in o">
+        <t t-set="company" t-value="res_company"/>
+        </t>
+        <div class="header" style=" direction: initial;">
+            <table style="border:1pt solid grey;width:100%;font-size:12px;" width="100%">
+                <link rel="stylesheet" href="/sales_commission_generic/static/src/css/style.css"/>
+                <tr>
+                    <td colspan="2" width="35%">
+                        <strong><span style="padding-left:5px;" t-field="company.name"/></strong><br/>
+                        <t t-if="company.street">
+                            <span style="padding-left:5px;" t-field="company.street"/><br/>
+                        </t>
+                        <t t-if="company.street2">
+                            <span style="padding-left:5px;" t-field="company.street2"/><br/>
+                        </t>
+                        <t t-if="company.city">
+                            <span style="padding-left:5px;" t-field="company.city"/><br/>
+                        </t>
+                        <t t-if="company.country_id">
+                            <span style="padding-left:5px;" t-field="company.country_id.name"/><br/>
+                        </t>
+                    </td>
+                    
+                    <td  colspan="3" width="30%" class="text-center"><img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="height: 100px;width: 100px; " alt="Logo"/></td>
+
+                    <td colspan="2" width="40%" class="enx" >
+                        <strong>
+                            <span class=" arabic" style="margin-right:6px;" t-field="company.arabic_name"/></strong><br/>
+                        <t t-if="company.street">
+                            <span class="text-right arabic" style="margin-right:6px;" t-field="company.arabic_street"/><br/>
+                        </t>
+                        <t t-if="company.street2">
+                            <span class="text-right arabic" style="margin-right:6px;" t-field="company.arabic_street2"/><br/>
+                        </t>
+                        <t t-if="company.city">
+                            <span class="text-right arabic" style="margin-right:6px;" t-field="company.arabic_city"/><br/>
+                        </t>
+                        <t t-if="company.arabic_country">
+                            <span class="text-right arabic" style="margin-right:6px;" t-field="company.arabic_country"/><br/>
+                        </t>
+                    </td>
+                </tr>
+                <tr style="border:1pt solid grey;">
+                    <td width="16%">‫‪ <span class="text-right" style="padding-left:5px;"/>CR No. : </td> 
+                    <td width="16%"> <span class="text-center arabic" t-field="company.company_registry"/> ‫‪</td> 
+                    <td width="17%"> <span class="text-right arabic" style="padding-left:-6px;">رقم السجل التجاري</span>‬</td>
+
+                    <td width="2%"></td>  
+
+                    <td width="16%">‫‪ <span class="text-right" style="padding-left:5px;">VAT‬‬ No.: </span> </td>
+                    <td width="16%"> <span class="text-center arabic" t-field="company.vat"/> ‫‪</td>
+                    <td width="17%"> <span class="text-right arabic" style="margin-left:15px;">ضريبة القيمة المضافة</span>‬</td>
+                </tr>  
+            </table>
+        </div>
+        <div class="article o_report_layout_standard">
+            <t t-raw="0" />
+        </div>
+        <div class="footer o_background_footer">
+            <div class="text-center" style="font-size:14px;"  >
+                <ul class="list-inline">
+                    <li t-if="company.phone" class="list-inline-item"><i class="fa fa-phone" role="img" aria-label="Phone" title="Phone"/> <span t-field="company.phone"/></li>
+                    <li t-if="company.email" class="list-inline-item"><i class="fa fa-at" role="img" aria-label="Email" title="Email"/> <span t-field="company.email"/></li>
+                    <li t-if="company.website" class="list-inline-item"><i class="fa fa-globe" role="img" aria-label="Website" title="Website"/> <span t-field="company.website"/></li>
+                    <li t-if="company.vat" class="list-inline-item"><i class="fa fa-building-o" role="img" aria-label="Fiscal number"/><t t-esc="(company.country_id.vat_label or 'Tax ID').replace(' ','\N{NO-BREAK SPACE}')"/>: <span t-esc="company.vat.replace(' ','\N{NO-BREAK SPACE}')"/></li>
+                </ul>
+                <!-- <div t-field="company.report_footer"/> -->
+                <div t-if="report_type == 'pdf'" class="text-muted">
+                    Page:
+                    <span class="page"/>
+                    of
+                    <span class="topage"/>
+                </div>
+            </div>
+        </div>
+    </template>
+
+        <template id="sale_inv_comm_template">
+        <t t-call="web.html_container">
+        <t t-call="sales_commission_generic.external_layout_seti">
+
+        <!-- <t t-call="web.external_layout"> -->
+            <t t-if="not o and doc">
+                <t t-set="o" t-value="doc"/>
+            </t>
+            <t t-if="o and 'company_id' in o">
+                <t t-set="company" t-value="o.company_id"/>
+            </t>
+            <t t-if="not o or not 'company_id' in o">
+                <t t-set="company" t-value="res_company"/>
+            </t>
+            <div class="page">
+                <center>
+                    <h4><b>Sales Invoices Commission</b></h4>
+                    <b><span t-esc="data['start_date']"/> to <span t-esc="data['end_date']"/></b><br/>
+                    <b><span>Salesperson : </span><span t-esc="data['user']['name']"/></b><br/>
+                    <br/>
+                    <br/>
+                    <div class="row">
+                    	<t t-set="total" t-value="0"/>
+                        <table width='100%' style="border: 2px solid black;" class="table table-condensed">
+                            <thead>
+                                <tr style="border: 2px solid black;">
+                                    <th style="border: 2px solid black;">Date</th>
+                                    <th style="border: 2px solid black;" >Name</th>
+                                    <th style="border: 2px solid black;">Invoice/Sale References</th>
+                                    <th style="border: 2px solid black;">Commission Type</th>
+                                    <th style="border: 2px solid black;">Commission Name</th>
+                                    <th style="border: 2px solid black;">Product</th>
+                                    <th style="border: 2px solid black;">Partner</th>
+                                    <th style="border: 2px solid black;">Amount</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tr t-foreach="ids" t-as="commission">
+                            <t t-set="total" t-value="total + commission.commission_amount"/>
+							<td style="border: 2px solid black;"><span t-field="commission.date"/></td>
+							<td style="border: 2px solid black;"><span t-field="commission.name"/></td>
+							<td style="border: 2px solid black;">
+								<t t-if="commission.order_id"><span t-field="commission.order_id"/></t>
+								<t t-if="commission.invoice_id"><span t-field="commission.invoice_id"/></t>
+							</td>
+							<td style="border: 2px solid black;"><span t-field="commission.type_name"/></td>
+							<td style="border: 2px solid black;"><span t-field="commission.comm_type"/></td>
+							<td style="border: 2px solid black;"><span t-field="commission.product_id"/></td>
+							<td style="border: 2px solid black;"><span t-field="commission.partner_id"/></td>
+							<td style="border: 2px solid black;"><span t-field="commission.commission_amount"/></td>
+                            </tr>
+                            
+                            <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                                <td style="border: 2px solid black;"><strong>Total :</strong></td>
+                                <td style="border: 2px solid black;"><strong><span t-esc="total"/></strong></td>
+                            
+                            
+                            
+                            </tr>
+                            
+                        </table>
+                    </div>
+                </center>
+            </div>
+            </t>
+        </t>
+        </template>
+
+    </data>
+</odoo>
