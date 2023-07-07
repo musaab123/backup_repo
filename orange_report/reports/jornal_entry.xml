@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <template id="prosys_purchase_report">
+      <t t-call="web.html_container">
+         <div class="article o_report_layout_standard" t-att-data-oe-model="" t-att-data-oe-id="">
+            <t t-call="orange_report.custom_session_header_footer"/>
+            <t t-foreach="docs" t-as="doc">
+               <!-- <t t-call="web.external_layout"> -->
+               <div class="page arabic" t-attf-style="background-image:url('/orange_report/static/src/img/ooo.jpg'); width:300mm; height:340mm;   position: relative;">
+                <link rel="stylesheet" href="/orange_report/static/src/css/style.css"/>
+
+                <br>
+						</br>
+						<table style="border:1pt solid #ff8c00;width:100%;
+   						 height: 23px;color:black; margin-top:10pt;" class="table-condensed table-sm">
+							<tr>
+			
+                        <h2 style="padding:1pt;margin:0pt;text-align:center;background-color:#ffd8b3;" t-if="doc.state in ['draft','sent']">Quotation #  <span t-field="doc.name"/></h2>
+                          
+							</tr>
+						</table>
+               <!-- +++++++++++++++++++++++++++++++++++++++customer ++++++++++++++++++++++++++++++++++++++++ -->
+                    <div class="row arabic">
+                     
+                      <div t-if="doc.user_id.name" class=" col-3 ">
+                            <strong style="color:#ff8c00;">Salesperson</strong>
+                            <p class="m-0" t-field="doc.user_id"/>
+                        </div>
+                        
+             
+
+                     <div t-if="doc.date_order" class=" col-3 " >
+                    <strong style="color:#ff8c00;">Quotation Date</strong>
+                    <p class="m-0" t-field="doc.date_order" t-options='{"widget": "date"}'/>
+                </div>
+
+                    <div t-if="doc.payment_term_id" class=" col-3 ">
+                            <strong style="color:#ff8c00;">Payment Terms</strong>
+                            <p class="m-0" t-field="doc.payment_term_id"/>
+                        </div>
+
+                     <div class="col-3">
+                                 <strong style="color:#ff8c00;">Incoterm </strong>
+                                <span t-field="doc.note"/>
+                  
+                            
+                     </div>
+
+                    </div>
+
+                    <br></br>
+               <!-- +++++++++++++++++++++++++++++++++++++++customer ++++++++++++++++++++++++++++++++++++++++ -->
+
+                  <div class="row arabic">
+
+                     <div class="col-3 arabic" >
+                        <!-- <table class="table table-sm o_main_table mt-4"> -->
+                           <div style="border-top: 3px solid #ff8c00; border-bottom: 3px solid black;">
+                           <br></br>  
+                              <tr >
+                                       <td  class="text-start">
+                                          <span t-field="doc.partner_id.wechat_id"/>
+                                       </td>
+
+                                       <br></br>  
+                                      
+                            
+                                     <td t-if="doc.partner_id.email" class="text-start">
+                                          <span t-field="doc.partner_id.email"/>
+                                       </td>
+                                        
+                                       <br></br>  
+
+
+                              
+                                     <td t-if="doc.partner_id.mobile" class="text-start">
+                                          <span t-field="doc.partner_id.mobile"/>
+                                       </td>
+                            
+
+                                      
+                                       <br></br>  
+                       
+                               
+                                 <td t-if="doc.partner_id.vat" class="text-start">
+                                  <span>Vat Number : </span>
+                                  <span t-field="doc.partner_id.vat"/>
+                                  
+                                         
+                                 </td>
+
+                              </tr>
+                              <br></br>  
+                           </div>
+                              <br></br>  
+
+                               <!-- tttttttttttttttttttttttttttttttttttttttttttttttttttttttt -->
+                                    <div style="border-bottom: 3px solid black;">
+                              <tr >
+                                       <td  class="text-start">
+                                          <span t-field="doc.shipping_port"/>
+                                       </td>
+
+                                       <br></br>  
+                                      
+                                     <td class="text-start">
+                                          <span t-field="doc.deliver_port"/>
+                                       </td>
+                                        
+                                       <br></br>  
+
+
+                              
+                                   <t t-foreach ="doc.container_ids" t-as="x">
+                                          <span t-field="x.container_number"/>
+                                         
+                                  </t>
+                                     
+                                      <br></br>  
+                              </tr>
+                           </div>
+                               <!-- ttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt -->
+                              
+                           <!-- ooooooooooooooooooooooooooooooooooooooooooooooooooo -->
+                            <br></br>  
+                           <div class="arabic">
+                           
+                                    <t t-if="doc.partner_shipping_id == doc.partner_invoice_id
+                             and doc.partner_invoice_id != doc.partner_id
+                             or doc.partner_shipping_id != doc.partner_invoice_id">
+                                       <t >
+                                          <strong>
+                                             <t t-if="doc.partner_shipping_id == doc.partner_invoice_id">
+                                                   Invoicing and Shipping Address:
+                                             </t>
+                                             <t t-else="">
+                                                   Invoicing Address:
+                                             </t>
+                                          </strong>
+                                          <div t-field="doc.partner_invoice_id"
+                                             t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
+                                          <t>
+                                             <strong>Shipping Address:</strong>
+                                             <div t-field="doc.partner_shipping_id"
+                                                   t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
+                                          </t>
+                                       </t>
+                                 </t>
+                           </div>
+
+                                <div >
+                               <div t-field="doc.partner_id"
+                t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}' />
+                           </div>
+                           
+                           <!-- ooooooooooooooooooooooooooooooooooooooooooooooooooo -->
+                        <!-- </table> -->
+                     </div>
+
+                     <div class="col-1"></div>
+
+                     <div class="col-8 knk arabic">
+                        <table class="table table-sm table-borderless" style="page-break-inside: avoid;">
+                           <thead style="border-top: 3px solid #ff8c00; border-bottom: 3px solid black;">
+                              <tr class="knk">
+                                 <td name="th_description" class="text-start p-3">Product</td>
+                                 <td name="th_quantity" class="text-end">Quantity</td>
+                                 <td name="th_priceunit" class="text-end">Price</td>
+                                 <td name="th_priceunit" class="text-end">Taxes</td>
+                                 <td name="th_priceunit" class="text-end">Amount</td>
+
+
+                                
+                              </tr>
+                           </thead>
+                           
+                        
+                           <tbody class="knk arabic">
+                              <t t-set="current_subtotal" t-value="0"/>
+                              <t t-foreach="doc.order_line" t-as="line">
+                                 <t t-set="current_subtotal" t-value="current_subtotal + line.price_subtotal" groups="account.group_show_line_subtotals_tax_excluded"/>
+                                 <t t-set="current_subtotal" t-value="current_subtotal + line.price_total" groups="account.group_show_line_subtotals_tax_included"/>
+                                 <tr t-att-class="'bg-200 fw-bold o_line_section' if line.display_type == 'line_section' else 'fst-italic o_line_note' if line.display_type == 'line_note' else ''">
+                                    <t t-if="not line.display_type">
+                                       <td name="td_name"><span t-field="line.product_template_id"/></td>
+                                       <td name="td_quantity" class="text-end">
+                                          <span t-field="line.product_uom_qty"/>
+                                          <!-- <span t-field="line.product_uom"/> -->
+                                       </td>
+                                       <td name="td_priceunit" class="text-end">
+                                          <span t-field="line.price_unit"/>
+                                       </td>
+                                       <td t-if="display_discount" class="text-end">
+                                          <span t-field="line.discount"/>
+                                       </td>
+                                       <td name="td_taxes" class="text-end">
+                                          <span t-out="', '.join(map(lambda x: (x.description or x.name), line.tax_id))"/>
+                                       </td>
+                                       <td t-if="not line.is_downpayment" name="td_subtotal" class="text-end o_price_total">
+                                          <span t-field="line.price_subtotal" groups="account.group_show_line_subtotals_tax_excluded"/>
+                                          <span t-field="line.price_total" groups="account.group_show_line_subtotals_tax_included"/>
+                                       </td>
+                                    </t>
+                                    <t t-elif="line.display_type == 'line_section'">
+                                       <td name="td_section_line" colspan="99">
+                                          <span t-field="line.name"/>
+                                       </td>
+                                       <t t-set="current_section" t-value="line"/>
+                                       <t t-set="current_subtotal" t-value="0"/>
+                                    </t>
+                                    <t t-elif="line.display_type == 'line_note'">
+                                       <td name="td_note_line" colspan="99">
+                                          <span t-field="line.name"/>
+                                       </td>
+                                    </t>
+                                 </tr>
+                                 <t t-if="current_section and (line_last or doc.order_line[line_index+1].display_type == 'line_section') and not line.is_downpayment">
+                                    <tr class="is-subtotal text-end">
+                                       <td name="td_section_subtotal" colspan="99">
+                                          <strong class="mr16">Subtotal</strong>
+                                          <span
+                                             t-out="current_subtotal"
+                                             t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'
+                                             />
+                                       </td>
+                                    </tr>
+                                 </t>
+                              </t>
+
+                              <div id="total" class="row justify-content-end">
+                                 <div class="col-4">
+                                    <table class="table table-sm table-borderless arabic" style="page-break-inside: avoid; border-top:0;">
+                                            
+
+                                    <tr class="border-black">
+                                       <td>
+                                          <strong> Discount Method </strong>
+                                       </td>
+                                       <td class="text-end">
+                                          <span t-field="doc.discount_method" />
+                                       </td>
+                                    </tr>
+                                    <tr class="border-black">
+                                       <td>
+                                          <strong>Discount Amount</strong>
+                                       </td>
+                                       <td class="text-end">
+                                          <span t-field="doc.discount_amount" /> 
+                                          <t t-if="doc.discount_method == 'per'"><span class="oe_inline">&amp;nbsp;%</span></t>
+                                       </td>
+								            </tr>
+
+                                    <tr class="border-black">
+                                       <td>
+                                          <strong>Discount</strong>
+                                       </td>
+                                       
+                                       <td class="text-end">
+                                          <span t-field="doc.discount_amt" />
+                                       </td>
+                                    </tr>
+
+                                    <tr class="border-black">
+
+														<t t-set="tax_totals" t-value="doc.tax_totals" />
+														<t t-call="account.document_tax_totals" />
+
+                                    </tr>
+
+                                  
+                                    </table>
+
+                                    <!-- kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk -->
+                                           <!-- <table class="table table-sm table-borderless arabic" style="page-break-inside: avoid; border-top:0;">
+                                             <tr class="border-black">
+                                                <td>
+                                                   <strong>Discount</strong>
+                                                </td>
+                                                
+                                                <td class="text-end">
+                                                   <span t-field="doc.discount_amt" />
+                                                </td>
+                                             </tr>
+                                             </table> -->
+                                    <!-- kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk -->
+
+
+
+                                 </div>
+                              </div>
+
+                                 <!-- <div >
+                                    <tr class="arabic">
+                                          <div style="page-break-inside: avoid;">
+                                             <table  class="table table-sm table-borderless" style="page-break-inside: avoid; border-top:0;">
+                                                <t t-set="tax_totals" t-value="doc.tax_totals"/>
+                                                <t t-call="account.document_tax_totals"/>
+                                             </table>
+                                        </div>
+                                    </tr>
+                                 </div> -->
+
+                           </tbody>
+                        </table>
+
+                     </div>
+                  </div>
+               </div>
+            </t>
+         </div>
+      </t>
+   </template>
+
+</odoo>

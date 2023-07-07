@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+       <template id="custom_ksa_header_footer">
+        <t t-if="o and 'company_id' in o">
+        <t t-set="company" t-value="o.company_id"/>
+        </t>
+        <t t-if="not o or not 'company_id' in o">
+        <t t-set="company" t-value="res_company"/>  
+        </t>
+        <div class="header" style=" direction: initial;">
+            <table style="border:1pt solid white;font-size:12px;" width="100%">
+                <link rel="stylesheet" href="/saudi_einvoice_knk/static/src/css/style.css"/>
+                <tr>
+                    <td colspan="2" width="30%">
+                        <strong><span style="padding-left:5px;" t-field="company.name"/></strong><br/>
+                        <t t-if="company.street">
+                            <span style="padding-left:5px;" t-field="company.street"/><br/>
+                        </t>
+                        <t t-if="company.street2">
+                            <span style="padding-left:5px;" t-field="company.street2"/><br/>
+                        </t>
+                        <t t-if="company.city">
+                            <span style="padding-left:5px;" t-field="company.city"/><br/>
+                        </t>
+                        <t t-if="company.country_id">
+                            <span style="padding-left:5px;" t-field="company.country_id.name"/><br/>
+                        </t>
+                    </td>
+                    
+                    <td  colspan="3" width="30%" class="text-center"><img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="height: 100px;width: 100px; " alt="Logo"/></td>
+
+                    <td colspan="2" width="40%" class="enx" >
+	                	<strong>
+	                		<span class=" text-right arabic"  t-field="company.arabic_name"/></strong><br/>
+	                	<t t-if="company.street">
+	                		<span class="text-right arabic"  t-field="company.arabic_street"/><br/>
+	                	</t>
+	                	<t t-if="company.street2">
+	                		<span class="text-right arabic"  t-field="company.arabic_street2"/><br/>
+	                	</t>
+	                	<t t-if="company.city">
+	                		<span class="text-right arabic"  t-field="company.arabic_city"/><br/>
+	                	</t>
+	                	<t t-if="company.arabic_country">
+	                		<span class="text-right arabic"  t-field="company.arabic_country"/><br/>
+	                	</t>
+
+                        <t t-if="company.vat">
+	                		<span class="text-right arabic" t-field="company.vat"/><br/>
+	                	</t>
+                          <t t-if="company.arabic_web">
+	                		<span class="text-right arabic" t-field="company.arabic_web"/><br/>
+	                	</t>
+                          <t t-if="company.arabic_company_dis">
+	                		<span class="text-right arabic" t-field="company.arabic_company_dis"/><br/>
+	                	</t>
+	                </td>
+	            </tr>
+	        	
+            </table>
+        </div>
+
+        <div class="article o_report_layout_standard">
+            <t t-raw="0" />
+        </div>
+        <div class="footer o_background_footer">
+            <div class="text-center" style="font-size:14px;"  >
+                <ul class="list-inline">
+                    <li t-if="company.phone" class="list-inline-item"><i class="fa fa-phone" role="img" aria-label="Phone" title="Phone"/> <span t-field="company.phone"/></li>
+                    <li t-if="company.email" class="list-inline-item"><i class="fa fa-at" role="img" aria-label="Email" title="Email"/> <span t-field="company.email"/></li>
+                    <li t-if="company.website" class="list-inline-item"><i class="fa fa-globe" role="img" aria-label="Website" title="Website"/> <span t-field="company.website"/></li>
+                    <li t-if="company.vat" class="list-inline-item"><i class="fa fa-building-o" role="img" aria-label="Fiscal number"/><t t-esc="(company.country_id.vat_label or 'Tax ID').replace(' ','\N{NO-BREAK SPACE}')"/>: <span t-esc="company.vat.replace(' ','\N{NO-BREAK SPACE}')"/></li>
+                </ul>
+                <!-- <div t-field="company.report_footer"/> -->
+                <div t-if="report_type == 'pdf'" class="text-muted">
+                    Page:
+                    <span class="page"/>
+                    of
+                    <span class="topage"/>
+                </div>
+            </div>
+        </div>
+    </template>
+
+   <!-- <template id="custom_ksa_header_footer">
+        <t t-if="o and 'company_id' in o">
+        <t t-set="company" t-value="o.company_id"/>
+        </t>
+        <t t-if="not o or not 'company_id' in o">
+        <t t-set="company" t-value="res_company"/>  
+        </t>
+        <div class="header" style=" direction: initial;">
+            <table style="width:100%;font-size:12px;" width="100%">
+                <link rel="stylesheet" href="/saudi_einvoice_knk/static/src/css/style.css"/>
+                <tr>
+                    <td colspan="2" width="30%">
+                        <strong><span style="padding-left:5px;" t-field="company.name"/></strong><br/>
+                        <t t-if="company.street">
+                            <span style="padding-left:5px;" t-field="company.street"/><br/>
+                        </t>
+                        <t t-if="company.street2">
+                            <span style="padding-left:5px;" t-field="company.street2"/><br/>
+                        </t>
+                        <t t-if="company.city">
+                            <span style="padding-left:5px;" t-field="company.city"/><br/>
+                        </t>
+                        <t t-if="company.country_id">
+                            <span style="padding-left:5px;" t-field="company.country_id.name"/><br/>
+                        </t>
+                    </td>
+                    
+                    <td  colspan="3" width="30%" class="text-center"><img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="height: 100px;width: 100px;" alt="Logo"/></td>
+
+                    <td colspan="2" width="40%" class="enx" >
+	                	<strong>
+	                		<span class=" arabic" style="margin-right:6px;" t-field="company.arabic_name"/></strong><br/>
+	                	<t t-if="company.street">
+	                		<span class="text-right arabic" style="margin-right:6px;" t-field="company.arabic_street"/><br/>
+	                	</t>
+	                	<t t-if="company.street2">
+	                		<span class="text-right arabic" style="margin-right:6px;" t-field="company.arabic_street2"/><br/>
+	                	</t>
+	                	<t t-if="company.city">
+	                		<span class="text-right arabic" style="margin-right:6px;" t-field="company.arabic_city"/><br/>
+	                	</t>
+	                	<t t-if="company.arabic_country">
+	                		<span class="text-right arabic" style="margin-right:6px;" t-field="company.arabic_country"/><br/>
+	                	</t>
+                            <t t-if="company.company_registry">
+	                		<span class="text-right arabic" style="margin-right:6px;" t-field="company.company_registry"/><br/>
+	                	</t>
+                         <t t-if="company.vat">
+	                		<span class="text-right arabic" style="margin-right:6px;" t-field="company.vat"/><br/>
+	                	</t>
+                          <t t-if="company.arabic_web">
+	                		<span class="text-right arabic" style="margin-right:6px;" t-field="company.arabic_web"/><br/>
+	                	</t>
+                          <t t-if="company.arabic_company_dis">
+	                		<span class="text-right arabic" style="margin-right:6px;" t-field="company.arabic_company_dis"/><br/>
+	                	</t>
+	                </td>
+	            </tr>
+	        	
+            </table>
+        </div>
+        <div class="article o_report_layout_standard">
+            <t t-raw="0" />
+        </div>
+        <div class="footer o_background_footer">
+            <div class="text-center" style="font-size:14px;"  >
+                <ul class="list-inline">
+                    <li t-if="company.phone" class="list-inline-item"><i class="fa fa-phone" role="img" aria-label="Phone" title="Phone"/> <span t-field="company.phone"/></li>
+                    <li t-if="company.email" class="list-inline-item"><i class="fa fa-at" role="img" aria-label="Email" title="Email"/> <span t-field="company.email"/></li>
+                    <li t-if="company.website" class="list-inline-item"><i class="fa fa-globe" role="img" aria-label="Website" title="Website"/> <span t-field="company.website"/></li>
+                    <li t-if="company.vat" class="list-inline-item"><i class="fa fa-building-o" role="img" aria-label="Fiscal number"/><t t-esc="(company.country_id.vat_label or 'Tax ID').replace(' ','\N{NO-BREAK SPACE}')"/>: <span t-esc="company.vat.replace(' ','\N{NO-BREAK SPACE}')"/></li>
+                </ul>
+                <div t-if="report_type == 'pdf'" class="text-muted">
+                    Page:
+                    <span class="page"/>
+                    of
+                    <span class="topage"/>
+                </div>
+            </div>
+        </div>
+    </template> -->
+
+  	
+       
+
+</odoo>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="delevry_slip_pdf_custom">
+		<t t-call="web.html_container">
+			<div class="article o_report_layout_standard" t-att-data-oe-model="" t-att-data-oe-id="">
+				<t t-call="orange_report.custom_session_header_footer" />
+				<t t-foreach="docs" t-as="doc">
+					<!-- <t t-call="web.external_layout"> -->
+					<div class="page arabic" t-attf-style="background-image:url('/orange_report/static/src/img/ooo.jpg'); width:300mm; height:340mm;   position: relative;">
+						<link rel="stylesheet" href="/orange_report/static/src/css/style.css" />
+						<br>
+						</br>
+						<table style="border:1pt solid #ff8c00;width:100%;
+   						 height: 23px;color:black; margin-top:10pt;" class="table-condensed table-sm">
+							<tr>
+						
+								 <h2 style="padding:1pt;margin:0pt;text-align:center;background-color:#ffd8b3;">Delivery Slip</h2>
+                                                                     <div />
+
+							</tr>
+						</table>
+						<!-- +++++++++++++++++++++++++++++++++++++++customer ++++++++++++++++++++++++++++++++++++++++ -->
+						<div class="row arabic">
+							<div  class=" col-3 ">
+                                <span style="color:#ff8c00;">Order</span>
+                                    <p t-field="doc.origin"/>
+
+							</div>
+							<div class="col-3">
+                                <span style="color:#ff8c00;">Invoice Number</span>
+
+                                    <span style="color:#ff8c00;" t-if="doc.move_type == 'out_invoice' and doc.state == 'posted'">Invoice Number</span>
+                                    <span style="color:#ff8c00;" t-if="doc.move_type == 'out_invoice' and doc.state == 'draft'">Draft Invoice</span>
+                                    <span style="color:#ff8c00;" t-if="doc.move_type == 'out_invoice' and doc.state == 'cancel'">Cancelled Invoice</span>
+                                    <span style="color:#ff8c00;" t-if="doc.move_type == 'out_refund'">Credit Note</span>
+                                    <span style="color:#ff8c00;" t-if="doc.move_type == 'in_refund'">Vendor Credit Note</span>
+                                    <span style="color:#ff8c00;" t-if="doc.move_type == 'in_invoice'">Vendor Bill</span>
+                                    <p t-if="doc.name != '/'" t-field="doc.name"/>
+							</div>
+							<div  class="col-3 ">
+								<span style="color:#ff8c00;">Status</span>
+								<p t-field="doc.state" class="m-0" />
+							</div>
+
+							<div class="col-3">
+								<span style="color:#ff8c00;">
+									Scheduled Date
+								</span>
+								<p t-field="doc.scheduled_date" class="m-0" />
+							</div>
+						</div>
+						<br>
+						</br>
+						<!-- +++++++++++++++++++++++++++++++++++++++customer ++++++++++++++++++++++++++++++++++++++++ -->
+						<div class="row arabic">
+							<div class="col-3 arabic">   
+
+                                     <div style="border-top: 3px solid #ff8c00; border-bottom: 3px solid black; border-left: 3px solid black; border-right: 3px solid #ff8c00;">
+                                            <br></br>
+                                            <br></br>
+                                            <br></br>
+
+                                                    <span t-field="doc.name" t-options="{'widget': 'barcode', 'width': 600, 'height': 100, 'img_style': 'width:300px;height:50px;'}"/>
+                                            <br></br>
+                                            <br></br>
+                                            <br></br>
+                                            <br></br>
+                                </div>
+
+                                  <br></br>
+                                            <br></br>
+
+
+								<div style="border-top: 3px solid #ff8c00; border-bottom: 3px solid black;">
+
+									<tr>
+                                    <br></br>
+
+                                
+									<div  name="div_outgoing_address">
+                                        <br></br>
+
+                                    <div t-if="doc.should_print_delivery_address()">
+                                        <br></br>
+
+                                        <span><strong>Delivery Address </strong></span>
+                                        <div t-field="doc.move_ids[0].partner_id"
+                                            t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
+                                    </div>
+                                    <div t-elif="doc.picking_type_id.code != 'internal' and doc.picking_type_id.warehouse_id.partner_id">
+                                        <span><strong>Warehouse Address </strong></span>
+                                        <div t-field="doc.picking_type_id.warehouse_id.partner_id"
+                                            t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
+                                    </div>
+                                </div>
+                                <div name="div_incoming_address">
+                                    <div t-if="doc.picking_type_id.code=='incoming' and doc.partner_id">
+                                        <span><strong>Vendor Address </strong></span>
+                                    </div>
+                                    <div t-if="doc.picking_type_id.code=='internal' and doc.partner_id">
+                                        <span><strong>Warehouse Address </strong></span>
+                                    </div>
+                                    <div t-if="doc.picking_type_id.code=='outgoing' and doc.partner_id">
+                                        <span><strong>Customer Address </strong></span>
+                                    </div>
+                                    <div t-if="doc.partner_id" name="partner_header">
+                                        <div t-field="doc.partner_id"
+                                             t-options='{"widget": "contact", "fields": ["address", "name", "phone", "vat"], "no_marker": True, "phone_icons": True}'/>
+                                    </div>
+                                </div>
+									</tr>
+                                    
+
+
+
+
+                                    
+								</div>
+                           
+							</div>
+							<div class="col-1">
+							</div>
+							<div class="col-8  arabic">
+								<table class="table table-sm table-borderless" style="page-break-inside: avoid;">
+									<thead style="border-top: 3px solid #ff8c00; border-bottom: 3px solid black;">
+										<tr class="knk">
+											<td name="th_description" style="height: 40px;  vertical-align: middle;">
+												Product
+											</td>
+											
+											<td name="th_priceunit"  style="height: 40px;  vertical-align: middle;">
+												Quantity
+											</td>
+                                            <td name="th_quantity"  style="height: 40px;  vertical-align: middle;">
+												Lot/Serial Number
+											</td>
+
+											<td name="th_priceunit" style="height: 40px;  vertical-align: middle;">
+												Product Barcode
+											</td>
+											
+										</tr>
+									</thead>
+
+                                     <tbody class="knk">
+                                                <t t-foreach="doc.move_line_ids_without_package" t-as="ml">
+                                        <tr>
+                                            <td>
+                                                <span t-field="ml.product_id.display_name"/><br/>
+                                                <span t-field="ml.product_id.description_picking"/>
+                                            </td>
+                                            <td>
+                                                <span t-if="doc.state != 'done'" t-field="ml.reserved_uom_qty"/>
+                                                <span t-if="doc.state == 'done'" t-field="ml.qty_done"/>
+                                                <span t-field="ml.product_uom_id" groups="uom.group_uom"/>
+                                            </td>
+                                            <td >
+                                                <div  t-esc="ml.lot_id.name or ml.lot_name" t-options="{'widget': 'barcode', 'humanreadable': 1, 'width': 400, 'height': 100, 'img_style': 'width:100%;height:35px;'}"/>
+                                            </td>
+                                            <td >
+                                                <t >
+                                                    <span t-if="ml.product_id and ml.product_id.barcode">
+                                                        <div t-field="ml.product_id.barcode" t-options="{'widget': 'barcode', 'symbology': 'auto', 'width': 400, 'height': 100, 'quiet': 0, 'img_style': 'height:35px;'}"/>
+                                                    </span>
+                                                    <t t-set="product_barcode" t-value="ml.product_id.barcode"/>
+                                                </t>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                  </tbody>
+									
+								</table>
+
+
+
+
+                                <!-- rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr -->
+                                <br></br>
+                                <br></br>
+                                <br></br>
+
+
+                                <table class="table table-sm table-borderless" style="page-break-inside: avoid;">
+									<thead style="border-top: 3px solid #ff8c00; border-bottom: 3px solid black;">
+										<tr class="text-start knk  ">
+											<td name="th_description" style="height: 40px;  vertical-align: middle;">
+												Container Number
+											</td>
+											
+											<td name="th_priceunit" style="height: 40px;  vertical-align: middle;">
+												Container weight
+											</td>
+                                            <td name="th_quantity" style="height: 40px;  vertical-align: middle;">
+												Container Size
+											</td>
+
+											<td name="th_priceunit" style="height: 40px;  vertical-align: middle;">
+												CBM
+											</td>
+											
+										</tr>
+									</thead>
+                                    <tbody class="knk">
+                                                <t  t-foreach ="doc.container_ids" t-as="x">
+                                        <tr class="text-start">
+                                            <td>
+                                                    <span t-field="x.container_number"/>
+
+                                            </td>
+                                            <td>
+                                                    <span t-field="x.container_weight"/>
+                                                
+                                            </td>
+                                            <td >
+                                                    <span t-field="x.container_size"/>
+
+                                            </td>
+                                            <td >
+                                                    <span t-field="x.cbm"/>
+                                               
+                                            </td>
+                                        </tr>
+                                    </t>
+                                  </tbody>
+
+                                     
+									
+								</table>
+                                <!-- rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr -->
+							</div>
+						</div>
+					</div>
+				</t>
+			</div>
+		</t>
+	</template>
+</odoo>

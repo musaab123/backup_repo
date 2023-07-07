@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="delevry_slip_ksa_customer_pdf_custom">
+		<t t-call="web.html_container">
+			<div class="article o_report_layout_standard" t-att-data-oe-model="" t-att-data-oe-id="">
+				<t t-call="orange_report.custom_ksa_header_footer" />
+				<t t-foreach="docs" t-as="doc">
+					<!-- <t t-call="web.external_layout"> -->
+					<div class="page arabic" t-attf-style="background-image:url('/orange_report/static/src/img/ooo.jpg'); width:300mm; height:340mm;   position: relative;">
+						<link rel="stylesheet" href="/orange_report/static/src/css/style.css" />
+						<br>
+						</br>
+						<table style="border:1pt solid #ff8c00;width:100%; height: 23px;color:black; margin-top:10pt;" class="table-condensed table-sm">
+							<tr>
+						
+								<h2 style="padding:1pt;margin:0pt;text-align:center;background-color:#ffd8b3;">Delivery Slip Customer</h2>
+                                                                    <!-- </div> -->
+
+							</tr>
+						</table>
+						<!-- +++++++++++++++++++++++++++++++++++++++customer ++++++++++++++++++++++++++++++++++++++++ -->
+			
+
+                <div class="row arabic">
+                     <table class="content-table arabic">
+                        <thead >
+                           <tr >
+                            
+                              <td>Distributer Name </td>
+                              <td> Invoice Number </td>
+                              <td> Distributer Car Number</td>
+                                <td>Shipping Port</td>
+                             
+                              <td>Deliver Port</td>
+                              
+                              <td> Policy Number </td>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <!-- <td><span t-field="doc.shipping_port"/></td>
+                              
+                              <td>
+                                 <sapn  class="m-0" t-field="doc.deliver_port"/>
+                              </td>
+                             
+                              <td><span t-field="doc.policy_number"/></td> -->
+
+                                 
+                              <td>   
+                                 <t t-foreach ="doc.container_ids" t-as="x">
+                                          <span t-field="x.container_number"/>
+                                         
+                                  </t>
+                              </td>
+                              <td><span t-if="doc.name != '/'" t-field="doc.name"/></td>
+                              <td>
+                                        <span t-field="doc.group_id"/>
+                              </td>
+
+                               
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <br></br>
+                  <br></br>
+
+						<!-- +++++++++++++++++++++++++++++++++++++++customer ++++++++++++++++++++++++++++++++++++++++ -->
+						<div class="row arabic">
+							<div class="col-3 arabic">   
+
+                                     <div style="border-top: 3px solid #ff8c00; border-bottom: 3px solid black; border-left: 3px solid black; border-right: 3px solid #ff8c00;">
+                                            <br></br>
+                                            <br></br>
+                                            <br></br>
+
+                                                    <span t-field="doc.name" t-options="{'widget': 'barcode', 'width': 600, 'height': 100, 'img_style': 'width:300px;height:50px;'}"/>
+                                            <br></br>
+                                            <br></br>
+                                            <br></br>
+                                            <br></br>
+                                </div>
+
+                                  <br></br>
+                                            <br></br>
+
+
+								<div style="border-top: 3px solid #ff8c00; border-bottom: 3px solid black;">
+
+									<tr>
+                                    <br></br>
+
+                                
+									<div  name="div_outgoing_address">
+                                        <br></br>
+
+                                    <div t-if="doc.should_print_delivery_address()">
+                                        <br></br>
+
+                                        <span><strong>Delivery Address </strong></span>
+                                        <div t-field="doc.move_ids[0].partner_id"
+                                            t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
+                                    </div>
+                                    <div t-elif="doc.picking_type_id.code != 'internal' and doc.picking_type_id.warehouse_id.partner_id">
+                                        <span><strong>Warehouse Address </strong></span>
+                                        <div t-field="doc.picking_type_id.warehouse_id.partner_id"
+                                            t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
+                                    </div>
+                                </div>
+                                <div name="div_incoming_address">
+                                    <div t-if="doc.picking_type_id.code=='incoming' and doc.partner_id">
+                                        <span><strong>Vendor Address </strong></span>
+                                    </div>
+                                    <div t-if="doc.picking_type_id.code=='internal' and doc.partner_id">
+                                        <span><strong>Warehouse Address </strong></span>
+                                    </div>
+                                    <div t-if="doc.picking_type_id.code=='outgoing' and doc.partner_id">
+                                        <span><strong>Customer Address </strong></span>
+                                    </div>
+                                    <div t-if="doc.partner_id" name="partner_header">
+                                        <div t-field="doc.partner_id"
+                                             t-options='{"widget": "contact", "fields": ["address", "name", "phone", "vat"], "no_marker": True, "phone_icons": True}'/>
+                                    </div>
+                                </div>
+									</tr>
+                                    
+
+
+
+
+                                    
+								</div>
+                           
+							</div>
+							<div class="col-1">
+							</div>
+							<div class="col-8  arabic">
+
+                            <table class="table table-sm table-borderless" style="page-break-inside: avoid;" t-if="doc.state!='done'" name="stock_move_table">
+                                <thead style="border-top: 3px solid #ff8c00; border-bottom: 3px solid black;">
+                                    <tr class="knk">
+                                        <td style="height: 40px;  vertical-align: middle;" name="th_sm_product"><strong>Product</strong></td>
+
+                                        <td style="height: 40px;  vertical-align: middle;" name="th_sm_ordered"><strong>Ordered</strong></td>
+                                        <td style="height: 40px;  vertical-align: middle;" name="th_sm_quantity"><strong>Delivered</strong></td>
+
+                                        <td style="height: 40px;  vertical-align: middle;" name="th_sm_quantity"><strong>Lot/Serial Number</strong></td>
+
+
+                                    </tr>
+                                </thead>
+                                <tbody class="knk">
+                                    <t t-set="lines" t-value="doc.move_ids.filtered(lambda x: x.product_uom_qty)"/>
+                                    <tr t-foreach="lines" t-as="move">
+                                        <td>
+                                            <span t-field="move.product_id"/>
+                                            <p t-if="move.description_picking != move.product_id.name and move.description_picking != move.product_id.display_name">
+                                                <span t-field="move.description_picking"/>
+                                            </p>
+                                        </td>
+                                      
+                                        <td>
+                                            <span t-field="move.product_uom_qty"/>
+                                            <span t-field="move.product_uom"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="move.quantity_done"/>
+                                            <span t-field="move.product_uom"/>
+                                        </td>
+                                         <td>
+                                            
+                                                      <t t-foreach="packages" t-as="package">
+                                    <t t-call="stock.stock_report_delivery_package_section_line"/>
+                                    <t t-set="package_move_lines" t-value="o.move_line_ids.filtered(lambda l: l.result_package_id == package)"/>
+                                    <!-- If printing lots/serial numbers => keep products in original lines -->
+                                    <t t-if="has_serial_number">
+                                        <tr t-foreach="package_move_lines" t-as="move_line">
+                                            <t t-call="stock.stock_report_delivery_has_serial_move_line"/>
+                                        </tr>
+                                    </t>
+                                    <!-- If not printing lots/serial numbers => merge lines with same product+description+uom -->
+                                    <t t-else="">
+                                        <t t-set="aggregated_lines" t-value="package_move_lines._get_aggregated_product_quantities(strict=True)"/>
+                                        <t t-call="stock.stock_report_delivery_aggregated_move_lines"/>
+                                    </t>
+                                </t>
+                                        </td>
+
+                              
+                                    </tr>
+                                </tbody>
+                            </table>
+							
+
+
+
+                             
+
+
+							</div>
+						</div>
+					</div>
+				</t>
+			</div>
+		</t>
+	</template>
+</odoo>

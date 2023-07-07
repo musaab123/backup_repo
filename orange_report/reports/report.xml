@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_report_prosys_purchase" model="ir.actions.report">
+            <field name="name">Modern Sale Orange</field>
+            <field name="model">sale.order</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">orange_report.prosys_purchase_report</field>
+            <field name="report_file">orange_report.prosys_purchase_report</field>
+            <field name="binding_model_id" ref="sale.model_sale_order"/>
+            <field name="binding_type">report</field>
+            <field name="groups_id" eval="[(4, ref('orange_report.group_china_company'))]"/>
+
+        </record>
+
+
+        <record id="action_report_sale_ksa_company" model="ir.actions.report">
+            <field name="name">Ksa Sale Order </field>
+            <field name="model">sale.order</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">orange_report.prosys_ksa_sale_report</field>
+            <field name="report_file">orange_report.prosys_ksa_sale_report</field>
+            <field name="binding_model_id" ref="sale.model_sale_order"/>
+            <field name="binding_type">report</field>
+            <field name="groups_id" eval="[(4, ref('orange_report.group_ksa_test_company'))]"/>
+
+        </record>
+        
+  
+        <record id="action_report_ksa_account" model="ir.actions.report">
+            <field name="name">Ksa Sale Invoice </field>
+            <field name="model">account.move</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">orange_report.prosys_ksa_invoice_report_pdf</field>
+            <field name="report_file">orange_report.prosys_ksa_invoice_report_pdf</field>
+            <field name="binding_model_id" ref="sale.model_account_move"/>
+            <field name="binding_type">report</field>
+            <field name="groups_id" eval="[(4, ref('orange_report.group_ksa_test_company'))]"/>
+
+        </record>
+
+        <record id="action_report_ksa_account_purchase" model="ir.actions.report">
+            <field name="name">Ksa Purchase Invoice </field>
+            <field name="model">account.move</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">orange_report.prosys_ksa_bill_report_pdf</field>
+            <field name="report_file">orange_report.prosys_ksa_bill_report_pdf</field>
+            <field name="binding_model_id" ref="purchase.model_account_move"/>
+            <field name="binding_type">report</field>
+            <field name="groups_id" eval="[(4, ref('orange_report.group_ksa_test_company'))]"/>
+
+        </record>
+
+        <record id="action_report_prosys_account" model="ir.actions.report">
+            <field name="name">Modern Invoice Orange</field>
+            <field name="model">account.move</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">orange_report.prosys_invoice_report_pdf</field>
+            <field name="report_file">orange_report.prosys_invoice_report_pdf</field>
+            <field name="binding_model_id" ref="sale.model_account_move"/>
+            <field name="binding_type">report</field>
+            <field name="groups_id" eval="[(4, ref('orange_report.group_china_company'))]"/>
+
+        </record>
+
+         <record id="action_report_prosys_invoice_services" model="ir.actions.report">
+            <field name="name">Invoice Services To Supplier</field>
+            <field name="model">account.move</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">orange_report.prosys_invoice_services_to_Supplier_pdf</field>
+            <field name="report_file">orange_report.prosys_invoice_services_to_Supplier_pdf</field>
+            <field name="binding_model_id" ref="purchase.model_account_move"/>
+            <field name="binding_type">report</field>
+            <field name="groups_id" eval="[(4, ref('orange_report.group_china_company'))]"/>
+
+        </record>
+
+        <record id="action_report_prosys_ksa_invoice_services" model="ir.actions.report">
+            <field name="name"> Ksa Invoice Services To Supplier</field>
+            <field name="model">account.move</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">orange_report.prosys_invoice_services_ksa_to_Supplier_pdf</field>
+            <field name="report_file">orange_report.prosys_invoice_services_ksa_to_Supplier_pdf</field>
+            <field name="binding_model_id" ref="purchase.model_account_move"/>
+            <field name="binding_type">report</field>
+            <field name="groups_id" eval="[(4, ref('orange_report.group_ksa_test_company'))]"/>
+
+        </record>
+
+
+        <record id="action_report_prosys_utility_invoice_pdf" model="ir.actions.report">
+            <field name="name"> Utility Invoice</field>
+            <field name="model">account.move</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">orange_report.prosys_utility_invoice_pdf</field>
+            <field name="report_file">orange_report.prosys_utility_invoice_pdf</field>
+            <field name="binding_model_id" ref="sale.model_account_move"/>
+            <field name="binding_type">report</field>
+            <field name="groups_id" eval="[(4, ref('orange_report.group_china_company'))]"/>
+
+        </record>
+
+        <record id="action_report_prosys_ksa_utility_invoice_pdf" model="ir.actions.report">
+            <field name="name">Ksa Utility Invoice</field>
+            <field name="model">account.move</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">orange_report.prosys_utility_ksa_invoice_pdf</field>
+            <field name="report_file">orange_report.prosys_utility_ksa_invoice_pdf</field>
+            <field name="binding_model_id" ref="sale.model_account_move"/>
+            <field name="binding_type">report</field>
+            <field name="groups_id" eval="[(4, ref('orange_report.group_ksa_test_company'))]"/>
+
+        </record>
+
+
+        <record id="action_report_prosys_purchase_pdf_custom" model="ir.actions.report">
+            <field name="name">Modern purchase Orange</field>
+            <field name="model">purchase.order</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">orange_report.prosys_purchase_report_pdf</field>
+            <field name="report_file">orange_report.prosys_purchase_report_pdf</field>
+            <field name="binding_model_id" ref="purchase.model_purchase_order"/>
+            <field name="binding_type">report</field>
+            <field name="groups_id" eval="[(4, ref('orange_report.group_china_company'))]"/>
+
+        </record>
+
+    <record id="action_report_ksa_purchase_pdf_custom" model="ir.actions.report">
+            <field name="name">Ksa purchase Order</field>
+            <field name="model">purchase.order</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">orange_report.prosys_ksa_purchase_report</field>
+            <field name="report_file">orange_report.prosys_ksa_purchase_report</field>
+            <field name="binding_model_id" ref="purchase.model_purchase_order"/>
+            <field name="binding_type">report</field>
+            <field name="groups_id" eval="[(4, ref('orange_report.group_ksa_test_company'))]"/>
+
+        </record>
+
+
+        <record id="action_report_prosys_delevry_slip_pdf_custom" model="ir.actions.report">
+            <field name="name">Modern Delivery Orange</field>
+            <field name="model">stock.picking</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">orange_report.delevry_slip_pdf_custom</field>
+            <field name="report_file">orange_report.delevry_slip_pdf_custom</field>
+            <field name="binding_model_id" ref="stock.model_stock_picking"/>
+            <field name="binding_type">report</field>
+            <field name="groups_id" eval="[(4, ref('orange_report.group_china_company'))]"/>
+
+        </record>
+
+
+        <record id="action_report_prosys_delevry_slip_pdf_ksa" model="ir.actions.report">
+            <field name="name">Modern Delivery Vindor</field>
+            <field name="model">stock.picking</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">orange_report.delevry_slip_ksa_pdf_custom</field>
+            <field name="report_file">orange_report.delevry_slip_ksa_pdf_custom</field>
+            <field name="binding_model_id" ref="stock.model_stock_picking"/>
+            <field name="binding_type">report</field>
+            <field name="groups_id" eval="[(4, ref('orange_report.group_ksa_test_company'))]"/>
+            
+
+        </record>
+
+         <record id="action_report_prosys_delevry_slip_pdf_ksa_customer" model="ir.actions.report">
+            <field name="name">Modern Delivery Customer</field>
+            <field name="model">stock.picking</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">orange_report.delevry_slip_ksa_customer_pdf_custom</field>
+            <field name="report_file">orange_report.delevry_slip_ksa__customer_pdf_custom</field>
+            <field name="binding_model_id" ref="stock.model_stock_picking"/>
+            <field name="binding_type">report</field>
+            <field name="groups_id" eval="[(4, ref('orange_report.group_ksa_test_company'))]"/>
+
+
+        </record>
+
+
+
+
+
+    </data> 
+
+</odoo>
+
+
+

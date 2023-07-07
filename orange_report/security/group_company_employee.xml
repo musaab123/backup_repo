@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+    
+        <record id="group_ksa_test_company" model="res.groups">
+            <field name="name">Ksa Company </field>
+        </record>
+
+
+        <record id="group_china_company" model="res.groups">
+            <field name="name">China Company</field>
+        </record>
+    </data>
+</odoo>
