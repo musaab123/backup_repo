@@ -1,0 +1,234 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_po_so_info_16
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-30 09:16+0000\n"
+"PO-Revision-Date: 2023-04-30 12:22+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.2.2\n"
+
+#. module: partner_po_so_info_16
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_container_details__account_id
+msgid "Accounts"
+msgstr "حسابات"
+
+#. module: partner_po_so_info_16
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_container_details__cbm
+msgid "CBM"
+msgstr "المتر المكعب"
+
+#. module: partner_po_so_info_16
+#: model:ir.model,name:partner_po_so_info_16.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: partner_po_so_info_16
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_container_details__container_number
+msgid "Container Number"
+msgstr "رقم الحاوية"
+
+#. module: partner_po_so_info_16
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_container_details__container_size
+msgid "Container Size"
+msgstr "حجم الحاويه"
+
+#. module: partner_po_so_info_16
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_container_details__container_weight
+msgid "Container weight"
+msgstr "وزن الحاوية"
+
+#. module: partner_po_so_info_16
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_bank_statement_line__container_ids
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_move__container_ids
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_payment__container_ids
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_purchase_order__container_ids
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_sale_order__container_ids
+#: model_terms:ir.ui.view,arch_db:partner_po_so_info_16.account_move_inherit_form
+#: model_terms:ir.ui.view,arch_db:partner_po_so_info_16.purchase_order_inherit_form
+#: model_terms:ir.ui.view,arch_db:partner_po_so_info_16.sale_order_inherit_form
+msgid "Containers"
+msgstr "الحاويات"
+
+#. module: partner_po_so_info_16
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_container_details__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: partner_po_so_info_16
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_container_details__create_date
+msgid "Created on"
+msgstr "أنشيء في"
+
+#. module: partner_po_so_info_16
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_bank_statement_line__deliver_port
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_move__deliver_port
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_payment__deliver_port
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_purchase_order__deliver_port
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_sale_order__deliver_port
+msgid "Deliver Port"
+msgstr "ميناء التسليم"
+
+#. module: partner_po_so_info_16
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_container_details__display_name
+msgid "Display Name"
+msgstr "إسم العرض"
+
+#. module: partner_po_so_info_16
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_bank_statement_line__distributer_car_number
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_move__distributer_car_number
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_payment__distributer_car_number
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_sale_order__distributer_car_number
+msgid "Distributer Car Number"
+msgstr "رقم سيارة المخرج"
+
+#. module: partner_po_so_info_16
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_bank_statement_line__distributer_name
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_move__distributer_name
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_payment__distributer_name
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_sale_order__distributer_name
+msgid "Distributer Name"
+msgstr "إسم المخرج"
+
+#. module: partner_po_so_info_16
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_bank_statement_line__from_city
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_move__from_city
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_payment__from_city
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_sale_order__from_city
+msgid "From City"
+msgstr "من مدينة"
+
+#. module: partner_po_so_info_16
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_container_details__id
+msgid "ID"
+msgstr "رقم"
+
+#. module: partner_po_so_info_16
+#: model:ir.model,name:partner_po_so_info_16.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: partner_po_so_info_16
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_container_details____last_update
+msgid "Last Modified on"
+msgstr "تاريخ آخر تعديل"
+
+#. module: partner_po_so_info_16
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_container_details__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: partner_po_so_info_16
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_container_details__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: partner_po_so_info_16
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_bank_statement_line__part_id
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_move__part_id
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_payment__part_id
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_purchase_order__part_id
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_res_partner__partner_id
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_sale_order__part_id
+msgid "Partner ID"
+msgstr "رقم العميل/ المورد"
+
+#. module: partner_po_so_info_16
+#: model:ir.model.constraint,message:partner_po_so_info_16.constraint_res_partner_partner_id_uniq
+msgid "Partner ID should be unique."
+msgstr "رقم العميل/ المورد يجب أن يكون غير مكرر"
+
+#. module: partner_po_so_info_16
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_bank_statement_line__policy_number
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_move__policy_number
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_payment__policy_number
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_purchase_order__policy_number
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_sale_order__policy_number
+msgid "Policy Number"
+msgstr "رقم البوليصة"
+
+#. module: partner_po_so_info_16
+#: model:ir.model,name:partner_po_so_info_16.model_purchase_order
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_container_details__purchase_id
+msgid "Purchase Order"
+msgstr "أمر شراء"
+
+#. module: partner_po_so_info_16
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_bank_statement_line__responsible_employee
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_move__responsible_employee
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_payment__responsible_employee
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_purchase_order__responsible_employee
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_sale_order__responsible_employee
+msgid "Responsible Employee"
+msgstr "الموظف المسؤول"
+
+#. module: partner_po_so_info_16
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_container_details__sale_id
+msgid "Sale Order"
+msgstr "أمر بيع"
+
+#. module: partner_po_so_info_16
+#: model:ir.model,name:partner_po_so_info_16.model_sale_order
+msgid "Sales Order"
+msgstr "أمر بيع"
+
+#. module: partner_po_so_info_16
+#: model_terms:ir.ui.view,arch_db:partner_po_so_info_16.account_move_inherit_form
+#: model_terms:ir.ui.view,arch_db:partner_po_so_info_16.purchase_order_inherit_form
+#: model_terms:ir.ui.view,arch_db:partner_po_so_info_16.sale_order_inherit_form
+msgid "Shipping"
+msgstr "الشحن"
+
+#. module: partner_po_so_info_16
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_bank_statement_line__shipping_company_name
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_move__shipping_company_name
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_payment__shipping_company_name
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_purchase_order__shipping_company_name
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_sale_order__shipping_company_name
+msgid "Shipping Company Name"
+msgstr "إسم شركة الشحن"
+
+#. module: partner_po_so_info_16
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_bank_statement_line__shipping_port
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_move__shipping_port
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_payment__shipping_port
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_purchase_order__shipping_port
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_sale_order__shipping_port
+msgid "Shipping Port"
+msgstr "ميناء الشحن"
+
+#. module: partner_po_so_info_16
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_bank_statement_line__vendor_bill_number
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_move__vendor_bill_number
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_payment__vendor_bill_number
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_purchase_order__vendor_bill_number
+msgid "Vendor Bill Number"
+msgstr "رقم فاتورة المورد"
+
+#. module: partner_po_so_info_16
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_res_partner__wechat_id
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_res_users__wechat_id
+msgid "Wechat"
+msgstr "ويشات"
+
+#. module: partner_po_so_info_16
+#: model:ir.model,name:partner_po_so_info_16.model_container_details
+msgid "container.details"
+msgstr "تفاصيل الحاوية"
+
+#. module: partner_po_so_info_16
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_bank_statement_line__to_city
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_move__to_city
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_account_payment__to_city
+#: model:ir.model.fields,field_description:partner_po_so_info_16.field_sale_order__to_city
+msgid "to City"
+msgstr "إلى مدينة"

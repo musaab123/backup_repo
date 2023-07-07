@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sale_order_inherit_form" model="ir.ui.view">
+        <field name="name">sale.order.inherit.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='other_information']/group[2]" position="after">
+                <group name="sale_shipping_details" string="Shipping">
+                    <group>
+                        <field name="part_id" invisible="1" />
+                        <field name="responsible_employee" />
+                        <field name="shipping_port" />
+                        <field name="deliver_port" />
+                        <field name="from_city" />
+                        <field name="to_city" />
+                    </group>
+                    <group>
+                        <field name="distributer_name" />
+                        <field name="distributer_car_number" />
+                        <field name="policy_number" />
+                        <field name="shipping_company_name" />
+                    </group>
+                </group>
+                <label for="container_ids" string="Containers"/><br/>
+                <field name="container_ids" widget="section_and_note_one2many" mode="tree" nolabel="1">
+                    <tree editable="bottom">
+                        <field name="purchase_id" invisible="1"/>
+                        <field name="container_number"/>
+                        <field name="container_weight"/>
+                        <field name="container_size"/>
+                        <field name="cbm"/>
+                    </tree>
+                </field>
+            </xpath>
+        </field>
+    </record>
+</odoo>

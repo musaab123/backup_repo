@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="purchase_order_inherit_form" model="ir.ui.view">
+        <field name="name">purchase.order.inherit.form</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='purchase_delivery_invoice']/group[1]" position="after">
+                <group name="Purchase_shipping_details" string="Shipping">
+                    <group>
+                        <field name="part_id" invisible="1" />
+                        <field name="responsible_employee" />
+                        <field name="vendor_bill_number" />
+                        <field name="shipping_port" />                        
+                    </group>
+                    <group>
+                        <field name="policy_number" />
+                        <field name="shipping_company_name" />
+                        <field name="deliver_port" />
+                    </group>
+                </group>
+                <label for="container_ids" string="Containers"/><br/>
+                <field name="container_ids" widget="section_and_note_one2many" mode="tree" nolabel="1">
+                    <tree editable="bottom">
+                        <field name="purchase_id" invisible="1" />
+                        <field name="container_number" />
+                        <field name="container_weight" />
+                        <field name="container_size" />
+                        <field name="cbm" />
+                    </tree>
+                </field>
+            </xpath>
+        </field>
+    </record>
+</odoo>
