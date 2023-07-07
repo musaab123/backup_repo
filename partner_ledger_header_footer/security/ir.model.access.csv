@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+,,,,,,,
+access_jornal_entry_wizard,access.jornal.entry.wizard,model_jornal_entry_wizard,,1,1,1,1
+access_account_journal,access.account.journal,model_account_journal,,1,1,1,1
+
+access_account_move,access.account.move,model_account_move,,1,1,1,1
+
+
+
+
+
