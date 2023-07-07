@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="custom_session_header_footer">
+         <t t-foreach="docs" t-as="o">
+
+        <t t-set="company" t-value="user.company_id"/>
+
+        <div t-attf-class="header o_company_#{company.id}_layout" t-att-style="report_header_style">
+            <div class="row">
+                <div class="col-3 mb4">
+                    <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="max-height: 45px;"
+                         alt="Logo"/>
+                </div>
+                <div class="col-9 text-right" style="margin-top:22px;" t-field="company.report_header" name="moto"/>
+            </div>
+            <div t-if="company.logo or company.report_header" class="row zero_min_height">
+                <div class="col-12">
+                    <div style="border-bottom: 1px solid black;"/>
+                </div>
+            </div>
+            <div dir="rtl">
+                <div style="float:right;">
+                    <div  name="company_address" style="text-align:right">
+                        <b><span t-field="company.partner_id.name" style="text-align:right;font-size:15px;"/><br/>
+                        <span t-field="company.partner_id.street" style="text-align:right;font-size:15px;"/><br/>
+                        <span t-field="company.partner_id.street2" style="text-align:right;font-size:15px;"/><br/>
+                        </b>
+                        <t t-if="o.partner_id.lang != 'ar_001'">
+                            <b><p t-if="company.partner_id.vat" class="mt0" style="text-align:right;font-size:15px;">
+                                <t t-out="o.company_id.account_fiscal_country_id.vat_label or 'Tax ID'" />:
+                                <span t-field="company.partner_id.vat" style="text-align:right"/>
+                            </p></b>
+                        </t>
+                        <t t-else="">
+                            <b><p t-if="company.partner_id.vat" class="mt0"  style="font-size:15px !important;text-align:right">
+                                <b><span style="text-align:right">Vat</span>
+                                <span t-field="company.partner_id.vat" style="text-align:right"/></b>
+                            </p></b>
+                        </t>
+                    </div>
+                    <div name="qr_code" style="text-align:right" class="d-none" />
+                    <div name="company_address" dir="ltr" style="text-align:right">
+                    </div>
+                </div>
+
+                
+               <!--  <div style="float:left; margin-left:120px;">
+                  
+                    <div style="margin-right:40px!important;">
+                    <t t-if="o.partner_id.lang != 'ar_001'" >
+                       
+                        <span class="text-right" dir="rtl" style=":right;"> :  اسم العميل </span>
+                         <span t-field="o.partner_id.name" class="text-right" dir="rtl" style="float:left;"/>
+
+                        <span t-if="o.partner_id.street" t-field="o.partner_id.street" class="text-right" dir="rtl" style="float:left;"/><br/>
+                        <span t-if="o.partner_id.street2" t-field="o.partner_id.street2" class="text-right" dir="rtl" style="float:left;"/><br/>
+                    </t>
+                    <t t-else="">
+                        <span class="text-right" dir="rtl" style="float:right;"> customer name:</span>
+                        <span t-field="o.partner_id.name" class="text-right" dir="rtl" style="float:right;"/><br/>
+                        <span t-if="o.partner_id.street" t-field="o.partner_id.street" class="text-right" dir="rtl" style="float:right;"/><br/>
+                        <span t-if="o.partner_id.street2" t-field="o.partner_id.street2" class="text-right" dir="rtl" style="float:right;"/><br/>
+                    </t>
+        
+                    <t t-if="o.partner_id.lang != 'ar_001'" >
+                        <p t-if="o.partner_id.vat" style="float:right;" class="mt0">
+                            <t t-out="o.company_id.account_fiscal_country_id.vat_label or 'Tax ID'" style="float:right;"/>:
+                            <span t-field="o.partner_id.vat"  style="float:right;"/>
+                        </p>
+                    </t>
+                    <t t-else="">
+                        <p t-if="o.partner_id.vat" style="float:right;" class="mt0">
+                            <span style="float:right;" dir="rtl" class="text-right" >الرقم الضريبي للعميل:</span>
+                            <span t-field="o.partner_id.vat" class="text-right" style="float:right;"/>
+                        </p>
+                    </t>
+
+                    </div>
+                  
+                </div> -->
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+         <div class="footer">
+            <div class="text-center" style="border-top: 1px solid black;">
+                <ul class="list-inline mb4 text-nowrap">
+                    <li t-if="company.phone" class="list-inline-item d-inline">Phone: <span class="o_force_ltr" t-field="company.phone"/></li>
+                    <li t-if="company.email" class="list-inline-item d-inline">Email: <span t-field="company.email"/></li>
+                    <li t-if="company.website" class="list-inline-item d-inline">Web: <span t-field="company.website"/></li>
+                    <li t-if="company.vat" class="list-inline-item d-inline"><t t-esc="company.country_id.vat_label or 'Tax ID'"/>: <span t-field="company.vat"/></li>
+                </ul>
+            </div>
+        </div>
+    </t>
+       
+    </template>
+
+</odoo>

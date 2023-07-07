@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="prosys_purchase_report">
+     <t t-call="web.html_container">
+    <div class="article o_report_layout_standard" t-att-data-oe-model="" t-att-data-oe-id="">
+        <t t-call="orange_report.custom_session_header_footer"/>
+
+
+            <!-- <t t-call="web.external_layout"> -->
+                <div class="page" style="font-size:15px;">
+                    <style type="text/css">
+                              @font-face {
+                                font-family:KacstLetter ;
+                                src: url(/prosys_report/static/font/KacstLetter.ttf);
+                              }
+                              h2 {font-family: KacstLetter;}
+                              td {font-family: KacstLetter;}
+                              th { font-family: KacstLetter;}
+                              h5 { font-family: KacstLetter;}
+                              h4 { font-family: KacstLetter;}
+                              p { font-family: KacstLetter;}
+
+                              span, table, th, td, b, p {
+                                            font-size: 15px;
+                                            text-align: center;
+                                            }
+
+                              .newh {
+                                  font-weight: bold;
+                                  text-align: center;
+                                  background-color:#c1f0c1;
+                                  }
+
+                              table, tr, th, td {
+                                  border:1px solid #000000 !important;
+                                  }
+
+                              .con{float:right;padding-left: 10px;padding-right: 10px;margin:3px;}
+                              .bor{border: 1px solid black;;padding: 5px;}
+                              .fon{font-size: 15px;}
+                              .nob{border: no-border !important}
+                       </style>
+
+                    <div>
+                        <center>
+                            <u>
+                                <h2 style="font-size:20px;"> Purchase Detailed Report </h2>
+                            </u>
+
+                        </center>
+                    </div>
+                    <br> </br> <br> </br> 
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <br></br>
+                            <table width="100%" class="table table-bordered" style="border:1px solid black !important;">
+                                <thead  style="text-align:center !important; font-size:15px">
+                                    <tr style="font-size:10px !important;!important;">   
+                                        <th > invoice number</th>
+                                        <th > date invoice </th>
+                                         <th >the supplier  </th>
+                                        <th>The amount does not include tax</th>
+                                        <th> Tax </th>
+                                        <th> The amount is inclusive of tax </th>
+
+
+                                       
+                                        
+                                         
+
+                                    </tr>
+                                </thead>
+
+
+                               
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+                       
+
+    <!--template id="prosys_purchase_report">
+        <t t-call="web.html_container">
+            
+               <t t-set="li" t-value="0"/>
+            <t t-foreach="docs" t-as="o">
+
+                <t t-if="li== 0">
+                    <t t-set="li" t-value="li + 1"/>
+
+                    <t t-set="lang" t-value="o.create_uid.lang"/>
+                    <t t-call="purchase_order_report.prosys_purchase_report_main" t-lang="lang"/>
+                </t>
+
+            </t>
+        </t>
+    </template-->
+      
+
+</odoo>

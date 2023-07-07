@@ -1,0 +1,77 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchase_order_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-25 00:53+0000\n"
+"PO-Revision-Date: 2023-01-25 00:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: purchase_order_report
+#: model_terms:ir.ui.view,arch_db:purchase_order_report.custom_session_header_footer
+msgid "<span style=\"text-align:right\">الرقم الضريبي:</span>"
+msgstr ""
+
+#. module: purchase_order_report
+#: model_terms:ir.ui.view,arch_db:purchase_order_report.custom_session_header_footer
+msgid "Email:"
+msgstr ""
+
+#. module: purchase_order_report
+#: model_terms:ir.ui.view,arch_db:purchase_order_report.custom_session_header_footer
+msgid "Logo"
+msgstr ""
+
+#. module: purchase_order_report
+#: model_terms:ir.ui.view,arch_db:purchase_order_report.custom_session_header_footer
+msgid "Phone:"
+msgstr ""
+
+#. module: purchase_order_report
+#: model:ir.model,name:purchase_order_report.model_purchase_order
+msgid "Purchase Order"
+msgstr ""
+
+#. module: purchase_order_report
+#: model_terms:ir.ui.view,arch_db:purchase_order_report.prosys_purchase_report_main
+msgid "The amount does not include tax"
+msgstr ""
+
+#. module: purchase_order_report
+#: model_terms:ir.ui.view,arch_db:purchase_order_report.prosys_purchase_report_main
+msgid "The amount is inclusive of tax"
+msgstr ""
+
+#. module: purchase_order_report
+#: model_terms:ir.ui.view,arch_db:purchase_order_report.custom_session_header_footer
+msgid "Web:"
+msgstr ""
+
+#. module: purchase_order_report
+#: model_terms:ir.ui.view,arch_db:purchase_order_report.prosys_purchase_report_main
+msgid "date invoice"
+msgstr ""
+
+#. module: purchase_order_report
+#: model_terms:ir.ui.view,arch_db:purchase_order_report.prosys_purchase_report_main
+msgid "invoice number"
+msgstr ""
+
+#. module: purchase_order_report
+#: model_terms:ir.ui.view,arch_db:purchase_order_report.prosys_purchase_report_main
+msgid "the supplier"
+msgstr ""
+
+#. module: purchase_order_report
+#: model:ir.actions.report,name:purchase_order_report.action_report_prosys_purchase
+#: model_terms:ir.ui.view,arch_db:purchase_order_report.prosys_purchase_report_main
+msgid "تقرير تفصيلي بالمشتريات"
+msgstr ""
