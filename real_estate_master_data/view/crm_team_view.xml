@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+      <!-- <menuitem
+                id="menu_itsys_real_estate"
+                name="Real Estate"
+                web_icon="itsys_real_estate,static/description/icon.png"
+                sequence="28"/> -->
+
+        <menuitem
+                id="menu_conf_list"
+                name="Configration"
+                parent="itsys_real_estate.menu_itsys_real_estate"
+                sequence="300"/>
+
+
+</odoo>
