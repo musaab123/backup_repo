@@ -1,0 +1,335 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eq_inventory_valuation_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-19 18:43+0000\n"
+"PO-Revision-Date: 2023-05-19 21:51+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.2.2\n"
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.external_layout_valuation_seti
+msgid "<i class=\"fa fa-at\" role=\"img\" aria-label=\"Email\" title=\"Email\"/>"
+msgstr ""
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.external_layout_valuation_seti
+msgid "<i class=\"fa fa-building-o\" role=\"img\" aria-label=\"Fiscal number\"/>"
+msgstr ""
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.external_layout_valuation_seti
+msgid "<i class=\"fa fa-globe\" role=\"img\" aria-label=\"Website\" title=\"Website\"/>"
+msgstr ""
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.external_layout_valuation_seti
+msgid "<i class=\"fa fa-phone\" role=\"img\" aria-label=\"Phone\" title=\"Phone\"/>"
+msgstr ""
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.external_layout_valuation_seti
+msgid ""
+"<span class=\"text-right arabic\" style=\"padding-right:-6px;\">رقم السجل التجاري</"
+"span>‬"
+msgstr ""
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.external_layout_valuation_seti
+msgid ""
+"<span class=\"text-right arabic\" style=\"padding-right:-6px;\">ضريبة القيمة المضافة</"
+"span>‬"
+msgstr ""
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.inventory_valuation_report_document
+msgid "Adjustment"
+msgstr "تعديلات"
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.inventory_valuation_report_document
+msgid "Beginning"
+msgstr "بداية"
+
+#. module: eq_inventory_valuation_report
+#: model:ir.model.fields.selection,name:eq_inventory_valuation_report.selection__wizard_inventory_valuation__filter_by__brand
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.wizard_inventory_valuation_form_view
+msgid "Brand"
+msgstr "ماركة المنتج"
+
+#. module: eq_inventory_valuation_report
+#: model:ir.model.fields,field_description:eq_inventory_valuation_report.field_wizard_inventory_valuation__brand_ids
+msgid "Brands"
+msgstr "ماركات المنتج"
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.wizard_inventory_valuation_form_view
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: eq_inventory_valuation_report
+#: model:ir.model.fields,field_description:eq_inventory_valuation_report.field_wizard_inventory_valuation__category_ids
+msgid "Categories"
+msgstr "الفئات"
+
+#. module: eq_inventory_valuation_report
+#: model:ir.model.fields.selection,name:eq_inventory_valuation_report.selection__wizard_inventory_valuation__filter_by__category
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.wizard_inventory_valuation_form_view
+msgid "Category"
+msgstr "فئة"
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.wizard_inventory_valuation_form_view
+msgid "Close"
+msgstr "إغلاق"
+
+#. module: eq_inventory_valuation_report
+#: model:ir.model.fields,field_description:eq_inventory_valuation_report.field_wizard_inventory_valuation__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.inventory_valuation_report_document
+msgid "Costing Method"
+msgstr "آلية حساب سعر التكلفة"
+
+#. module: eq_inventory_valuation_report
+#: model:ir.model.fields,field_description:eq_inventory_valuation_report.field_wizard_inventory_valuation__create_uid
+msgid "Created by"
+msgstr "أنشيء بواسطة"
+
+#. module: eq_inventory_valuation_report
+#: model:ir.model.fields,field_description:eq_inventory_valuation_report.field_wizard_inventory_valuation__create_date
+msgid "Created on"
+msgstr "أنشيء في"
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.inventory_valuation_report_document
+msgid "Date:"
+msgstr "التاريخ :"
+
+#. module: eq_inventory_valuation_report
+#: model:ir.model.fields,field_description:eq_inventory_valuation_report.field_wizard_inventory_valuation__display_name
+msgid "Display Name"
+msgstr "إسم العرض"
+
+#. module: eq_inventory_valuation_report
+#: model:ir.model.fields,field_description:eq_inventory_valuation_report.field_wizard_inventory_valuation__end_date
+msgid "End Date"
+msgstr "تاريخ الإنتهاء"
+
+#. module: eq_inventory_valuation_report
+#. odoo-python
+#: code:addons/eq_inventory_valuation_report/wizard/wizard_inventory_valuation.py:0
+#, python-format
+msgid "End Date should be greater than Start Date."
+msgstr "تاريخ الإنتهاء ينبغي أن يكون أكبر من تاريخ البداية"
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.inventory_valuation_report_document
+msgid "Ending"
+msgstr "النهاية"
+
+#. module: eq_inventory_valuation_report
+#: model:ir.model.fields,field_description:eq_inventory_valuation_report.field_wizard_inventory_valuation__data
+msgid "File"
+msgstr "ملف"
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.wizard_inventory_valuation_form_view
+msgid "File :"
+msgstr "ملف :"
+
+#. module: eq_inventory_valuation_report
+#: model:ir.model.fields,field_description:eq_inventory_valuation_report.field_wizard_inventory_valuation__name
+msgid "File Name"
+msgstr "إسم الملف"
+
+#. module: eq_inventory_valuation_report
+#: model:ir.model.fields,field_description:eq_inventory_valuation_report.field_wizard_inventory_valuation__filter_by
+msgid "Filter By"
+msgstr "تصفية بواسطة"
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.wizard_inventory_valuation_form_view
+msgid "Go Back"
+msgstr "إرجع للوراء"
+
+#. module: eq_inventory_valuation_report
+#: model:ir.model.fields,field_description:eq_inventory_valuation_report.field_wizard_inventory_valuation__group_by_categ
+msgid "Group By Category"
+msgstr "تجميع بواسطة الفئات"
+
+#. module: eq_inventory_valuation_report
+#: model:ir.model.fields,field_description:eq_inventory_valuation_report.field_wizard_inventory_valuation__id
+msgid "ID"
+msgstr "رقم معرف"
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.inventory_valuation_report_document
+msgid "Internal"
+msgstr "داخلي"
+
+#. module: eq_inventory_valuation_report
+#: model:ir.actions.act_window,name:eq_inventory_valuation_report.action_wizard_inventory_valuation
+#: model:ir.actions.report,name:eq_inventory_valuation_report.action_inventory_valuation_template
+#: model:ir.ui.menu,name:eq_inventory_valuation_report.menu_stock_inventory_menu
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.inventory_valuation_report_document
+msgid "Inventory Valuation Report"
+msgstr "تقرير تقييم المخزون"
+
+#. module: eq_inventory_valuation_report
+#: model:ir.model.fields,field_description:eq_inventory_valuation_report.field_wizard_inventory_valuation____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: eq_inventory_valuation_report
+#: model:ir.model.fields,field_description:eq_inventory_valuation_report.field_wizard_inventory_valuation__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: eq_inventory_valuation_report
+#: model:ir.model.fields,field_description:eq_inventory_valuation_report.field_wizard_inventory_valuation__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: eq_inventory_valuation_report
+#: model:ir.model.fields,field_description:eq_inventory_valuation_report.field_wizard_inventory_valuation__location_ids
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.inventory_valuation_report_document
+msgid "Location"
+msgstr "الموقع"
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.external_layout_valuation_seti
+msgid "Logo"
+msgstr ""
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.wizard_inventory_valuation_form_view
+msgid "PDF"
+msgstr ""
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.external_layout_valuation_seti
+msgid ""
+"Page:\n"
+"                        <span class=\"page\"/>\n"
+"                        of\n"
+"                        <span class=\"topage\"/>"
+msgstr ""
+
+#. module: eq_inventory_valuation_report
+#: model:ir.model.fields.selection,name:eq_inventory_valuation_report.selection__wizard_inventory_valuation__filter_by__product
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.inventory_valuation_report_document
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.wizard_inventory_valuation_form_view
+msgid "Product"
+msgstr "المنتج"
+
+#. module: eq_inventory_valuation_report
+#: model:ir.model.fields,field_description:eq_inventory_valuation_report.field_wizard_inventory_valuation__product_ids
+msgid "Products"
+msgstr "المنتجات"
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.inventory_valuation_report_document
+msgid "Qty"
+msgstr "الكمية"
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.inventory_valuation_report_document
+msgid "Received"
+msgstr "مستلم"
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.wizard_inventory_valuation_form_view
+msgid "Report Download"
+msgstr "تحميل التقرير"
+
+#. module: eq_inventory_valuation_report
+#: model:ir.model,name:eq_inventory_valuation_report.model_report_eq_inventory_valuation_report_inventory_valuation_report
+msgid "Report Inventory Valuation Report"
+msgstr "تقرير تقييم المخزون"
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.inventory_valuation_report_document
+msgid "Sales"
+msgstr "المبيعات"
+
+#. module: eq_inventory_valuation_report
+#: model:ir.model.fields,field_description:eq_inventory_valuation_report.field_wizard_inventory_valuation__start_date
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+#. module: eq_inventory_valuation_report
+#: model:ir.model.fields,field_description:eq_inventory_valuation_report.field_wizard_inventory_valuation__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.inventory_valuation_report_document
+msgid "To"
+msgstr "إلى"
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.inventory_valuation_report_document
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.inventory_valuation_report_document
+msgid "Value"
+msgstr "القيمة"
+
+#. module: eq_inventory_valuation_report
+#: model:ir.model.fields,field_description:eq_inventory_valuation_report.field_wizard_inventory_valuation__warehouse_ids
+msgid "Warehouse"
+msgstr "المستودع"
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.inventory_valuation_report_document
+msgid "Warehouse:"
+msgstr "المستودع :"
+
+#. module: eq_inventory_valuation_report
+#: model:ir.model,name:eq_inventory_valuation_report.model_wizard_inventory_valuation
+msgid "Wizard Inventory Valuation"
+msgstr ""
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.wizard_inventory_valuation_form_view
+msgid "XLS"
+msgstr ""
+
+#. module: eq_inventory_valuation_report
+#: model:ir.model.fields.selection,name:eq_inventory_valuation_report.selection__wizard_inventory_valuation__state__choose
+msgid "choose"
+msgstr "إختر"
+
+#. module: eq_inventory_valuation_report
+#: model:ir.model.fields.selection,name:eq_inventory_valuation_report.selection__wizard_inventory_valuation__state__get
+msgid "get"
+msgstr "جلب"
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.wizard_inventory_valuation_form_view
+msgid "or"
+msgstr ""
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.external_layout_valuation_seti
+msgid "‫‪ <span class=\"text-right\" style=\"padding-left:5px;\"/>CR No. :"
+msgstr ""
+
+#. module: eq_inventory_valuation_report
+#: model_terms:ir.ui.view,arch_db:eq_inventory_valuation_report.external_layout_valuation_seti
+msgid "‫‪ <span class=\"text-right\" style=\"padding-left:5px;\">VAT‬‬ No.: </span>"
+msgstr ""
