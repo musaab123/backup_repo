@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="presys_customer_bill">
+
+        <t t-call="web.html_container">
+    <div class="article o_report_layout_standard" t-att-data-oe-model="" t-att-data-oe-id="">
+        <t t-call="presys_bill_customer_report.custom_session_header_footer"/>
+
+
+            <!-- <t t-call="web.external_layout"> -->
+                <div class="page" style="font-size:15px;">
+                    <style type="text/css">
+                              @font-face {
+                                font-family:KacstLetter ;
+                                src: url(/prosys_report/static/font/KacstLetter.ttf);
+                              }
+                              h2 {font-family: KacstLetter;}
+                              td {font-family: KacstLetter;}
+                              th { font-family: KacstLetter;}
+                              h5 { font-family: KacstLetter;}
+                              h4 { font-family: KacstLetter;}
+                              p { font-family: KacstLetter;}
+
+                              span, table, th, td, b, p {
+                                            font-size: 15px;
+                                            text-align: center;
+                                            }
+
+                              .newh {
+                                  font-weight: bold;
+                                  text-align: center;
+                                  background-color:#c1f0c1;
+                                  }
+
+                              table, tr, th, td {
+                                  border:1px solid #000000 !important;
+                                  }
+
+                              .con{float:right;padding-left: 10px;padding-right: 10px;margin:3px;}
+                              .bor{border: 1px solid black;;padding: 5px;}
+                              .fon{font-size: 15px;}
+                              .nob{border: no-border !important}
+                       </style>
+
+
+                    <div>
+                        <center>
+                            <u>
+                                <h2 style="font-size:20px;"> Detailed sale report</h2>
+                            </u>
+
+                        </center>
+                    </div>
+                    <br> </br> <br> </br>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <br></br>
+                            <table width="100%" class="table table-bordered" style="border:1px solid black !important;">
+                                <thead  style="text-align:center !important; font-size:15px">
+                                    <tr style="font-size:10px !important;!important;">
+                                    
+                                        <th > Invoice No</th>
+                                        <th >Invoice Date </th>
+                                        <th > customer </th>
+
+                                        <th >Tax</th>
+                                        <th >The amount include Tax</th>
+                                        <th >The amount does not include tax</th>
+                                       
+                                    </tr>
+                                </thead>
+                                 <tbody>
+                                    <t t-set="total_amount_tax" t-value="0"/>
+                                    <t t-set="total_amount_total" t-value="0"/>
+                                    <t t-set="total_amount_untaxed" t-value="0"/>
+
+                                     <t t-foreach="docs" t-as="line">
+                                 
+                                        <tr>
+                                           
+                                          
+                                            <td>
+                                                <span t-field="line.name"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="line.invoice_date" t-options="{'widget': 'date'}"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="line.invoice_partner_display_name"/>
+                                            </td>
+
+                                            <td>
+                                                <span t-field="line.amount_tax_signed"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="line.amount_total_signed"/>
+
+                                            </td>
+                                            <td>
+                                                <span t-field="line.amount_untaxed_signed"/>
+                                            </td>
+                                           
+                                            
+                                             
+
+                        <t t-set="total_amount_tax" t-value="total_amount_tax + line.amount_tax_signed"/>
+                    <t t-set="total_amount_total" t-value="total_amount_total + line.amount_total_signed"/>
+                 <t t-set="total_amount_untaxed" t-value="total_amount_untaxed + (line.amount_total_signed-line.amount_tax_signed)"/>
+
+
+                                        </tr>
+                                    </t>
+                                </tbody> 
+
+                                 <tfooter >
+                                    <tr>
+                                        <!-- <th  style="background-color:gray !important;">Total</th>
+                                         -->
+                                        <td colspan="3"></td>
+                                       
+                                        <td>
+                                            <span t-esc="total_amount_tax"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="total_amount_total"/>
+
+                                        </td>
+                                        <td>
+                                            <span t-esc="total_amount_untaxed"/>
+                                        </td>
+                                        
+                                       
+                                        
+                                    </tr>
+                                </tfooter>
+                            </table>
+                        </div> 
+                        </div>
+                    </div>
+                </div>
+
+                <!-- </t> -->
+            <!-- </t> -->
+        </t>
+    </template>
+
+</odoo>

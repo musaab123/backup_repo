@@ -1,0 +1,77 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* presys_bill_customer_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-29 16:37+0000\n"
+"PO-Revision-Date: 2023-01-29 16:37+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: presys_bill_customer_report
+#: model_terms:ir.ui.view,arch_db:presys_bill_customer_report.custom_session_header_footer
+msgid "<span style=\"text-align:right\">Vat:</span>"
+msgstr ""
+
+#. module: presys_bill_customer_report
+#: model:ir.actions.report,name:presys_bill_customer_report.action_report_pos
+#: model_terms:ir.ui.view,arch_db:presys_bill_customer_report.presys_customer_bill
+msgid "Detailed sale report"
+msgstr "تقرير تفصيلي بالمبيعات"
+
+#. module: presys_bill_customer_report
+#: model_terms:ir.ui.view,arch_db:presys_bill_customer_report.custom_session_header_footer
+msgid "Email:"
+msgstr "ايميل"
+
+#. module: presys_bill_customer_report
+#: model_terms:ir.ui.view,arch_db:presys_bill_customer_report.presys_customer_bill
+msgid "Invoice Date"
+msgstr "تاريخ الفاتورة"
+
+#. module: presys_bill_customer_report
+#: model_terms:ir.ui.view,arch_db:presys_bill_customer_report.presys_customer_bill
+msgid "Invoice No"
+msgstr "رقم الفاتورة"
+
+#. module: presys_bill_customer_report
+#: model_terms:ir.ui.view,arch_db:presys_bill_customer_report.custom_session_header_footer
+msgid "Logo"
+msgstr "الشعار"
+
+#. module: presys_bill_customer_report
+#: model_terms:ir.ui.view,arch_db:presys_bill_customer_report.custom_session_header_footer
+msgid "Phone:"
+msgstr "الهاتف"
+
+#. module: presys_bill_customer_report
+#: model_terms:ir.ui.view,arch_db:presys_bill_customer_report.presys_customer_bill
+msgid "Tax"
+msgstr "الضريبة"
+
+#. module: presys_bill_customer_report
+#: model_terms:ir.ui.view,arch_db:presys_bill_customer_report.presys_customer_bill
+msgid "The amount does not include tax"
+msgstr "الاجمالي غير شامل الضريبة"
+
+#. module: presys_bill_customer_report
+#: model_terms:ir.ui.view,arch_db:presys_bill_customer_report.presys_customer_bill
+msgid "The amount include Tax"
+msgstr "الاجمالي شامل الضريبة"
+
+#. module: presys_bill_customer_report
+#: model_terms:ir.ui.view,arch_db:presys_bill_customer_report.custom_session_header_footer
+msgid "Web:"
+msgstr "الموقع"
+
+#. module: presys_bill_customer_report
+#: model_terms:ir.ui.view,arch_db:presys_bill_customer_report.presys_customer_bill
+msgid "customer"
+msgstr "العميل"
