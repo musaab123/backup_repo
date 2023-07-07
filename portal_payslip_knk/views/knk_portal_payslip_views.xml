@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="portal_my_home_menu_payslip" inherit_id="portal.portal_breadcrumbs" priority="30">
+        <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+            <li t-if="page_name == 'payslip' or payslip" t-attf-class="breadcrumb-item #{'active' if not payslip else ''}">
+                <a t-if="payslip" t-attf-href="/my/payslip?{{ keep_query() }}">Payslips</a>
+                <t t-else="">Payslips</t>
+            </li>
+            <li t-if="payslip" class="breadcrumb-item active">
+                <t t-esc="payslip.name" />
+            </li>
+        </xpath>
+    </template>
+    <template id="portal_my_home_payslip" customize_show="True" inherit_id="portal.portal_my_home" priority="21">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="title">Payslips</t>
+                <t t-set="url" t-value="'/my/payslip'" />
+                <t t-set="placeholder_count" t-value="'payslip_count'" />
+            </t>
+        </xpath>
+    </template>
+    <template id="portal_my_payslip_list">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True" />
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Payslips</t>
+            </t>
+            <t t-if="not orders">
+                <p>There are currently no Payslips in your account.</p>
+            </t>
+            <t t-if="orders">
+                <t t-if="grouped_orders">
+                    <t t-call="portal.portal_table">
+                        <t t-foreach="grouped_orders" t-as="orders">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <span class='d-none d-md-inline'>Payslip Name</span>
+                                    </th>
+                                    <th class="text-right">Date From</th>
+                                    <th class="text-center">Date To</th>
+                                    <th class="text-right">Reference</th>
+                                </tr>
+                            </thead>
+                            <t t-foreach="orders" t-as="order">
+                                <tr>
+                                    <td><a t-att-href="order.get_portal_url()">
+                                            <t t-esc="order.name" /></a></td>
+                                    <td class="text-right">
+                                        <span t-field="order.date_from" t-options="{'widget': 'date'}" />
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-field="order.date_to" t-options="{'widget': 'date'}" />
+                                    </td>
+                                    <td class="text-right"><span t-field="order.number" /></td>
+                                </tr>
+                            </t>
+                        </t>
+                    </t>
+                </t>
+            </t>
+        </t>
+    </template>
+    <template id="payslip_portal_template" inherit_id="portal.portal_sidebar">
+        <xpath expr="//div[hasclass('o_portal_sidebar')]" position="inside">
+            <t t-if="page_name == 'payslip'">
+                <div class="row mt16 o_portal_sale_sidebar">
+                    <!-- Sidebar -->
+                    <t t-call="portal.portal_record_sidebar">
+                        <t t-set="classes" t-value="'col-lg-auto d-print-none'" />
+                        <t t-set="entries">
+                            <ul class="list-group list-group-flush flex-wrap flex-row flex-lg-column">
+                                <li class="list-group-item flex-grow-1">
+                                    <div class="o_download_pdf btn-toolbar flex-sm-nowrap">
+                                        <div class="btn-group flex-grow-1 mr-1 mb-1">
+                                            <a class="btn btn-secondary btn-block o_download_btn" t-att-href="payslip.get_portal_url(report_type='pdf', download=True)" title="Download"><i class="fa fa-download" /> Download</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </t>
+                    </t>
+                    <!-- main content -->
+                    <div class="w-75">
+                        <div t-attf-class="card  #{'pb-5' if report_type == 'html' else ''}" id="payslip_content">
+                            <div t-call="portal_payslip_knk.payslip_portal_content" />
+                        </div>
+                        <!-- chatter -->
+                        <div id="payslip_communication" class="mt-4">
+                            <h2>History</h2>
+                            <t t-call="portal.message_thread">
+                                <t t-set="object" t-value="payslip" />
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+    <template id="payslip_portal_content">
+        <div class="p-4">
+            <t t-set="payslip" t-value="payslip" />
+            <div class="page">
+                <h2 t-field="payslip.name" />
+                <hr />
+                <t t-set="is_invalid" t-value="payslip._is_invalid()" />
+                <t t-if="is_invalid">
+                    <strong>
+                        <t t-esc="is_invalid" /></strong>
+                </t>
+                <table name="employee-infos" class="table table-sm table-bordered">
+                    <tr>
+                        <td class="w-25"><strong>Employee</strong></td>
+                        <td class="w-25"><strong>Marital Status</strong></td>
+                        <td class="w-25"><strong>Designation</strong></td>
+                        <td class="w-25"><strong>Pay Period</strong></td>
+                    </tr>
+                    <tr>
+                        <td><span t-field="payslip.employee_id" /></td>
+                        <td><span t-field="payslip.employee_id.marital" /></td>
+                        <td><span t-field="payslip.employee_id.job_title" /></td>
+                        <td><span t-field="payslip.date_from" /> - <span t-field="payslip.date_to" /></td>
+                    </tr>
+                    <tr>
+                        <td><span t-field="payslip.employee_id.address_home_id.street" /></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><span t-field="payslip.employee_id.address_home_id.city" /> <span t-field="payslip.employee_id.address_home_id.zip" /></td>
+                        <td><strong>Person in charge</strong></td>
+                        <td><strong>Identification</strong></td>
+                        <td><strong>Computed on </strong></td>
+                    </tr>
+                    <tr>
+                        <td><span t-field="payslip.employee_id.work_email" /></td>
+                        <td name="personne-in-charge">
+                            <t t-esc="payslip.employee_id.children" />
+                        </td>
+                        <td><span t-field="payslip.employee_id.identification_id" /></td>
+                        <td><span t-field="payslip.compute_date" /></td>
+                    </tr>
+                </table>
+                <table class="table table-sm">
+                    <tr>
+                        <td class="w-25"><strong>Basic Salary</strong></td>
+                        <td style="color:#875A7B" class="w-25">
+                            <span t-esc="payslip.line_ids.filtered(lambda line: line.code == 'BASIC').total" t-options='{"widget": "monetary", "display_currency": payslip.company_id.currency_id}' />
+                        </td>
+                        <td class="w-25"></td>
+                        <td class="w-25"></td>
+                    </tr>
+                </table>
+                <div id="total">
+                    <table class="table table-sm">
+                        <thead class="o_black_border">
+                            <tr>
+                                <th>Name</th>
+                                <th>Number of Hours</th>
+                                <th>Number of Days</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <span t-foreach="payslip.worked_days_line_ids" t-as="worked_days">
+                                <t t-if="worked_days.code != 'OUT'">
+                                    <tr style="color:none">
+                                        <td>
+                                            <span t-field="worked_days.name" />
+                                        </td>
+                                        <td><span t-field="worked_days.number_of_hours" /></td>
+                                        <td><span t-field="worked_days.number_of_days" /></td>
+                                        <td><span t-esc="worked_days.amount" digits="[42, 2]" t-options='{"widget": "monetary", "display_currency": payslip.company_id.currency_id}' /></td>
+                                    </tr>
+                                </t>
+                            </span>
+                            <span t-foreach="payslip.line_ids.filtered(lambda line: line.appears_on_payslip)" t-as="line">
+                                <t t-set="line_style" />
+                                <t t-set="line_class" />
+                                <t t-if="line.code == 'NET'">
+                                    <t t-set="line_style" t-value="'color:#875A7B;'" />
+                                    <t t-set="line_class" t-value="'o_total o_border_bottom'" />
+                                </t>
+                                <t t-if="(line.code == 'BASIC') or (line.code == 'GROSS')">
+                                    <t t-set="line_style" t-value="'color:#00A09D;'" />
+                                    <t t-set="line_class" t-value="'o_subtotal o_border_bottom'" />
+                                </t>
+                                <tr t-att-class="line_class" t-att-style="line_style">
+                                    <td><span t-field="line.name" /></td>
+                                    <td></td>
+                                    <td><span t-if="line.quantity > 1" t-esc="line.quantity" /></td>
+                                    <td><span t-esc="line.total" t-options='{"widget": "monetary", "display_currency": payslip.company_id.currency_id}' /></td>
+                                </tr>
+                            </span>
+                        </tbody>
+                    </table>
+                </div>
+                <p t-if="payslip.net_wage &gt;= 0">Total to pay on <td><span t-field="payslip.employee_id.bank_account_id" /></td>, bank account of <span t-field="payslip.employee_id" />: <td><span t-field="payslip.net_wage" /></td>
+                </p>
+                <p t-if="payslip.net_wage &lt; 0">The net amount will be recovered from the first positive remuneration established after this.</p>
+                <table name="contract-infos" class="table table-sm table-bordered">
+                    <tr>
+                        <td class="w-25"><strong>Contract Start Date</strong></td>
+                        <td class="w-25"><strong>Working Schedule</strong></td>
+                        <td class="w-25" name="company-car-title"></td>
+                    </tr>
+                    <tr>
+                        <td><span t-field="payslip.employee_id.first_contract_date" /></td>
+                        <td><span t-field="payslip.employee_id.contract_id.hours_per_week" /></td>
+                        <td class="w-25" name="company-car-model"></td>
+                    </tr>
+                </table>
+                <p class="text-center">Made by Odoo</p>
+            </div>
+        </div>
+    </template>
+</odoo>
