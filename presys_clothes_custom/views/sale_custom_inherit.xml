@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <data>
+      <record id="view_product_sale_prop_form_inherit_2" model="ir.ui.view">
+         <field name="name">sale.order.inherit</field>
+         <field name="model">sale.order</field>
+         <field name="inherit_id" ref="sale.view_order_form"/>
+         <field name="arch" type="xml">
+            <field name="payment_term_id" position="after">
+               <field name="partner_collector_id" context="{'res_partner_search_mode': 'is_tenant', 'default_is_tenant':True,}"
+                                 domain="[('is_tenant','=',True)]" attrs="{'readonly': [('state', 'in', ('sale','done','cancel'))]}"/>
+               <field name="partner_director_id" context="{'res_partner_search_mode': 'is_owner', 'default_is_owner':True,}"
+                                 domain="[('is_owner','=',True)]" attrs="{'readonly': [('state', 'in', ('sale','done','cancel'))]}"/>
+            </field>
+         </field>
+      </record>
+
+
+
+
+
+      <record id="view_product_sale_prop_form_inherit_4" model="ir.ui.view">
+         <field name="name">sale.order.inherit</field>
+         <field name="model">sale.order</field>
+         <field name="inherit_id" ref="sale.view_order_form"/>
+         <field name="arch" type="xml">
+            <field name="partner_id"  context="{'res_partner_search_mode': 'is_customer', 'default_is_customer':True,}"
+                                 domain="[('is_customer','=',True)]" attrs="{'readonly': [('state', 'in', ('sale','done','cancel'))]}" position="attributes">
+                     <attribute name = "required">False</attribute>
+
+              
+            </field>
+         </field>
+      </record>
+
+
+
+
+       <!-- <record id="view_product_sale_prop_form_inherit_3" model="ir.ui.view">
+         <field name="name">sale.order.inherit</field>
+         <field name="model">sale.order</field>
+         <field name="inherit_id" ref="sale.view_order_form"/>
+         <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+               <field name="customer_type" invisible="True"/>
+               
+            </field>
+         </field>
+      </record> -->
+   </data>
+</odoo>

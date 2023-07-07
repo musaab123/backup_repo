@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <!-- <record id="view_partner_is_tenant_is_owner_form" model="ir.ui.view">
+            <field name="name">res.partner.is_tenant.is_owner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='vat']" position="after">
+                    <field name="customer_type"/>
+                </xpath>
+            </field>
+        </record> -->
+
+         <record id="view_partner_is_tenant_is_owner_form" model="ir.ui.view">
+            <field name="name">res.partner.is_tenant.is_owner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <group name="sale" position="before">
+                    <group string="Partner Type" name="partner_type">
+                        <field name="is_tenant"/>
+                        <field name="is_owner"/>
+                        <field name="is_customer"/>
+                    </group>
+                </group>
+      
+            </field>
+        </record>
+
+    </data> 
+</odoo>

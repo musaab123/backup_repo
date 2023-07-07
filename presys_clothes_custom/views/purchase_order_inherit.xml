@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <data>
+      <record id="view_product_template_prop_form_inherit_1" model="ir.ui.view">
+         <field name="name">purchase.order.inherit</field>
+         <field name="model">purchase.order</field>
+         <field name="inherit_id" ref="purchase.purchase_order_form"/>
+         <field name="arch" type="xml">
+            <field name="payment_term_id" position="after">
+               <field name="partner_collector_id" />
+               <field name="partner_director_id"/>
+            </field>
+         </field>
+      </record>
+   </data>
+</odoo>

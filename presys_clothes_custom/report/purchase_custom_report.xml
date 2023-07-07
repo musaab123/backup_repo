@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <template id="report_saleorder_document_inherit" inherit_id="sale.report_saleorder_document">
+      <xpath expr="//div[@class='page']" position="before" >
+
+      <table width="100%">
+			  <tr>
+            <td class="text-center" >Director</td>
+			    <td class="text-center">Collector</td>
+			  </tr>
+			  <tr>
+			    <td class="text-center">
+			    	<div>
+                     <p t-field="doc.partner_collector_id"/>
+               </div>
+			    </td>
+			    <td class="text-center">
+			    	 <div>
+                     <p t-field="doc.partner_director_id"/>
+               </div>
+			    </td>
+			  </tr>
+		</table> 
+
+        
+      </xpath>
+   </template>
+</odoo>
