@@ -1,0 +1,10 @@
+16.0.0.1 ==> fixed issue of margin calculation in commission line for invoice.
+
+Versio- 16.0.0.2 : (27/03/2023)
+-- Improvement	
+	-- Added stage in commission line.
+	-- cancel commission if the sale order is cancel or return product.
+	-- cancel commission if the invoice is reset to draft or same for the invoice payment.
+
+Versio- 16.0.0.3 : (29/03/2023)
+	-- When we create downpayment it is not showing total in the downpayment invoice fixed that issue.
