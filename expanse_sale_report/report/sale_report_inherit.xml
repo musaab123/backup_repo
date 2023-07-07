@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!-- oooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
+
+<template id="report_saleorder_document_inherit_test" inherit_id="hr_expense.report_expense_sheet">
+
+      <xpath expr="//div[@class='page']" position="replace" >
+            <t t-if="o and 'company_id' in o">
+        <t t-set="company" t-value="o.company_id"/>
+    	</t>
+    	<t t-if="not o or not 'company_id' in o">
+        <t t-set="company" t-value="res_company"/>
+    	</t>
+		<div class="header" style=" direction: initial;" >
+	    	<table style="border:1pt solid grey;width:100%;font-size:12px;" width="100%">
+	    		<link rel="stylesheet" href="/expanse_sale_report/static/src/css/cw_reports.css"/>
+	            <tr>
+	                <td colspan="2" width="35%">
+	                	<strong><span style="padding-left:5px;" t-field="company.name"/></strong><br/>
+	                	<t t-if="company.street">
+	                		<span style="padding-left:5px;" t-field="company.street"/><br/>
+	                	</t>
+	                	<t t-if="company.street2">
+	                		<span style="padding-left:5px;" t-field="company.street2"/><br/>
+	                	</t>
+	                	<t t-if="company.city">
+	                		<span style="padding-left:5px;" t-field="company.city"/><br/>
+	                	</t>
+	                	<t t-if="company.country_id">
+	                		<span style="padding-left:5px;" t-field="company.country_id.name"/><br/>
+	                	</t>
+	                </td>
+	                
+	                <td  colspan="3" width="30%" class="text-center"><img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="height: 100px;width: 100px; " alt="Logo"/></td>
+
+	                <td colspan="2" width="35%" class="text-right">
+	                	<strong>
+	                		<span class="text-right arabic" style="padding-right:5px;" t-field="company.arabic_name"/></strong><br/>
+	                	<t t-if="company.street">
+	                		<span class="text-right arabic" style="padding-right:5px;" t-field="company.arabic_street"/><br/>
+	                	</t>
+	                	<t t-if="company.street2">
+	                		<span class="text-right arabic" style="padding-right:5px;" t-field="company.arabic_street2"/><br/>
+	                	</t>
+	                	<t t-if="company.city">
+	                		<span class="text-right arabic" style="padding-right:5px;" t-field="company.arabic_city"/><br/>
+	                	</t>
+	                	<t t-if="company.arabic_country">
+	                		<span class="text-right arabic" style="padding-right:5px;" t-field="company.arabic_country"/><br/>
+	                	</t>
+	                </td>
+	            </tr>
+	        	<tr style="border:1pt solid grey;">
+	            	<td width="16%">‫‪ <span class="text-right" style="padding-left:5px;"/>CR No. : </td> 
+	            	<td width="16%"> <span class="text-center arabic" t-field="company.company_registry"/> ‫‪</td> 
+	            	<td width="17%"> <span class="text-right arabic" style="padding-right:-6px;">رقم السجل التجاري</span>‬</td>
+
+	            	<td width="2%" style="border-left:1pt solid black;"></td>  
+
+	            	<td width="16%">‫‪ <span class="text-right" style="padding-left:5px;">VAT‬‬ No.: </span> </td>
+	            	<td width="16%"> <span class="text-center arabic" t-field="company.vat"/> ‫‪</td>
+	            	<td width="17%"> <span class="text-right arabic" style="padding-right:-6px;">ضريبة القيمة المضافة</span>‬</td>
+	            </tr>  
+	        </table>
+        </div>
+        <div class="article o_report_layout_standard">
+            <t t-raw="0" />
+        </div>
+        <div class="footer o_background_footer">
+            <div class="text-center" style="font-size:14px;"  >
+                <ul class="list-inline">
+                    <li t-if="company.phone" class="list-inline-item"><i class="fa fa-phone" role="img" aria-label="Phone" title="Phone"/> <span t-field="company.phone"/></li>
+                    <li t-if="company.email" class="list-inline-item"><i class="fa fa-at" role="img" aria-label="Email" title="Email"/> <span t-field="company.email"/></li>
+                    <li t-if="company.website" class="list-inline-item"><i class="fa fa-globe" role="img" aria-label="Website" title="Website"/> <span t-field="company.website"/></li>
+                    <li t-if="company.vat" class="list-inline-item"><i class="fa fa-building-o" role="img" aria-label="Fiscal number"/><t t-esc="(company.country_id.vat_label or 'Tax ID').replace(' ','\N{NO-BREAK SPACE}')"/>: <span t-esc="company.vat.replace(' ','\N{NO-BREAK SPACE}')"/></li>
+                </ul>
+                <!-- <div t-field="company.report_footer"/> -->
+                <div t-if="report_type == 'pdf'" class="text-muted">
+                    Page:
+                    <span class="page"/>
+                    of
+                    <span class="topage"/>
+                </div>
+            </div>
+        </div>
+
+
+		   <div class="page">
+                        <h2 class="text-center">Expenses Report</h2>
+						<br></br>
+                        <div class="row mt32 mb32">
+                            <div class="col-2">
+                                <strong>Employee:</strong>
+                                <p t-field="o.employee_id.name"/>
+                            </div>
+                            <div class="col-2">
+                                <strong>Date:</strong>
+                                <p t-field="o.accounting_date"/>
+                            </div>
+                            <div class="col-3">
+                                <strong>Description:</strong>
+                                <p t-field="o.name"/>
+                            </div>
+                            <div class="col-2">
+                                <strong>Validated By:</strong>
+                                <p t-field="o.user_id"/>
+                            </div>
+                            <div class="col-3">
+                                <strong>Payment By:</strong>
+                                <p t-field="o.payment_mode"/>
+                            </div>
+                        </div>
+
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Name</th>
+                                    <th class="text-center">Ref.</th>
+                                    <th>Unit Price</th>
+                                    <th>Taxes</th>
+                                    <th class="text-center">Qty</th>
+                                    <th class="text-end">Price</th>
+                                    <th t-if="o.is_multiple_currency" class="text-end">Price in Company Currency</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="o.expense_line_ids" t-as="line">
+                                    <td><span t-field="line.date"/></td>
+                                    <td>
+                                        <span t-field="line.name"/>
+                                        <span t-field="line.description"/><br/>
+                                        <span>
+                                            <div t-foreach="line.analytic_distribution" t-as="distribution">
+                                                <t t-esc="line.env['account.analytic.account'].browse(int(distribution))[0].name"/>: <t t-esc="line.analytic_distribution.get(distribution)"/>
+                                            </div>
+                                        </span>
+                                    </td>
+                                    <td style="text-center">
+                                        <span t-field="line.reference"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="line.unit_amount"/>
+                                    </td>
+                                    <td>
+                                        <t t-foreach="line.tax_ids" t-as="tax">
+                                          <t t-if="tax.description">
+                                            <span t-field="tax.description"/>
+                                          </t>
+                                          <t t-if="not tax.description">
+                                            <span t-field="tax.name"/>
+                                          </t>
+                                        </t>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-field="line.quantity"/>
+                                    </td>
+                                    <td class="text-end">
+                                        <span t-field="line.total_amount"
+                                            t-options='{"widget": "monetary", "display_currency": line.currency_id}'/>
+                                    </td>
+                                    <td t-if="o.is_multiple_currency" class="text-end">
+                                        <span t-field="line.total_amount_company"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="row justify-content-end">
+                            <div class="col-4">
+                                <table class="table table-sm">
+                                    <tr class="border-black">
+                                        <td><strong>Total</strong></td>
+                                        <td class="text-end">
+                                            <span t-field="o.total_amount"
+                                                t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <p>Certified honest and conform,<br/>(Date and signature).<br/><br/></p>
+                    </div>
+
+
+
+	</xpath>
+
+
+
+</template>
+
+
+
+</odoo>
+
+
+
+

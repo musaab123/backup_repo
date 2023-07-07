@@ -1,0 +1,17 @@
+#sale_report_inherit_template{
+    @font-face {
+        font-family:KacstLetter ;
+        src: url(/report-sale-Pur/static/font/KacstLetter.ttf);
+      }
+
+}
+
+#sale_report_inherit_template span{
+  color: red !important;
+}
+
+.test{
+  padding:1pt;margin:0pt;
+  font-weight: bold;
+  background-color:#DCDCDC !important;
+}
